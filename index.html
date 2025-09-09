@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CNC SYSTEMS</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">  <img src="images/logo.jpeg" alt="CNC SYSTEMS Logo"></div>
+      <nav>
+ 
+	   <!-- Botón del menú hamburguesa -->
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>       
+	   <ul>
+           <li><a href="#home" data-en="Home" data-es="Inicio" data-pt="Início">Inicio</a></li>
+            <li><a href="historia.html" data-en="About Us" data-es="Sobre Nosotros" data-pt="Sobre Nós">Sobre Nosotros</a></li>
+            <li><a href="servicio.html" data-en="Services" data-es="Servicios" data-pt="Serviços">Servicios</a></li>
+            <li><a href="contact.html" data-en="Contact" data-es="Contacto" data-pt="Contato">Contacto</a></li>
+		  
+        </ul>
+      </nav>
+	  <div class="language-selector">
+        <div class="idioma"><a href="#" onclick="changeLanguage('en')"><img src="images/ingles.png" alt="English"></a><a href="#" onclick="changeLanguage('es')"><img src="images/espanol.png" alt="Español"></a><a href="#" onclick="changeLanguage('pt')"><img src="images/portugues.png" alt="Português"></a></div>
+    </div>
+    </div>
+	 
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Su producción, siempre en marcha con CNC SYSTEMS</h1>
+      <p>Ofrecemos un servicio rápido, fiable y profesional en toda España y Portugal. Nuestra experiencia garantiza que su maquinaria funcione siempre al máximo rendimiento, con atención técnica inmediata y soluciones adaptadas a cada necesidad.</p>
+   <a href="contact.html" class="btn">Contactenos</a>  
+  </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-why">
+  <div class="flex">
+    
+    <!-- Servicios -->
+    <div class="services">
+      <h2>Compromiso con la Calidad</h2>
+      <p>
+       Empleamos componentes de alta calidad y equipos de diagnóstico avanzados. Nuestro equipo técnico se enfoca en las necesidades específicas de cada cliente, brindando atención personalizada en todo momento
+      </p>
+	  </br>
+	    <a href="servicio.html" class="btn">Que ofrecemos</a>
+    </div>
+
+    <!-- Por qué elegirnos -->
+    <div class="services">
+      <h2>Por qué elegirnos</h2>
+      <p>
+        En CNC SYSTEMS llevamos más de 35 años especializados en el mantenimiento, instalación y reparación de maquinaria. 
+        Con una trayectoria consolidada en el sector, ofrecemos soluciones técnicas de alta calidad para garantizar el máximo rendimiento de las máquinas de control numérico.
+      </p>
+	    <a href="historia.html" class="btn">Conozcanos</a>
+    </div>
+
+ <div class="services">
+      <h2>Nuestro Equipo, Nuestra Fuerza</h2>
+      <p>
+       En CNC SYSTEMS, cada persona aporta su talento y dedicación. Juntos formamos un equipo sólido que impulsa nuestra misión y valores. Cada día trabajamos unidos para ofrecer soluciones de calidad a nuestros cliente
+      </p>
+	    </br>
+	    <a href="equipo.html" class="btn">Nuestro equipo</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Sección de marcas -->
+<section class="marcas">
+  <div class="container">
+      <div class="marcas-grid">
+      <div class="marca"><img src="images/fanuc.png" alt="Fanuc"></div>
+      <div class="marca"><img src="images/muratec.png" alt="Muratec"></div>
+      <div class="marca"><img src="images/siemens.png" alt="Siemens"></div>
+      <div class="marca"><img src="images/tsugami.png" alt="Tsugami"></div>
+      <div class="marca"><img src="images/matsuura.png" alt="Matsuura"></div>
+      <div class="marca"><img src="images/snk.png" alt="SNK"></div>
+      <div class="marca"><img src="images/haas.png" alt="Haas"></div>
+    </div>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 CNC SYSTEMS - All rights reserved</p>
+  </footer>
+</body>
+
+<!-- Script de JavaScript para cambiar el idioma -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtener el idioma desde la URL (si está disponible)
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'es'; // Default to English if no lang is specified
+
+        // Función para actualizar el contenido
+        function updateLanguage() {
+            const elements = document.querySelectorAll('[data-en], [data-es]');
+            elements.forEach(function (element) {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+        }
+
+        // Llamar a la función para actualizar el contenido según el idioma
+        updateLanguage();
+    });
+// Obtener el botón y el menú
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('header nav ul');
+
+// Añadir el evento de clic al botón
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show'); // Toggle para mostrar/ocultar el menú
+});
+
+</script>
+
+</html>

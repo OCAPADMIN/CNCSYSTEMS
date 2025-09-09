@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro Equipo - CNC SYSTEMS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">  <img src="images/logo.jpeg" alt="CNC SYSTEMS Logo"></div>
+      <nav>
+	   <!-- Botón del menú hamburguesa -->
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>   
+        <ul>
+           <li><a href="index.html" data-en="Home" data-es="Inicio" data-pt="Início">Inicio</a></li>
+            <li><a href="#about" data-en="About Us" data-es="Sobre Nosotros" data-pt="Sobre Nós">Sobre Nosotros</a></li>
+            <li><a href="servicio.html" data-en="Services" data-es="Servicios" data-pt="Serviços">Servicios</a></li>
+            <li><a href="contact.html" data-en="Contact" data-es="Contacto" data-pt="Contato">Contacto</a></li>
+		  
+        </ul>
+      </nav>
+	  <div class="language-selector">
+        <div class="idioma"><a href="#" onclick="changeLanguage('en')"><img src="images/ingles.png" alt="English"></a><a href="#" onclick="changeLanguage('es')"><img src="images/espanol.png" alt="Español"></a><a href="#" onclick="changeLanguage('pt')"><img src="images/portugues.png" alt="Português"></a></div>
+    </div>
+    </div>
+	   </header>
+
+  <!-- Intro -->
+  <section class="services-why">
+    <h1>Nuestro Equipo</h1>
+    <p>
+      En CNC SYSTEMS creemos que nuestro mayor valor está en las personas. 
+      Contamos con un equipo multidisciplinar que une experiencia, innovación y compromiso. 
+      Cada área de la empresa trabaja coordinadamente para garantizar el mejor servicio a nuestros clientes.
+    </p>
+  </section>
+
+  <!-- Dirección -->
+  <section class="services-why">
+    <h2>Dirección</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="images/equipo/director.jpg" alt="Director General">
+        <h4>Modesto Porto</h4>
+        <p>Director General</p>
+		 <p>
+    📧 <a href="mailto:modesto.porto@cncsystems.com">modesto.porto@cncsystems.com</a><br>
+    📞 <a href="tel:+34911222333">+34 911 222 333</a>
+  </p>
+      </div>
+	   <div class="card">
+        <img src="images/equipo/subdirector.jpg" alt="Director General">
+        <h4>Ana Maria Porto</h4>
+        <p>SubDirectora</p>
+		   <p>
+    📧 <a href="mailto:anamaria.porto@cncsystems.com">anamaria.porto@cncsystems.com</a><br>
+    📞 <a href="tel:+34660404046">+34 660 40 40 46</a>
+  </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Administrativo -->
+  <section class="services-why">
+    <h2>Área Administrativa</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="images/equipo/admin1.jpg" alt="Administrativa">
+        <h4>María López</h4>
+        <p>Responsable Administrativa</p>
+      </div>
+      <div class="card">
+        <img src="images/equipo/admin2.jpg" alt="Administrativo">
+        <h4>Carlos García</h4>
+        <p>Administrativo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comercial -->
+  <section class="services-why">
+    <h2>Área Comercial</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="images/equipo/comercial1.jpg" alt="Comercial">
+        <h4>Laura Fernández</h4>
+        <p>Responsable Comercial</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Técnico -->
+  <section class="services-why">
+    <h2>Área Técnica</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="images/equipo/tecnico1.jpg" alt="Técnico CNC">
+        <h4>Pedro Martínez</h4>
+        <p>Técnico CNC Senior</p>
+      </div>
+      <div class="card">
+        <img src="images/equipo/tecnico2.jpg" alt="Técnico CNC">
+        <h4>Ana Torres</h4>
+        <p>Técnica CNC</p>
+      </div>
+      <div class="card">
+        <img src="images/equipo/tecnico3.jpg" alt="Soporte Técnico">
+        <h4>David Ruiz</h4>
+        <p>Soporte Técnico</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 CNC SYSTEMS - All rights reserved</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <!-- Script de JavaScript para cambiar el idioma -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtener el idioma desde la URL (si está disponible)
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'es'; // Default to English if no lang is specified
+
+        // Función para actualizar el contenido
+        function updateLanguage() {
+            const elements = document.querySelectorAll('[data-en], [data-es]');
+            elements.forEach(function (element) {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+        }
+
+        // Llamar a la función para actualizar el contenido según el idioma
+        updateLanguage();
+    });
+// Obtener el botón y el menú
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('header nav ul');
+
+// Añadir el evento de clic al botón
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show'); // Toggle para mostrar/ocultar el menú
+});
+
+</script>
+
+
+
+</body>
+</html>
