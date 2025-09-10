@@ -20,10 +20,10 @@
         </button>   
         <ul>
            <li><a href="index.html" data-en="Home" data-es="Inicio" data-pt="Início">Inicio</a></li>
-            <li><a href="#about" data-en="About Us" data-es="Sobre Nosotros" data-pt="Sobre Nós">Sobre Nosotros</a></li>
+           <li><a href="historia.html" data-en="About Us" data-es="Sobre Nosotros" data-pt="Sobre Nós">Sobre Nosotros</a></li>
             <li><a href="servicio.html" data-en="Services" data-es="Servicios" data-pt="Serviços">Servicios</a></li>
             <li><a href="contact.html" data-en="Contact" data-es="Contacto" data-pt="Contato">Contacto</a></li>
-		  
+		 
         </ul>
       </nav>
 	  <div class="language-selector">
@@ -127,13 +127,33 @@ Ofrecemos un servicio rápido, fiable y profesional, utilizando repuestos de alt
   </div>
     </div>
 </section>
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 CNC SYSTEMS - All rights reserved</p>
-  </footer>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <p>© <span id="year"></span> CNC SYSTEMS. SL - All rights reserved</p>
+    </div>
+    <div class="footer-right">
+      <!-- LinkedIn -->
+      <a class="social-link" href="https://www.linkedin.com/company/cncsystems-sl" target="_blank" rel="noopener noreferrer" aria-label="Sigue a CNC Systems en LinkedIn">
+        <!-- SVG LinkedIn -->
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.5 8.98h4.78v2.05h.07c.66-1.25 2.28-2.57 4.69-2.57 5.01 0 5.93 3.3 5.93 7.59V24h-5V16.7c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V24h-5V8.98z"/>
+        </svg>
+        <span class="sr-only">CNC Systems en LinkedIn</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
 <!-- Script de JavaScript para cambiar el idioma -->
+
+<script>
+  // año automático
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Obtener el idioma desde la URL (si está disponible)
