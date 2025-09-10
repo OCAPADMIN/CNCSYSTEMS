@@ -380,7 +380,7 @@ header nav ul.show {
 	text-align: center
     z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
 }
-
+ 
 /* Botón hamburguesa siempre visible */
  .menu-toggle {
         display: block; /* Mostramos el botón de hamburguesa */
