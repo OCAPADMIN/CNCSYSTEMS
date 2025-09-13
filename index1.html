@@ -112,6 +112,25 @@
     </div>
   </div>
 </footer>
+<!-- Banner de cookies: PONLO AQUÍ -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>
+      Esta web utiliza cookies para mejorar tu experiencia. 
+      <a href="politica-cookies.html" target="_blank">Más info</a>
+    </p>
+    <button id="accept-cookies">Aceptar</button>
+  </div>
+
+  <!-- Script del banner -->
+  <script>
+    if(localStorage.getItem('cookies-accepted') === 'true'){
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+    document.getElementById('accept-cookies').onclick = function() {
+      localStorage.setItem('cookies-accepted','true');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
 </body>
 
 <!-- Script de JavaScript para cambiar el idioma -->
