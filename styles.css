@@ -479,3 +479,24 @@ header nav ul.show {
 .cookie-banner button:hover {
   background: #e0f2fe;
 }
+.cookie-settings-btn {
+  position: fixed;
+  bottom: 80px;   /* un poco por encima del banner */
+  right: 20px;
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cookie-settings-btn:hover {
+  background: #0c94d6;
+  transform: rotate(20deg);
+}

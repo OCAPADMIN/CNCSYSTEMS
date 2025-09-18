@@ -96,6 +96,7 @@
 </section>
   <!-- Footer -->
 <footer class="site-footer">
+
   <div class="footer-inner">
     <div class="footer-left">
       <p>© <span id="year"></span> CNC SYSTEMS. SL - All rights reserved</p>
@@ -111,26 +112,67 @@
       </a>
     </div>
   </div>
+   <p>
+    <a href="aviso-legal.html">Aviso Legal</a> | 
+    <a href="politica-privacidad.html">Política de Privacidad</a> | 
+    <a href="politica-cookies.html">Política de Cookies</a>
+  </p>
 </footer>
-<!-- Banner de cookies: PONLO AQUÍ -->
-  <div id="cookie-banner" class="cookie-banner">
-    <p>
-      Esta web utiliza cookies para mejorar tu experiencia. 
-      <a href="politica-cookies.html" target="_blank">Más info</a>
-    </p>
-    <button id="accept-cookies">Aceptar</button>
-  </div>
+<!-- Banner cookies -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <p>
+    Usamos cookies para mejorar tu experiencia. 
+    <a href="politica-cookies.html">Más información</a>
+  </p>
+  <button onclick="acceptCookies()">Aceptar</button>
+  <button onclick="rejectCookies()">Rechazar</button>
+  <button onclick="openPreferences()">Configurar</button>
+</div>
 
-  <!-- Script del banner -->
-  <script>
-    if(localStorage.getItem('cookies-accepted') === 'true'){
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
-    document.getElementById('accept-cookies').onclick = function() {
-      localStorage.setItem('cookies-accepted','true');
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
-  </script>
+<!-- Panel de configuración -->
+<div id="cookie-preferences" class="cookie-banner" style="display:none; flex-direction:column; align-items:flex-start; max-width:500px;">
+  <h3>Configuración de cookies</h3>
+  <label><input type="checkbox" disabled checked> Necesarias (siempre activas)</label>
+  <label><input type="checkbox" id="analytics"> Analíticas</label>
+  <label><input type="checkbox" id="marketing"> Marketing</label>
+  <div style="margin-top:10px; display:flex; gap:8px;">
+    <button onclick="savePreferences()">Guardar</button>
+    <button onclick="closePreferences()">Cancelar</button>
+  </div>
+</div>
+
+<script>
+function acceptCookies() {
+  localStorage.setItem("cookies-consent", "all");
+  document.getElementById("cookie-banner").style.display = "none";
+}
+function rejectCookies() {
+  localStorage.setItem("cookies-consent", "none");
+  document.getElementById("cookie-banner").style.display = "none";
+}
+function openPreferences() {
+  document.getElementById("cookie-preferences").style.display = "flex";
+}
+function closePreferences() {
+  document.getElementById("cookie-preferences").style.display = "none";
+}
+function savePreferences() {
+  let analytics = document.getElementById("analytics").checked;
+  let marketing = document.getElementById("marketing").checked;
+  localStorage.setItem("cookies-consent", JSON.stringify({analytics, marketing}));
+  document.getElementById("cookie-preferences").style.display = "none";
+  document.getElementById("cookie-banner").style.display = "none";
+}
+window.onload = function() {
+  if (!localStorage.getItem("cookies-consent")) {
+    document.getElementById("cookie-banner").style.display = "flex";
+  }
+}
+</script>
+<!-- Botón fijo para abrir configuración de cookies -->
+<button id="cookie-settings-btn" class="cookie-settings-btn" onclick="openPreferences()">
+  ⚙️
+</button>
 </body>
 
 <!-- Script de JavaScript para cambiar el idioma -->
