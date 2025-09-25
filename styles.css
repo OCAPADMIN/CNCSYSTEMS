@@ -220,12 +220,22 @@ footer {
   max-width:1100px;
   margin:0 auto;
 }
+
+.footer-left p {
+  margin: 0;
+}
+
+.footer-right {
+  display: flex;
+  gap: 25px;                 /* espacio entre iconos */
+}
 .social-link svg {
   width: 24px;
   height: 24px;
   fill: #0ea5e9; /* azul LinkedIn */
   display: inline-block;
 }
+
 .footer-right .social-link{
   display:inline-flex;
   align-items:center;
