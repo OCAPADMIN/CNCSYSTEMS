@@ -510,3 +510,70 @@ header nav ul.show {
   background: #0c94d6;
   transform: rotate(20deg);
 }
+.servicios-fotos {
+  width: 90%;
+  margin: 60px auto;
+}
+
+.servicios-fotos-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.foto-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1.2;
+  max-width: 550px;
+}
+
+.foto-lateral img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.foto-lateral img:hover {
+  transform: scale(1.05);
+}
+
+.texto-central {
+  flex: 1;
+  min-width: 10px;
+  text-align: justify;
+}
+
+.texto-central h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+  .servicios-fotos-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .foto-lateral {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .foto-lateral img {
+    width: 80%;
+    height: auto;
+  }
+
+  .texto-central {
+    text-align: left;
+    padding: 0 10px;
+  }
+}
