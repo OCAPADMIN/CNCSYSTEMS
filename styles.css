@@ -577,3 +577,76 @@ header nav ul.show {
     padding: 0 10px;
   }
 }
+
+.tarifas-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.pricing-section {
+  padding: 60px 20px;
+  background: #f6f8fb;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 2.2em;
+  color: #002b5c;
+  margin-bottom: 10px;
+}
+
+.pricing-section p {
+  color: #555;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pricing-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  width: 280px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-card h3 {
+  margin: 0;
+  color: #002b5c;
+  font-size: 1.4em;
+}
+
+.pricing-card .price {
+  margin: 0;
+  font-size: 1.6em;
+  color: #e63946;
+  font-weight: 700;
+}
+
+.pricing-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.pricing-card .btn {
+  align-self: flex-start;
+}
+
+.tarifas-notes {
+  padding: 30px 20px 60px;
+  text-align: center;
+  color: #555;
+}
