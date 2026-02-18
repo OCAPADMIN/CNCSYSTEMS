@@ -688,6 +688,10 @@ header nav ul.show {
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
+.tarifa-card h1 {
+	font-size: 1.2rem;
+ 
+}
 .sat-cta {
   background: #0f1724;
   color: white;
