@@ -162,11 +162,15 @@ nav a:hover {
   margin-bottom: 15px;
   color: #e63946;
 }
+.services-why li {
 
+font-size: 12px; /* o 0.875rem, 90%, lo que prefieras */ 
+}
 .services-why p {
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
+
 }
 
 .services-why .btn {
@@ -267,6 +271,15 @@ footer {
   gap: 20px;
   justify-content: center;
   margin-bottom: 30px;
+  position: relative;
+  background-image: url('images/tecnico3.jpg');
+  background-size: cover;       /* La imagen cubre todo el contenido */
+  background-position: center;  /* Centra la imagen */
+  background-repeat: no-repeat; 
+  background-attachment: fixed; /* Efecto parallax sutil */
+  display: flex;
+  justify-content: center;      /* Centra horizontalmente */
+  padding: 10px 20px; /* Espacio arriba y abajo */
 }
 
 .card {
@@ -511,7 +524,7 @@ header nav ul.show {
   transform: rotate(20deg);
 }
 .servicios-fotos {
-  width: 90%;
+  width: 100%;
   margin: 60px auto;
 }
 
@@ -576,4 +589,113 @@ header nav ul.show {
     text-align: left;
     padding: 0 10px;
   }
+}
+.hero-sat {
+  position: relative;
+  background-image: url('images/tecnico3.jpg');
+  background-size: cover;       /* La imagen cubre todo el contenido */
+  background-position: center;  /* Centra la imagen */
+  background-repeat: no-repeat; 
+  background-attachment: fixed; /* Efecto parallax sutil */
+  display: flex;
+  justify-content: center;      /* Centra horizontalmente */
+}
+
+.hero-sat::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);  /* Overlay oscuro para mejorar legibilidad */
+  z-index: 1;
+}
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  color: #fff;
+  padding: 60px 30px;
+  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro del overlay */
+  border-radius: 12px;            /* Bordes redondeados opcional */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* Sombra suave */
+}
+
+
+.sat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.sat-card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.sat-card:hover {
+  transform: translateY(-8px);
+}
+
+.sat-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.sat-fotos {
+  margin: 80px 0;
+}
+
+.sat-fotos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.sat-fotos-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.sat-tarifas {
+  width: 90%;
+  margin: 80px auto;
+}
+.sat-servicios  h2{
+ 
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e63946
+}
+.sat-tarifas h2 {
+
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e63946
+}
+.tarifas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tarifa-card {
+  background: #f9fafc;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+.sat-cta {
+  background: #0f1724;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.sat-cta h3 {
+  color: #0ea5e9;
+  margin: 15px 0;
 }
