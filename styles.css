@@ -428,6 +428,21 @@ header nav ul.show {
         background-color: #BD3B3B;
     }
 }
+/* Botón destacado */
+.menu-asistencia{
+  background:#39A9E1;   /* azul parecido al del logo */
+  color:white !important;
+  padding:10px 18px;
+  border-radius:6px;
+  font-weight:600;
+  border:2px solid #39A9E1;
+  transition:all 0.3s ease;
+}
+
+.menu-asistencia:hover{
+  background:#000;      /* negro del logo */
+  border-color:#000;
+}
 .contact-section{
   padding: 36px 20px;
   background: linear-gradient(180deg,#f8fafc 0%, #eef2f6 100%);
@@ -614,7 +629,7 @@ header nav ul.show {
   max-width: 800px;
   text-align: center;
   color: #fff;
-  padding: 60px 30px;
+  padding: 30px 40px;
   background: rgba(0, 0, 0, 0.6); /* Fondo oscuro del overlay */
   border-radius: 12px;            /* Bordes redondeados opcional */
   box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* Sombra suave */
@@ -702,4 +717,177 @@ header nav ul.show {
 .sat-cta h3 {
   color: #0ea5e9;
   margin: 15px 0;
+}
+.asistencia{
+padding:80px 20px;
+background:#f7f7f7;
+text-align:center;
+}
+
+.asistencia h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.asistencia p{
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+}
+
+.form-asistencia{
+max-width:700px;
+margin:auto;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.campo{
+display:flex;
+flex-direction:column;
+text-align:left;
+}
+
+.campo label{
+margin-bottom:6px;
+font-weight:600;
+}
+
+
+.whatsapp-contact{
+margin-top:30px;
+}
+
+.whatsapp-btn{
+background:#25D366;
+}
+
+.whatsapp-btn:hover{
+background:#1ebe5d;
+}
+
+@media (max-width:768px){
+.form-grid{
+grid-template-columns:1fr;
+}
+}
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+font-size:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+transition:transform 0.2s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+.sat-formulario{
+margin-top:30px;
+padding:30px;
+border-radius:8px;
+max-width:100%;
+margin-left:auto;
+margin-right:auto;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+width:100%;
+box-sizing:border-box;
+
+}
+
+.sat-grid{
+display:grid;
+grid-template-columns:repeat(2, minmax(0,1fr));
+gap:15px;
+width:100%;
+}
+
+.campo input[type="file"]{
+border:none;
+}
+.campo input,
+.campo textarea,
+.campo select{
+width:100%;
+padding:14px 16px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:16px;
+box-sizing:border-box;
+min-height:28px;
+}
+.campo-ancho{
+grid-column:1 / -1;
+}
+@media (max-width:900px){
+
+.sat-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:600px){
+
+.sat-grid{
+grid-template-columns:1fr;
+}
+
+}
+.sat-formulario h3{
+text-align:center;
+margin-bottom:20px;
+}
+
+.campo label{
+font-size:14px;
+
+}
+
+.campo textarea{
+min-height:120px;
+resize:vertical;
+}
+@media (max-width:768px){
+
+.hero-overlay{
+padding:20px 15px;   /* antes tenías 130px a los lados */
+width:100%;
+box-sizing:border-box;
+}
+
+.sat-formulario{
+padding:20px 15px;
+width:100%;
+}
+
+.sat-grid{
+grid-template-columns:1fr;   /* una columna */
+gap:15px;
+}
+
+.campo input,
+.campo textarea,
+.campo select{
+width:100%;
+font-size:16px;
+padding:14px;
+}
+
+
 }

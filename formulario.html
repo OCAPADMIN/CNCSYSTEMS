@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios - CNC SYSTEMS</title>
+  <title>CNC SYSTEMS</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="js/script.js"></script>
 </head>
 <body>
 <a href="https://wa.me/660404046?text=Hola%20necesito%20asistencia%20técnica%20para%20una%20máquina%20CNC"
@@ -17,23 +18,19 @@ target="_blank">
     <div class="container">
       <div class="logo">  <img src="images/logo.jpeg" alt="CNC SYSTEMS Logo"></div>
       <nav>
+ 
 	   <!-- Botón del menú hamburguesa -->
         <button class="menu-toggle" aria-label="Toggle Menu">
             <span></span>
             <span></span>
             <span></span>
-        </button>   
-        <ul>
-           <li><a href="index.html" data-en="Home" data-es="Inicio" data-pt="Início">Inicio</a></li>
-          <li><a href="historia.html" data-en="About Us" data-es="Sobre Nosotros" data-pt="Sobre Nós">Sobre Nosotros</a></li>
+        </button>       
+	   <ul>
+          <li><a href="index.html" data-en="Home" data-es="Inicio" data-pt="Início">Inicio</a></li>
+              <li><a href="historia.html" data-en="About Us" data-es="Sobre Nosotros" data-pt="Sobre Nós">Sobre Nosotros</a></li>
             <li><a href="servicio.html" data-en="Services" data-es="Servicios/Tarifas" data-pt="Serviços">Servicios/Tarifas</a></li>
             <li><a href="contact.html" data-en="Contact" data-es="Contacto" data-pt="Contato">Contacto</a></li>
-			    <li>
-      <a href="formulario.html" class="menu-asistencia">
-        Solicitar asistencia
-      </a>
-    </li>
-		  
+		   <li><a href="formulario.html" class="menu-asistencia">Solicitar asistencia</a></li>
         </ul>
       </nav>
 	  <div class="language-selector">
@@ -42,165 +39,76 @@ target="_blank">
     </div>
 	 
   </header>
-  
-
-<!-- <!-- HERO VISUAL -->
+<!-- Solicitud de asistencia -->
 <section class="hero-sat">
  
   <div class="hero-overlay">
-    <h2>Servicio profesional para maquinaria CNC</h2>
+    <h2>Asistencia Técnica SAT</h2>
+    <p>Servicio profesional para maquinaria CNC en toda España</p>
  
-<p>Asistencia técnica para incidencias, reparaciones y mantenimiento de maquinaria. Envíenos su solicitud y le contactaremos.</p>
+  <!-- Formulario SAT -->
+<div class="sat-formulario">
 
-	    <a href="formulario.html" class="btn">Solicitar asistencia</a>
-		
-<p>O si lo prefiere, también puede ponerse en contacto directamente con nosotros y estaremos encantados de atenderle.</p>
+<h3>Solicitud rápida de asistencia</h3>
 
-	    <a href="contact.html" class="btn">Contactenos</a>
-    
+<form action="https://formspree.io/f/xlgpglej" method="POST" enctype="multipart/form-data">
+
+<div class="sat-grid">
+
+<div class="campo">
+<label>👤 Nombre</label>
+<input type="text" name="nombre" required>
+</div>
+
+<div class="campo">
+<label>🏢 Empresa</label>
+<input type="text" name="empresa">
+</div>
+
+<div class="campo">
+<label>📧 Email</label>
+<input type="email" name="email" required>
+</div>
+
+<div class="campo">
+<label>📞 Teléfono</label>
+<input type="tel" name="telefono">
+</div>
+ <div class="campo">
+          <label>⚙️ Tipo de asistencia</label>
+          <select name="servicio">
+            <option>Mantenimiento</option>
+            <option>Reparación</option>
+            <option>Instalación</option>
+            <option>Diagnóstico técnico</option>
+            <option>Otro</option>
+          </select>
+        </div>
+
+
+<div class="campo">
+<label>🏭 Tipo de máquina</label>
+<input type="text" name="maquina" placeholder="Ej: Centro de mecanizado, torno CNC...">
+</div>
+
+</div>
+
+<div class="campo">
+<label>📝 Descripción de la incidencia</label>
+<textarea name="mensaje" rows="4" required></textarea>
+</div>
+
+
+<button type="submit" class="btn">Solicitar asistencia</button>
+
+</form>
+
 </div>
   </div>
   
 </section>
 
-
-  <!-- Servicios -->
-  <section class="services-why">
-       
-  
-  <section class="servicios-fotos">
-   
-   <div class="servicios-fotos-contenedor">
-    
-	 <div class="texto-central">
-   <h3  class="centrado" >Nuestros servicio</h3>
-   <p>
-        Ofrecemos asistencia técnica integral en máquinas herramienta CNC, mantenimiento preventivo,
-        reparaciones electrónicas y mecánicas, y optimización de procesos de mecanizado.
-      </p>
-      <p>
-        Nuestros técnicos especializados garantizan tiempos de respuesta rápidos y soluciones
-        personalizadas para cada cliente.
-      </p>
-	<div class="cards">
-  <div class="card">
-    <img src="images/instalacion.png" alt="Instalación">
-    <h4 data-en="Installation" data-es="Instalación" data-pt="Instalação">Instalación</h4>
-    <p data-en="Installation and commissioning of new equipment, ensuring precision and efficiency from day one."
-       data-es="Puesta en marcha de nuevos equipos, garantizando precisión y eficiencia desde el primer día."
-       data-pt="Instalação e comissionamento de novos equipamentos, garantindo precisão e eficiência desde o primeiro dia.">
-       Puesta en marcha de nuevos equipos, garantizando precisión y eficiencia desde el primer día.
-    </p>
-  </div>
-  
-  <div class="card">
-    <img src="images/mantenimiento.png" alt="Mantenimiento">
-    <h4 data-en="Maintenance" data-es="Mantenimiento" data-pt="Manutenção">Mantenimiento</h4>
-    <p data-en="Preventive and corrective maintenance to extend the life of your CNC machines."
-       data-es="Mantenimiento preventivo y correctivo para prolongar la vida útil de sus máquinas CNC."
-       data-pt="Manutenção preventiva e corretiva para prolongar a vida útil das suas máquinas CNC.">
-       Mantenimiento preventivo y correctivo para prolongar la vida útil de sus máquinas CNC.
-    </p>
-  </div>
-  
-  <div class="card">
-    <img src="images/reparacion.png" alt="Reparación">
-    <h4 data-en="Repair" data-es="Reparación" data-pt="Reparação">Reparación</h4>
-    <p data-en="Repair of mechanical, electrical, and electronic failures quickly and reliably."
-       data-es="Solución de averías mecánicas, eléctricas y electrónicas de forma rápida y fiable."
-       data-pt="Solução de avarias mecânicas, elétricas e eletrónicas de forma rápida e confiável.">
-       Solución de averías mecánicas, eléctricas y electrónicas de forma rápida y fiable.
-    </p>
-  </div>
-  
-  <div class="card">
-    <img src="images/retrofit.png" alt="Retrofit">
-    <h4 data-en="Retrofit" data-es="Retrofit" data-pt="Retrofit">Retrofit</h4>
-    <p data-en="Modernization of obsolete equipment to improve performance and adapt to new technologies."
-       data-es="Modernización de equipos obsoletos para mejorar rendimiento y adaptarlos a nuevas tecnologías."
-       data-pt="Modernização de equipamentos obsoletos para melhorar o desempenho e adaptá-los a novas tecnologias.">
-       Modernización de equipos obsoletos para mejorar rendimiento y adaptarlos a nuevas tecnologías.
-    </p>
-  </div>
-  
-  <div class="card">
-    <img src="images/asesoramiento.png" alt="Asesoramiento">
-    <h4 data-en="Consulting" data-es="Asesoramiento" data-pt="Consultoria">Asesoramiento</h4>
-    <p data-en="Personalized technical consulting to optimize each client's production processes."
-       data-es="Consultoría técnica personalizada para optimizar procesos y producción de cada cliente."
-       data-pt="Consultoria técnica personalizada para otimizar os processos de produção de cada cliente.">
-       Consultoría técnica personalizada para optimizar procesos y producción de cada cliente.
-    </p>
-  </div>
-</div>
-  </div>
-
-</section>
-
-
-  <!-- Tipos de Mantenimiento -->
-  
-
-
-  
-  <section class="servicios-fotos">
-   
-   <div class="servicios-fotos-contenedor">
-    
-	 <div class="texto-central">
-   <h3  class="centrado" >Formatos de Mantenimiento</h3>
-  <p> Estos son nuestros principales formatos de mantenimiento, pensados para ofrecer flexibilidad y seguridad a su producción. No obstante, sabemos que cada empresa es diferente, por lo que adaptamos nuestros planes a las necesidades específicas de cada cliente.</p>
-   
- <div class="cards">
-    <div class="card">
-      <img src="images/horas.png" alt="Horas">
-      <h4>Bolsas de horas</h4>
-      <p>Flexibilidad total para asistencia técnica según sus necesidades.</p>
-    </div>
-    <div class="card">
-      <img src="images/telefono.png" alt="Teléfono">
-      <h4>Consultas telefónicas</h4>
-      <p>Soporte remoto directo con nuestro equipo de expertos.</p>
-    </div>
-    <div class="card">
-      <img src="images/soporte.png" alt="Soporte">
-      <h4>Soporte anual</h4>
-      <p>Cobertura durante todo el año con prioridad en asistencia.</p>
-    </div>
-    <div class="card">
-      <img src="images/preventivo.png" alt="Preventivo">
-      <h4>Mantenimiento preventivo</h4>
-      <p>Revisiones periódicas para reducir riesgos de averías.</p>
-    </div>
-  </div>
-   </div>
-    
-    
-
-   </section>
-
- 
-<!-- TARIFAS -->
-<section class="sat-tarifas">
-  <h2 class="centrado">Tarifas</h2>
-
-  <div class="tarifas-grid">
-
-    <div class="tarifa-card">
-      <h1>Nuestras tarifas son competitivas y personalizadas según las necesidades de cada cliente. Para recibir las tarifas actuales y un presupuesto adaptado, por favor póngase en contacto con nosotros. Estaremos encantados de atenderle y ofrecerle la mejor solución.</h1>
-      
-  <a href="contact.html" class="btn">Contactenos</a>  
-    </div>
-</div>
-
-  </div>
-</section>
-
-    
-</section>
- 
-</section>
-  <!-- Footer -->
+ <!-- Footer -->
 <footer class="site-footer">
 
  <div class="footer-inner">
@@ -295,6 +203,7 @@ window.onload = function() {
 }
 </script>
 
+</body>
 
 <!-- Script de JavaScript para cambiar el idioma -->
 <script>
@@ -302,8 +211,6 @@ window.onload = function() {
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
-  <script src="js/script.js"></script>
-<!-- Script de JavaScript para cambiar el idioma -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Obtener el idioma desde la URL (si está disponible)
@@ -332,6 +239,4 @@ menuToggle.addEventListener('click', () => {
 
 </script>
 
-
-</body>
 </html>
