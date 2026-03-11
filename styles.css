@@ -271,20 +271,14 @@ font-size: 15px; /* o 0.875rem, 90%, lo que prefieras */
 /* ===================== */
 @media (max-width: 768px) {
   .services-job{
-max-width:95%;
-padding:20px 10px;
+max-width:100%;
+padding:10px 0px;
 }
 
 .job-list{
 max-width:100%;
 font-size:17px;
 }
-
-
-  .services-job .why,
-  .services-job .sitio {
-    margin-top: 20px; /* separación entre cajas al apilarse */
-  }
 
   .services-job .sitio {
     aspect-ratio: 16/9; /* altura proporcional al ancho */
@@ -1013,4 +1007,21 @@ margin-top:10px;
 
 .job-item ul{
 margin-left:20px;
+}
+
+.jobs-card {
+  background: #f9fafc;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 6px 5px rgba(0,0,0,0.08);
+}
+.jobs-card h1 {
+	font-size: 1.2rem;
+ 
+}
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  
 }
