@@ -270,17 +270,16 @@ font-size: 15px; /* o 0.875rem, 90%, lo que prefieras */
 /* Responsive para móviles */
 /* ===================== */
 @media (max-width: 768px) {
-  .services-job .flex {
-    flex-direction: column;
-  }
+  .services-job{
+max-width:95%;
+padding:20px 10px;
+}
 
-  .services-job .services,
-  .services-job .why,
-  .services-job .sitio {
-    flex: 1 1 100%;
-    width: 100%;
-    min-width: auto;
-  }
+.job-list{
+max-width:100%;
+font-size:17px;
+}
+
 
   .services-job .why,
   .services-job .sitio {
@@ -531,6 +530,15 @@ header nav ul.show {
 .menu-asistencia:hover{
   background:#000;      /* negro del logo */
   border-color:#000;
+}
+@media (max-width: 768px){
+
+.menu-asistencia{
+display:inline-block;
+padding:4px 6px;
+font-size:14px;
+}
+
 }
 .contact-section{
   padding: 36px 20px;
