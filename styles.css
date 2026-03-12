@@ -101,6 +101,48 @@ nav a:hover {
 .btn.secondary:hover {
   background: #111;
 }
+.equipo-why {
+  width: 90%;
+  margin: 60px auto; /* separación superior e inferior */
+}
+
+/* Titulos y párrafos */
+.equipo-why h1 {
+  
+  margin-bottom: 15px;
+  color: #e63946;
+  font-size: 2.5rem;
+  max-width: 600px;
+}
+
+
+.equipo-why h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e63946;
+}
+
+
+/* Titulos y párrafos */
+.equipo-why h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #e63946;
+}
+.equipo-why li {
+
+font-size: 12px; /* o 0.875rem, 90%, lo que prefieras */ 
+}
+.equipo-why p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+
+}
+
+.equipo-why .btn {
+  margin-top: 20px;
+}
 
 /* Services + Why Side by Side *//* ===================== */
 /* Services + Why Section */
@@ -111,18 +153,19 @@ nav a:hover {
 }
 .services-why .flex {
   display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  gap: 20px; /* Reducir un poco el espacio ayuda a que quepan mejor */
+  align-items: stretch; /* Para que todas las cajas tengan la misma altura */
   justify-content: space-between;
-  flex-wrap: wrap; /* se acomoda en columna en móviles */
+  flex-wrap: wrap;
 }
 
 /* Services (contenido principal) */
 .services-why .services {
-  flex: 2 1 30%;
+  flex: 1 1 22%; /* Cambiado de 2 1 30% a 1 1 22% */
   background: #fff;
   padding: 25px;
   border-radius: 12px;
+  box-sizing: border-box; /* Asegura que el padding no sume ancho extra */
  
 }
 
@@ -363,8 +406,23 @@ footer {
   justify-content: center;      /* Centra horizontalmente */
   padding: 10px 20px; /* Espacio arriba y abajo */
 }
-
-.card {
+.cardsequ {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+  background-image: url('images/porteqjuipo.png');
+  background-size: cover;       /* La imagen cubre todo el contenido */
+  background-position: center;  /* Centra la imagen */
+  background-repeat: no-repeat; 
+  background-attachment: fixed; /* Efecto parallax sutil */
+  display: flex;
+  justify-content: center;      /* Centra horizontalmente */
+  padding: 10px 20px; /* Espacio arriba y abajo */
+}
+.card{
   background: white;
   border-radius: 12px;
   padding: 20px;
@@ -372,8 +430,7 @@ footer {
   width: 180px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-}
-.card {
+
     width: 250px; /* ancho fijo de la tarjeta */
     padding: 15px;
     border: 1px solid #ccc;
@@ -412,6 +469,59 @@ footer {
 }
 
 .card a:hover {
+  text-decoration: underline;
+}
+
+.cardase{
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 180px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+    width: 250px; /* ancho fijo de la tarjeta */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    word-wrap: break-word;       /* forzar quiebre de palabra larga */
+    overflow-wrap: break-word;   /* soporte moderno */
+    white-space: normal;         /* asegurar que no sea nowrap */
+}
+
+.cardase:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.cardase img {
+    width: 100%;
+  height: 260px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.cardase h4 {
+  font-size: 1.3em;
+  color: #002b5c;
+  margin-bottom: 10px;
+}
+
+.cardase p {
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #e63946;
+}
+.cardase a {
+  color: #555;
+  font-size: 0.65em;
+   text-decoration: none;
+  font-weight: bold;
+}
+
+.cardase a:hover {
   text-decoration: underline;
 }
 
