@@ -1143,6 +1143,7 @@ z-index: 1000;
 }
 .asistencia-container img{
 width: 150px;
+ cursor: pointer;
 }
 .asistencia-boton{
 background:#ff6a00;
