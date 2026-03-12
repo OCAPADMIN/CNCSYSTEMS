@@ -11,11 +11,34 @@
   <script src="js/script.js"></script>
 </head>
 <body>
-<a href="https://wa.me/34660404046?text=Hola%20necesito%20asistencia%20técnica%20para%20una%20máquina%20CNC"
-class="whatsapp-float"
-target="_blank">
-💬
-</a>
+
+<div class="asistencia-container">
+
+  <div  onclick="toggleMenu()">
+    <img src="images/icono-asistencia.png"><br>
+
+  </div>
+
+  <div class="asistencia-menu" id="asistenciaMenu">
+
+    <a href="tel:+34660404046" class="asistencia-item">
+      📞 Llamar ahora
+    </a>
+
+    <a href="https://wa.me/34660404046?text=Hola%20tengo%20una%20máquina%20CNC%20parada%20y%20necesito%20asistencia"
+       target="_blank"
+      class="asistencia-item">
+      💬 WhatsApp
+    </a>
+
+    <a href="formulario.html" class="asistencia-item">
+      ⚙ Enviar avería
+    </a>
+
+  </div>
+
+</div>
+ 
   <!-- Header -->
   <header>
     <div class="container">
@@ -245,4 +268,14 @@ menuToggle.addEventListener('click', () => {
 
 </script>
 
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("asistenciaMenu");
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
+}
+</script>
 </html>
