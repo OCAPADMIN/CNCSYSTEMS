@@ -1145,6 +1145,11 @@ z-index: 1000;
 width: 150px;
  cursor: pointer;
 }
+
+.asistencia-container img:hover{
+filter: brightness(70%);   /* Oscurece la imagen al pasar el ratón */
+}
+ 
 .asistencia-boton{
 background:#ff6a00;
 color:white;
