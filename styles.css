@@ -1107,8 +1107,9 @@ background:#fafafa;
 
 .job-item summary{
 cursor:pointer;
-font-size:18px;
+font-size:15px;
 font-weight:600;
+  color: #black;
 }
 
 .job-item p{
@@ -1116,7 +1117,7 @@ margin-top:10px;
 }
 
 .job-item ul{
-margin-left:20px;
+margin-left:12px;
 }
 
 .jobs-card {
@@ -1201,4 +1202,89 @@ border-bottom:1px solid #ddd;
 
 .post h2{
 margin-bottom:10px;
+}
+
+
+.services-blog {
+  width: 90%;
+  margin: 60px auto; /* separación superior e inferior */
+  max-width:900px;
+margin:1px auto;
+padding:20px 20px;
+}
+
+/* Services (contenido principal) */
+.services-blog .services {
+  flex: 2 1 30%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+ 
+}
+
+/* job (caja lateral) */
+.services-blog .why {
+  flex: 1 1 35%;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+/* Titulos y párrafos */
+.services-blog h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e63946;
+}
+
+
+/* Titulos y párrafos */
+.services-blog h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #e63946;
+}
+.services-blog li {
+
+font-size: 15px; /* o 0.875rem, 90%, lo que prefieras */ 
+}
+.services-blog p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+
+}
+.services-blog ul{
+ max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    list-style-position: inside;
+}
+
+.services-blog .btn {
+  margin-top: 20px;
+}
+
+
+/* ===================== */
+/* Responsive para móviles */
+/* ===================== */
+@media (max-width: 768px) {
+  .services-blog{
+max-width:100%;
+padding:10px 0px;
+}
+
+.job-list{
+max-width:100%;
+font-size:17px;
+}
+
+.under-construction {
+  width: 100%;          /* Ocupa el 50% del contenedor (ajustable) */
+  max-width: 400px;    /* No crecerá más de 200px */
+  height: auto;        /* Mantiene la proporción original */
 }

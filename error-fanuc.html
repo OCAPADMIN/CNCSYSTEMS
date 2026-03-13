@@ -70,24 +70,597 @@
 
 
   <!-- Services Section -->
-<section class="blog">
-<h1>Errores más comunes en controles Fanuc</h1>
+<section class="services-blog" id="about">
+ 
+<h2>Errores más comunes en controles Fanuc y cómo diagnosticarlos</h2>
 
-<p>Los controles Fanuc son muy fiables, pero con los años pueden aparecer errores que paran la producción.</p>
+<p>
+Los <strong> controles Fanuc </strong> son uno de los sistemas CNC más utilizados en centros de mecanizado
+y tornos industriales. Son conocidos por su fiabilidad, pero con el paso del tiempo
+pueden aparecer alarmas o errores que provocan la parada de la máquina.
+</p>
 
-<h2>Error 401 Servo Alarm</h2>
+<p>
+Cuando aparece una alarma en el control CNC es importante identificar su origen
+para evitar daños en la máquina y reducir el tiempo de parada de producción.
+</p>
 
-<p>Este error suele estar relacionado con problemas en el servo drive o en el encoder.</p>
 
-<h2>Error 414 Overtravel</h2>
+<h3>Importancia de un diagnóstico adecuado</h3>
 
-<p>Se produce cuando el eje supera el límite configurado en la máquina.</p>
+<p>
+Cuando una máquina CNC presenta alarmas repetitivas o paradas inesperadas,
+es importante realizar un diagnóstico técnico adecuado. En muchos casos
+la causa real del problema no es la alarma que aparece en el control,
+sino un fallo en otro componente del sistema.
+</p>
 
-<p>Si su máquina CNC presenta este tipo de errores podemos ayudarle.</p>
+<p>
+Una revisión completa del sistema de control, servos y electrónica puede
+ayudar a identificar el origen de la avería y evitar futuras paradas
+de producción.
+</p>
+<p> Si su máquina CNC presenta alarmas o fallos que impiden el funcionamiento
+normal, nuestro equipo técnico puede ayudarle a diagnosticar y reparar
+la avería.
+</p>
 
-<p><strong>⚡ ¿Máquina parada? Contacte con nuestro servicio técnico.</strong></p>
-  <a href="formulario.html" class="btn">Solicitar asistencia</a>
+<p>
+Ofrecemos asistencía tecnica, asesoramiento, diagnóstico de averías
+y modernización de sistemas de control mediante retrofit.
+</p>
+<p> <strong> <a href="contact.html" data-en="Contact" data-es="Contacte" data-pt="contato">Contacte</a>  con nuestro servicio técnico. </strong>
+O solicite una asistencia directamente     <a href="formulario.html" class="btn">Solicitar asistencia</a> </p>
+</br>
+
+<h3> Codigos de errores mas comunes en controles Fanuc</h3>
+
+
+<div class="job-offers">
+
+
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 401 – V Ready Off / DRDY Signal Off</strong> -	Problema en servo drive
+</summary>
+<div id="fanuc401">
+
+
+<p>
+La alarma <strong>Fanuc 401</strong> es una de las alarmas más habituales y,
+al mismo tiempo, una de las que puede resultar más compleja de diagnosticar
+en máquinas CNC con control Fanuc.
+</p>
+
+<p>
+Esta alarma indica que la señal <strong>DRDY (Drive Ready)</strong> no está activa,
+lo que significa que el sistema de servo no está listo para funcionar.
+En muchos casos está relacionada con el sistema de alimentación de los
+servo drives o con el propio amplificador de servo.
+</p>
+
+<p>
+Si el circuito eléctrico de potencia que alimenta los drives funciona
+correctamente, es posible que el origen del problema se encuentre
+en el propio servo amplifier.
+</p>
+
+<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+
+<ul>
+<li>Comprobar si los drives o amplificadores de servo se están alimentando correctamente.</li>
+<li>Verificar que el paro de emergencia (Emergency Stop) está correctamente liberado.</li>
+<li>En los drives de la serie <strong>FANUC ALPHA</strong>, comprobar que el último servo drive del rack tiene instalado el conector de terminación <strong>JX1B</strong>.</li>
+<li>Revisar el contacto <strong>MCC</strong> del módulo de alimentación (PSM) y comprobar que la secuencia de arranque es correcta.</li>
+<li>Comprobar si existe alguna alarma activa en el servo, en el spindle o en el módulo de alimentación.</li>
+</ul>
+
+<p>
+Es importante tener en cuenta que la alarma <strong>Fanuc 401</strong>, dependiendo
+del modelo de control o de la generación de los drives, puede estar
+provocada por diferentes causas dentro del sistema CNC.
+Por este motivo, en muchas ocasiones es necesario realizar un diagnóstico
+técnico completo para identificar el origen real del problema.
+</p>
+
+<p><strong>¿Tiene una máquina CNC con alarma Fanuc 401?</strong></p>
+
+<p>
+En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico
+y reparación de averías en controles <strong>FANUC</strong>.
+</p>
+
+<p>
+Si su máquina CNC presenta una alarma o se encuentra parada por un problema
+en el control, servo o electrónica, nuestro equipo técnico puede ayudarle
+a identificar la causa de la avería y encontrar una solución.
+</p>
+
+<p><strong>⚡ Si necesita asistencia técnica para su máquina CNC,
+no dude en ponerse en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+  </div>
+
+</details>
+
+
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 410 – Eje + / Spindle Overload</strong> - Límite positivo de eje o sobrecarga de husillo
+</summary>
+<div id="fanuc410">
+
+<p>
+La alarma <strong>Fanuc 410</strong> puede aparecer por dos motivos principales dependiendo del tipo de máquina y del control Fanuc:
+</p>
+
+<ul>
+<li>En máquinas de fresado o torneado modernas, indica una <strong>sobrecarga del husillo (Spindle Overload)</strong> durante la operación.</li>
+<li>En máquinas de eje lineal, señala que el eje ha alcanzado su <strong>límite positivo (+) de recorrido</strong>.</li>
+</ul>
+
+<p>
+En ambos casos, la máquina se detiene automáticamente para evitar daños y requiere revisión inmediata.
+</p>
+
+<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+
+<ul>
+<li>Si se trata de husillo: comprobar herramientas, velocidad, avance y carga de material.</li>
+<li>Si se trata de límite de eje: verificar los topes físicos y sensores de fin de carrera.</li>
+<li>Revisar parámetros de servo y configuración de límites en el CNC.</li>
+<li>Comprobar que no haya interferencias eléctricas ni sobrecarga mecánica en el eje.</li>
+</ul>
+
+<p>
+Es importante tener en cuenta que la alarma <strong>Fanuc 410</strong> puede variar según el modelo de control y la serie de drives, por lo que un diagnóstico técnico completo suele ser necesario para identificar la causa real.
+</p>
+
+<p><strong>¿Tiene una máquina CNC con alarma Fanuc 410?</strong></p>
+
+<p>
+En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong>, husillos y servos.
+</p>
+
+<p>
+Si su máquina CNC presenta esta alarma o está parada, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
+</p>
+
+<p><strong>⚡ Para asistencia técnica, póngase en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+
+</div>
+
+</details>
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 411 – Eje − / Spindle Overrun</strong> - Límite negativo de eje o sobrevelocidad de husillo
+</summary>
+<div id="fanuc411">
+
+<p>
+La alarma <strong>Fanuc 411</strong> puede aparecer por dos motivos principales dependiendo del tipo de máquina y del control Fanuc:
+</p>
+
+<ul>
+<li>En máquinas de fresado o torneado modernas, indica <strong>sobrevelocidad o sobrerecorrido del husillo (Spindle Overrun)</strong>.</li>
+<li>En máquinas de eje lineal, señala que el eje ha alcanzado su <strong>límite negativo (−) de recorrido</strong>.</li>
+</ul>
+
+<p>
+En ambos casos, la máquina se detiene para evitar daños y requiere revisión antes de continuar la operación.
+</p>
+
+<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+
+<ul>
+<li>Si se trata de husillo: comprobar velocidad, avance y carga de material, así como estado de la herramienta.</li>
+<li>Si se trata de límite de eje: verificar los topes físicos y sensores de fin de carrera.</li>
+<li>Revisar parámetros de servo y configuración de límites en el CNC.</li>
+<li>Comprobar que no haya interferencias eléctricas ni sobrecarga mecánica en el eje.</li>
+</ul>
+
+<p>
+Es importante tener en cuenta que la alarma <strong>Fanuc 411</strong> puede variar según el modelo de control y la serie de drives, por lo que un diagnóstico técnico completo suele ser necesario para identificar la causa real.
+</p>
+
+<p><strong>¿Tiene una máquina CNC con alarma Fanuc 411?</strong></p>
+
+<p>
+En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong>, husillos y servos.
+</p>
+
+<p>
+Si su máquina CNC presenta esta alarma o está parada, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
+</p>
+
+<p><strong>⚡ Para asistencia técnica, póngase en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+
+</div>
+
+</details>
+
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 414 – Digital Servo Alarm</strong> -Fallo en servo amplifier
+</summary>
+<div id="fanuc414">
+
+<p>
+La alarma <strong>414 Digital Servo Alarm</strong> aparece cuando el sistema
+de control detecta un problema en el funcionamiento del servo de uno de los ejes.
+Este error suele estar relacionado con el servo amplifier, el servomotor o
+la comunicación entre el control CNC y el sistema de servo.
+</p>
+
+<p>Las causas más habituales pueden ser:</p>
+
+<ul>
+<li>Fallo en el servo amplifier</li>
+<li>Problemas en el servomotor del eje</li>
+<li>Conexiones defectuosas en cables de potencia o señal</li>
+<li>Problemas en el encoder del eje</li>
+<li>Errores de comunicación entre el control CNC y el drive</li>
+</ul>
+
+<p>
+Cuando aparece esta alarma es recomendable comprobar primero el estado
+de los drives y verificar si existe alguna alarma adicional en el
+servo amplifier o en el módulo de alimentación.
+</p>
+
+<p>
+En algunos casos también puede ser necesario revisar el cableado del
+servomotor o el estado del encoder del eje.
+</p>
+
+<p>
+<strong>En CNC Systems contamos con amplia experiencia en el diagnóstico
+y reparación de averías en controles FANUC.</strong>
+Si su máquina CNC presenta la alarma <strong>Fanuc 414</strong> o cualquier
+otro problema que impida el funcionamiento normal de la máquina,
+no dude en ponerse en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a>  con nosotros para recibir asistencia técnica.
+</p>
+  </div>
+
+</details>
+
+
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 417 – Servo Error Excess</strong>- Error de seguimiento excesivo del eje
+</summary>
+<div id="fanuc417">
+<p>El <strong>error 417</strong> es uno de los fallos más comunes que pueden aparecer en los controles <strong>Fanuc</strong> durante la operación de la máquina. Este error generalmente indica un <strong>problema de comunicación entre la unidad de control y algún dispositivo externo</strong>, como un encoder, un PLC o un módulo de E/S.</p>
+  
+  <p>Los síntomas mas comunes que aparecen en el error 417 son:</p>
+  <ul>
+    <li>La máquina se detiene de forma inesperada.</li>
+    <li>En la pantalla aparece el mensaje: “<strong>Alarm 417: I/O Error</strong>” o “<strong>Communication Error</strong>”.</li>
+    <li>Algunos ejes pueden no moverse o responder de forma errática.</li>
+    <li>En casos de CNC con red Ethernet, puede aparecer junto con códigos de timeout de red.</li>
+  </ul>
+  
+  <p>Causas más comunes</p>
+  <ul>
+    <li><strong>Cableado defectuoso:</strong> conexiones flojas, empalmes mal hechos o cables dañados.</li>
+    <li><strong>Módulos de E/S con fallo:</strong> especialmente en sistemas antiguos, los módulos pueden dejar de responder.</li>
+    <li><strong>Interferencias eléctricas:</strong> maquinaria cercana o cambios recientes en la instalación eléctrica.</li>
+    <li><strong>Problemas de configuración:</strong> ajustes incorrectos en parámetros de comunicación o dirección de dispositivos externos.</li>
+  </ul>
+  
+  <p>Las soluciones recomendadas mas usuales serian:</p>
+  <ul>
+    <li>Revisar todas las conexiones físicas de la máquina, especialmente los cables de los módulos de E/S.</li>
+    <li>Comprobar los parámetros de comunicación en el control Fanuc y asegurarse de que coincidan con la configuración del hardware.</li>
+    <li>Sustituir el módulo de E/S o el dispositivo externo que no responde correctamente.</li>
+    <li>Reiniciar el CNC después de cualquier ajuste para validar que el error no se repita.</li>
+    <li>En máquinas con red Ethernet, comprobar que no haya conflictos de IP o problemas de red que afecten a la comunicación.</li>
+  </ul>
+  </br>
+  <p>
+<strong>En CNC Systems contamos con amplia experiencia en este tipo de errores</strong> no dude en ponerse en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a>  con nosotros para recibir asistencia técnica o asesoramiento.
+</p>
+  </div>
+
+</details>
+
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 430 – Servo Alarm / Axis Fault</strong> - Desviación de posición del eje
+</summary>
+<div id="fanuc430">
+
+<p>
+La alarma <strong>Fanuc 430</strong> es común en máquinas CNC con control Fanuc y
+suele estar relacionada con un <strong>problema en el servo o en el sensor de posición del eje</strong>.
+Este fallo puede detener la máquina y requiere revisión inmediata.
+</p>
+
+<p>
+Generalmente, la alarma indica que el eje afectado no recibe la señal correcta del
+encoder o resolver, lo que impide que el control funcione correctamente. También
+puede estar asociada a sobrecarga, interferencias eléctricas o parámetros de servo incorrectos.
+</p>
+
+<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+
+<ul>
+<li>Revisar el sensor de posición (encoder o resolver) del eje afectado y su cableado.</li>
+<li>Comprobar que los cables de servo estén bien conectados y sin daños.</li>
+<li>Verificar que los parámetros del servo estén correctamente configurados en el CNC.</li>
+<li>Asegurarse de que no haya sobrecarga ni interferencias externas en el eje.</li>
+<li>Sustituir el módulo de servo o sensor si se detecta fallo físico.</li>
+</ul>
+
+<p>
+Es importante tener en cuenta que la alarma <strong>Fanuc 430</strong>, dependiendo
+del modelo de control o de la generación de los servos, puede tener diferentes
+orígenes. Por ello, en muchos casos es necesario un diagnóstico técnico completo
+para identificar la causa real del problema.
+</p>
+
+<p><strong>¿Tiene una máquina CNC con alarma Fanuc 430?</strong></p>
+
+<p>
+En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico
+y reparación de averías en controles <strong>FANUC</strong>, servos y electrónica.
+</p>
+
+<p>
+Si su máquina CNC presenta una alarma o está parada por un problema en el control,
+servo o sensores, nuestro equipo técnico puede ayudarle a identificar la causa
+y encontrar la solución más adecuada.
+</p>
+
+<p><strong>⚡ Si necesita asistencia técnica para su máquina CNC,
+no dude en ponerse en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+
+</div>
+
+</details>
+
+
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 500 – Servo/Amplifier Alarm / General Servo Fault</strong> - Problema en servo o amplificador
+</summary>
+<div id="fanuc500">
+
+<p>
+La alarma <strong>Fanuc 500</strong> es un error genérico que indica un <strong>problema en el servo o en el amplificador</strong> de la máquina CNC.
+Este fallo puede afectar a cualquier eje y detener la operación hasta que se solucione.
+</p>
+
+<p>
+Generalmente, la alarma aparece cuando el servo detecta una condición fuera de sus límites normales, como sobrecarga, fallo eléctrico o fallo interno del amplificador. A diferencia de las alarmas 410 y 411, que están relacionadas únicamente con el husillo, la 500 puede afectar a cualquier eje de la máquina.
+</p>
+
+<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+
+<ul>
+<li>Revisar la alimentación eléctrica de los servos y amplificadores.</li>
+<li>Comprobar que los cables de servo estén correctamente conectados y sin daños.</li>
+<li>Verificar los parámetros del servo y amplificador en el CNC.</li>
+<li>Inspeccionar si hay sobrecarga mecánica o interferencias externas en el eje afectado.</li>
+<li>Sustituir el amplificador o servo si se detecta fallo físico.</li>
+</ul>
+
+<p>
+Es importante tener en cuenta que la alarma <strong>Fanuc 500</strong> puede tener diferentes causas dependiendo del modelo de control y de la generación de los servos, por lo que a menudo es necesario un diagnóstico técnico completo para identificar el origen real del problema.
+</p>
+
+<p><strong>¿Tiene una máquina CNC con alarma Fanuc 500?</strong></p>
+
+<p>
+En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong>, servos y amplificadores.
+</p>
+
+<p>
+Si su máquina CNC presenta una alarma o está parada por un problema en el control, servo o amplificador, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
+</p>
+
+<p><strong>⚡ Si necesita asistencia técnica para su máquina CNC,
+no dude en ponerse en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+
+</div>
+
+</details>
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 700 – Servo Overvoltage / Amplifier Fault</strong> - Problema en servo o amplificador
+</summary>
+<div id="fanuc700">
+
+<p>
+La alarma <strong>Fanuc 700</strong> indica un <strong>problema en el servo o amplificador</strong>, generalmente relacionado con un <strong>sobretensión o condición fuera de rango</strong>.
+Este fallo puede afectar a cualquier eje de la máquina y detener la operación para proteger los componentes.
+</p>
+
+<p>
+En muchas ocasiones, esta alarma se produce cuando el amplificador detecta un voltaje superior al permitido, un fallo interno del servo o un error de alimentación eléctrica.
+A diferencia de errores específicos como 410 o 411, la 700 es más general y puede afectar tanto al husillo como a ejes lineales.
+</p>
+
+<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+
+<ul>
+<li>Verificar la alimentación eléctrica de los servos y amplificadores, asegurando que los voltajes estén dentro de los rangos permitidos.</li>
+<li>Revisar los cables de servo y conexiones del amplificador para descartar daños o contactos flojos.</li>
+<li>Comprobar los parámetros del servo y amplificador en el CNC.</li>
+<li>Inspeccionar si hay sobrecarga mecánica o interferencias externas en el eje afectado.</li>
+<li>Sustituir el amplificador o servo si se detecta fallo físico o interno.</li>
+</ul>
+
+<p>
+Es importante tener en cuenta que la alarma <strong>Fanuc 700</strong> puede tener causas distintas según el modelo de control y la serie de servos, por lo que a menudo es necesario un diagnóstico técnico completo para determinar el origen exacto.
+</p>
+
+<p><strong>¿Tiene una máquina CNC con alarma Fanuc 700?</strong></p>
+
+<p>
+En <strong>CNC Systems</strong> contamos con experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong>, servos y amplificadores.
+</p>
+
+<p>
+Si su máquina CNC presenta esta alarma o está parada por un problema de sobrevoltaje o fallo en el amplificador, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
+</p>
+
+<p><strong>⚡ Para asistencia técnica, póngase en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+
+</div>
+
+</details>
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 750 – Servo Overcurrent / Amplifier Overload</strong> - Problema de sobrecorriente en servo o amplificador
+</summary>
+<div id="fanuc750">
+
+<p>
+La alarma <strong>Fanuc 750</strong> indica un <strong>problema de sobrecorriente</strong> en el servo o amplificador de la máquina CNC.
+Este fallo puede afectar a cualquier eje o al husillo, y detiene la máquina para proteger los componentes eléctricos.
+</p>
+
+<p>
+En muchos casos, la alarma se produce cuando el amplificador detecta un exceso de corriente debido a sobrecarga mecánica, interferencias externas o un fallo interno del servo.
+A diferencia de otras alarmas de servo genéricas, la 750 está específicamente asociada a <strong>corrientes superiores a los límites seguros</strong>.
+</p>
+
+<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+
+<ul>
+<li>Verificar si hay sobrecarga mecánica en el eje o husillo afectado.</li>
+<li>Revisar los cables de servo y conexiones del amplificador para detectar daños o contactos flojos.</li>
+<li>Comprobar los parámetros de servo y amplificador en el CNC y asegurarse de que estén correctos.</li>
+<li>Inspeccionar si existen interferencias externas que puedan provocar picos de corriente.</li>
+<li>Sustituir el amplificador o servo si se detecta un fallo físico o interno.</li>
+</ul>
+
+<p>
+Es importante tener en cuenta que la alarma <strong>Fanuc 750</strong> puede tener diferentes causas según el modelo de control y la serie de servos, por lo que un diagnóstico técnico completo suele ser necesario para identificar el origen exacto.
+</p>
+
+<p><strong>¿Tiene una máquina CNC con alarma Fanuc 750?</strong></p>
+
+<p>
+En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong>, servos y amplificadores.
+</p>
+
+<p>
+Si su máquina CNC presenta esta alarma o está parada por un problema de sobrecorriente, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
+</p>
+
+<p><strong>⚡ Para asistencia técnica, póngase en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+
+</div>
+
+</details>
+<details class="job-item">
+
+<summary>
+
+<strong>Fanuc Alarm 910 – I/O Error / Communication Fault</strong> - Problema en entrada/salida o comunicación
+</summary>
+<div id="fanuc910">
+
+<p>
+La alarma <strong>Fanuc 910</strong> indica un <strong>problema en el sistema de E/S o en la comunicación interna</strong> del CNC.
+Este fallo puede afectar la operación de los ejes, husillo o periféricos conectados a la máquina.
+</p>
+
+<p>
+La alarma 910 suele aparecer cuando un módulo de entrada/salida no responde, hay un fallo en la red interna de la máquina, o existe interferencia eléctrica que interrumpe la comunicación entre control y dispositivos externos.
+A diferencia de errores de servo o husillo, la 910 está centrada en <strong>señales digitales y comunicación interna</strong>.
+</p>
+
+<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+
+<ul>
+<li>Revisar los cables de los módulos de E/S y las conexiones entre ellos.</li>
+<li>Verificar que todos los dispositivos externos (sensores, actuadores, PLCs) respondan correctamente.</li>
+<li>Comprobar la configuración de red interna, direcciones de módulo y parámetros de comunicación en el CNC.</li>
+<li>Inspeccionar si hay interferencias eléctricas que puedan afectar la señal de E/S.</li>
+<li>Reiniciar la máquina después de cualquier ajuste para validar que la alarma no se repita.</li>
+</ul>
+
+<p>
+Es importante tener en cuenta que la alarma <strong>Fanuc 910</strong> puede tener causas distintas según el modelo de control y la generación de módulos de E/S, por lo que un diagnóstico técnico completo suele ser necesario para identificar el origen exacto.
+</p>
+
+<p><strong>¿Tiene una máquina CNC con alarma Fanuc 910?</strong></p>
+
+<p>
+En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong> y sistemas de E/S.
+</p>
+
+<p>
+Si su máquina CNC presenta esta alarma o está parada por un problema de comunicación o E/S, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
+</p>
+
+<p><strong>⚡ Para asistencia técnica, póngase en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+
+</div>
+
+</details>
+</div>
+<h3> Error de referencia de eje</h3>
+
+<p>
+Cuando una máquina CNC pierde la referencia de un eje, el control puede mostrar
+errores relacionados con la posición o con el sistema de medición.
+</p>
+
+<p>Este problema suele estar relacionado con:</p>
+
+<ul>
+<li>Fallos en el encoder</li>
+<li>Pérdida de batería del sistema de posición</li>
+<li>Problemas en el cableado del encoder</li>
+</ul>
+
+<p>
+En estos casos puede ser necesario realizar un nuevo proceso de referenciado
+o revisar el sistema de medición del eje.
+</p>
+
+<h3>Alarmas de comunicación</h3>
+
+<p>
+Algunas alarmas Fanuc están relacionadas con problemas de comunicación entre
+distintos módulos del control CNC.
+</p>
+
+<p>Esto puede deberse a:</p>
+
+<ul>
+<li>Fallos en el bus de comunicación</li>
+<li>Problemas en tarjetas electrónicas</li>
+<li>Conectores o cables deteriorados</li>
+</ul>
+
 </section><!-- Footer -->
+
+
+
+
+
 <footer class="site-footer">
 
  <div class="footer-inner">
