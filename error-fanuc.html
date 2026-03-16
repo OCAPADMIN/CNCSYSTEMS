@@ -123,59 +123,62 @@ O solicite una asistencia directamente     <a href="formulario.html" class="btn"
 
 <summary>
 
-<strong>Fanuc Alarm 401 – V Ready Off / DRDY Signal Off</strong> -	Problema en servo drive
-</summary>
+<strong>Fanuc Alarm 401 – V Ready Off / DRDY Signal Off</strong> -	Problema en servo drive   
+</summary> 
 <div id="fanuc401">
-
+</br>
+<strong><a href="error-401.html" class="contact-btn">💡 FICHA TECNICA DEL ERROR</a></strong>
+</br>
+<section class="alarma-401">
+  <h2>Alarma Fanuc 401: Diagnóstico y Precauciones</h2>
+  
+  <p>La alarma <strong>Fanuc 401</strong> es una de las más habituales en máquinas CNC con control Fanuc y, al mismo tiempo, una de las más complejas de diagnosticar. Su aparición indica un fallo en la preparación del sistema de servo, lo que impide cualquier movimiento seguro de la máquina.</p>
+  
+  <h3>Definición Técnica</h3>
+  <p>La alarma 401 se activa cuando la señal <strong>VRDY (Velocity Control Ready)</strong> del servoamplificador no está activa. Esto significa que, aunque el control NC haya enviado la orden de preparación a los motores, los amplificadores no han devuelto la confirmación de estado “Ready”.</p>
+  <p>No se trata de un error de software: es una <strong>interrupción física o electrónica</strong> en el circuito de potencia o en los sistemas de seguridad de los ejes. Habitualmente está relacionada con la alimentación de los <strong>servo drives</strong> o con los <strong>amplificadores de servo</strong>.</p>
+  
+  <h3>Causas Comunes</h3>
+  <ul>
+    <li>Fallos en la <strong>cadena de seguridad de 24 V</strong>.</li>
+    <li>Problemas en módulos críticos del armario eléctrico: <strong>PSM</strong> o <strong>SVM</strong>.</li>
+    <li>Fusibles fundidos o conectores sueltos en el rack de alimentación.</li>
+    <li>Temperatura excesiva o ventilación insuficiente en los amplificadores.</li>
+    <li>Señales de <strong>Emergency Stop</strong> retenidas o no liberadas correctamente.</li>
+    <li>Configuración incorrecta de parámetros de servo tras modificaciones recientes.</li>
+  </ul>
+  
+  <h3>Consecuencias</h3>
+  <ul>
+    <li>Bloquea todos los movimientos de la máquina (ejes X, Y, Z y cabezal).</li>
+    <li>No permite iniciar ciclos automáticos ni movimientos de homing.</li>
+    <li>Cualquier operación queda detenida hasta que se solucione el problema.</li>
+  </ul>
+  
+  <h3>Precauciones de Seguridad</h3>
+  <p>El diagnóstico de la alarma 401 implica manipulación de <strong>alto voltaje</strong> en el bus de corriente continua (DC Link) y comprobación de señales críticas. <strong>Un diagnóstico incorrecto o manipulación indebida puede dañar irreversiblemente los módulos electrónicos y encarecer la reparación.</strong></p>
+  <p><strong>No intente puentear señales de seguridad ni manipular el cableado interno.</strong></p>
+  
+  <h3>Puntos Clave de Inspección Profesional</h3>
+  <ul>
+    <li><strong>Códigos de Hardware:</strong> alarmas activas en los displays de siete segmentos de módulos de alimentación y ejes.</li>
+    <li>Integridad de la <strong>cadena de seguridad de 24 V</strong> y estado del conector de terminación <strong>JX1B</strong> (serie ALPHA).</li>
+    <li>Secuencia de conmutación del <strong>contactor MCC</strong> en el módulo de alimentación.</li>
+    <li>Correcta instalación del conector de terminación en el último servo drive del rack (serie FANUC ALPHA).</li>
+    <li>Alimentación de los amplificadores y secuencia de arranque del contactor principal.</li>
+    <li>Alarmas activas en el servo, spindle o módulo de alimentación.</li>
+    <li>Liberación real del <strong>Emergency Stop</strong> a nivel de señales de diagnóstico.</li>
+    <li>Estado de la batería de respaldo y parámetros de servo según la serie de CNC.</li>
+  </ul>
+  
+  <h3>Diagnóstico Especializado</h3>
+  <p>La alarma 401 puede tener <strong>diferentes causas según el modelo de control o la generación de los drives</strong>, por lo que muchas veces es necesario un diagnóstico técnico completo para localizar el módulo defectuoso.</p>
+</section>
+<p>  Este error requiere una medición precisa de voltajes en el bus 
+de corriente continua y una revisión de los códigos de estado en el hardware para identificar el módulo defectuoso. </p>
 
 <p>
-La alarma <strong>Fanuc 401</strong> es una de las alarmas más habituales y,
-al mismo tiempo, una de las que puede resultar más compleja de diagnosticar
-en máquinas CNC con control Fanuc.
-</p>
-
-<p>
-Esta alarma indica que la señal <strong>DRDY (Drive Ready)</strong> no está activa,
-lo que significa que el sistema de servo no está listo para funcionar.
-En muchos casos está relacionada con el sistema de alimentación de los
-servo drives o con el propio amplificador de servo.
-</p>
-
-<p>
-Si el circuito eléctrico de potencia que alimenta los drives funciona
-correctamente, es posible que el origen del problema se encuentre
-en el propio servo amplifier.
-</p>
-
-<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
-
-<ul>
-<li>Comprobar si los drives o amplificadores de servo se están alimentando correctamente.</li>
-<li>Verificar que el paro de emergencia (Emergency Stop) está correctamente liberado.</li>
-<li>En los drives de la serie <strong>FANUC ALPHA</strong>, comprobar que el último servo drive del rack tiene instalado el conector de terminación <strong>JX1B</strong>.</li>
-<li>Revisar el contacto <strong>MCC</strong> del módulo de alimentación (PSM) y comprobar que la secuencia de arranque es correcta.</li>
-<li>Comprobar si existe alguna alarma activa en el servo, en el spindle o en el módulo de alimentación.</li>
-</ul>
-
-<p>
-Es importante tener en cuenta que la alarma <strong>Fanuc 401</strong>, dependiendo
-del modelo de control o de la generación de los drives, puede estar
-provocada por diferentes causas dentro del sistema CNC.
-Por este motivo, en muchas ocasiones es necesario realizar un diagnóstico
-técnico completo para identificar el origen real del problema.
-</p>
-
-<p><strong>¿Tiene una máquina CNC con alarma Fanuc 401?</strong></p>
-
-<p>
-En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico
-y reparación de averías en controles <strong>FANUC</strong>.
-</p>
-
-<p>
-Si su máquina CNC presenta una alarma o se encuentra parada por un problema
-en el control, servo o electrónica, nuestro equipo técnico puede ayudarle
-a identificar la causa de la avería y encontrar una solución.
+En <strong> CNC Systems </strong> contamos con amplia experiencia y herramientas de diagnóstico específicas para resolver averías en controles <strong>FANUC</strong> de forma rápida y segura, minimizando el tiempo de parada de su producción
 </p>
 
 <p><strong>⚡ Si necesita asistencia técnica para su máquina CNC,
