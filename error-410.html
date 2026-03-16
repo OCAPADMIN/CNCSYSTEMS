@@ -75,13 +75,13 @@
   <div class="flex">
 <div class="why">    
 <div class="alarm-item">
-    <h1>Fanuc Alarm 401</h1>
+    <h1>Fanuc Alarm 410</h1>
     <div class="alarm-content">
-        <p><strong>La alarma Fanuc 401: </strong> SERVO ALARM (VRDY OFF)  </p>
+        <p><strong>La alarma Fanuc 410: </strong> SERVO ALARM (EXCESS ERROR) </p>
 		<div class="imagen-alarma">
-    <img src="images/fanuc-401.jpg" alt="Fanuc Alarm 401">
+    <img src="images/fanuc-410.jpg" alt="Fanuc Alarm 401">
     <p>
-        Ejemplo de visualización de la alarma <strong>Fanuc 401 – Servo Alarm (VRDY OFF)</strong>
+        Ejemplo de visualización de la alarma <strong>Fanuc 410 – SERVO ALARM (EXCESS ERROR)</strong>
         en la pantalla del control CNC. Esta alarma suele impedir el movimiento
         de los ejes hasta que el sistema de servo vuelve a estado ready.
     </p>
@@ -89,11 +89,13 @@
     
         <div class="summary-box">
             <h2>Resumen rápido:</h2>
-    <p><strong>Estado de la máquina:</strong> Inmovilizada.</p>
-	 <p><strong>Causa:</strong> Señal DRDY no activa. Fallo en el circuito de 24V o Paro de Emergencia.</p>
-     <p><strong>Riesgo:</strong> Un rearmado forzado puede quemar tarjetas electrónicas o módulos de potencia.</p>
-     <p><strong>Nivel de urgencia:</strong> Muy Alta (Máquina bloqueada)</p>
-			
+   <p>
+                <strong>Estado de la máquina: </strong>Inmovilizada.<br>
+                <strong>Causa:</strong> Error de exceso de posición (el eje no llega a donde debe).<br>
+                <strong>Solución rápida:</strong> Colisión mecánica, rotura de husillo o daños en el motor.<br>
+                <strong>Nivel de urgencia:</strong> Alta (Máquina bloqueada por seguridad).<br>
+               
+            </p>
 			</br>
 
 				<div class="accion-alarma">
@@ -102,12 +104,13 @@
 			</p></br>
         </div>
         <h3>Causas principales:</h3>
-        <ul>
-		    <li>Falta de alimentación (24VDC): Es la causa más común. El circuito de seguridad que alimenta los servos se ha interrumpido.</li>
-            <li>Paro de emergencia (E-Stop): Un botón de emergencia pulsado o un cable de emergencia cortado.</li>
-            <li>Fallo en el Servo Amplificador: El hardware del amplificador de un eje está dañado.</li>
-            <li>Problema de comunicación: El cable de fibra óptica o el cable de bus que comunica el control con los servos está suelto o dañado.</li>
-            <li>Módulo de potencia (PSM): El módulo que suministra energía a todos los servos no está dando el visto bueno (señal de Ready).</li>
+            <ul>
+            <li><strong>Bloqueo Mecánico:</strong> Falta de lubricación, virutas en las guías o rodamientos de apoyo dañados.</li>
+            <li><strong>Fallo en el Sistema de Medición:</strong> Lectura errónea del encoder del motor o de la regla óptica.</li>
+            <li><strong>Problema en el Freno:</strong> El freno del eje no se libera, forzando el motor hasta su límite térmico.</li>
+            <li><strong>Fallo en el Servo Amplificador (SVM):</strong> Incapacidad eléctrica para vencer la inercia del movimiento.</li>
+            <li><strong>Desajuste de Parámetros:</strong> Error en los límites de tolerancia del lazo de posición.</li>
+        
         </ul>
 <div class="imagen-alarma">
 		<img src="images/fanuc-alarm-401-servo-alarm.jpg"
@@ -120,24 +123,15 @@ o con el sistema de alimentación del servo.
 </br>    
 
 
-<h3>⚠️ IMPORTANTE: Riesgos de Manipulación</h3>
-<p> La alarma 401 <strong> no es un error de software </strong>que se solucione reiniciando. Es una interrupción física.</p>
-	 <p><strong>Peligro:</strong> Intentar puentear señales o manipular el armario eléctrico sin equipo de medición específico conlleva riesgo de electrocución y daños irreparables en el control Fanuc.</p>
-     <p><strong>Daños adicionales:</strong> Forzar el arranque repetidamente puede dañar el <strong>módulo de alimentación</strong>, una pieza extremadamente costosa.</p>
-     	
 
-<p>
-La alarma Fanuc 401 indica que el sistema de servo no está listo para
-funcionar correctamente. En la mayoría de los casos <strong>la máquina no podrá
-continuar trabajando</strong> hasta que se identifique el origen del problema.
-</p>
+<h3>⚠️ ADVERTENCIA: RIESGO DE DAÑO MECÁNICO</h3>
+    <p>La alarma Fanuc 410 es una medida de protección del CNC para evitar un impacto inminente. El control detecta que el motor está haciendo fuerza pero el eje no se mueve a la velocidad correcta.</p>
     
     <p style="background: #e63946; color: white; padding: 10px; font-weight: bold;">
-Intentar reiniciar la máquina repetidamente sin diagnosticar la causa
-puede <strong> provocar daños adicionales </strong> en el sistema de servo o en el módulo
-de alimentación.
+        "Intentar reiniciar la máquina repetidamente sin diagnosticar la causa puede provocar daños estructurales catastróficos en los husillos de bolas, los rodamientos de apoyo o el propio motor de servo."
     </p>
 
+    <p><strong>Consecuencia de manipulación indebida:</strong> Forzar el sistema para 'intentar que camine' suele terminar en una <strong>colisión mecánica severa</strong> o en el quemado de los devanados del motor por sobreesfuerzo, transformando una intervención técnica sencilla en una reconstrucción completa de la máquina.</p>
 <p>
 Se recomienda detener la producción y contactar con el servicio técnico
 especializado para realizar el diagnóstico del sistema.
