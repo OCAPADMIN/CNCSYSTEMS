@@ -192,50 +192,70 @@ no dude en ponerse en <a href="contact.html" data-en="Contact" data-es="contacto
 
 <summary>
 
-<strong>Fanuc Alarm 410 – Eje + / Spindle Overload</strong> - Límite positivo de eje o sobrecarga de husillo
-</summary>
+<strong>Fanuc Alarm 410 – Eje + / Spindle Overload</strong> - Límite positivo de eje o sobrecarga de husillo  
+</summary> 
+<div id="fanuc410">
 </br>
 <strong><a href="error-410.html" class="contact-btn">💡 FICHA TECNICA DEL ERROR</a></strong>
 </br>
-<div id="fanuc410">
 
-<p>
-La alarma <strong>Fanuc 410</strong> puede aparecer por dos motivos principales dependiendo del tipo de máquina y del control Fanuc:
-</p>
+<section class="alarma-410">
+  <h2>Alarma Fanuc 410: Diagnóstico y Precauciones</h2>
+  
+  <p>La alarma <strong>Fanuc 410</strong> es relativamente frecuente en máquinas CNC con control Fanuc y puede tener dos interpretaciones principales dependiendo del tipo de máquina y configuración. En ambos casos, implica una condición crítica que detiene la máquina para evitar daños mecánicos o eléctricos.</p>
 
-<ul>
-<li>En máquinas de fresado o torneado modernas, indica una <strong>sobrecarga del husillo (Spindle Overload)</strong> durante la operación.</li>
-<li>En máquinas de eje lineal, señala que el eje ha alcanzado su <strong>límite positivo (+) de recorrido</strong>.</li>
-</ul>
+  <h3>¿Qué significa la alarma Fanuc 410?</h3>
+  
+  <p>Esta alarma puede aparecer en dos situaciones diferentes:</p>
+  
+  <ul>
+    <li><strong>Sobrecarga de husillo (Spindle Overload):</strong> el motor del husillo está trabajando por encima de su capacidad.</li>
+    <li><strong>Límite positivo de eje (+):</strong> un eje lineal ha alcanzado el final de su recorrido permitido.</li>
+  </ul>
 
-<p>
-En ambos casos, la máquina se detiene automáticamente para evitar daños y requiere revisión inmediata.
-</p>
+  <p>La interpretación exacta depende del tipo de máquina (torno, fresadora, etc.) y de la configuración del control.</p>
 
-<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+  <h3>Causas más comunes</h3>
 
-<ul>
-<li>Si se trata de husillo: comprobar herramientas, velocidad, avance y carga de material.</li>
-<li>Si se trata de límite de eje: verificar los topes físicos y sensores de fin de carrera.</li>
-<li>Revisar parámetros de servo y configuración de límites en el CNC.</li>
-<li>Comprobar que no haya interferencias eléctricas ni sobrecarga mecánica en el eje.</li>
-</ul>
+  <ul>
+    <li>Condiciones de mecanizado demasiado exigentes (avance, profundidad o velocidad excesivos).</li>
+    <li>Herramienta desgastada o incorrecta.</li>
+    <li>Colisión o esfuerzo mecánico excesivo en el eje o husillo.</li>
+    <li>Fin de carrera activado o mal ajustado.</li>
+    <li>Parámetros de límites mal configurados en el CNC.</li>
+    <li>Problemas eléctricos o en el servo drive.</li>
+  </ul>
 
-<p>
-Es importante tener en cuenta que la alarma <strong>Fanuc 410</strong> puede variar según el modelo de control y la serie de drives, por lo que un diagnóstico técnico completo suele ser necesario para identificar la causa real.
-</p>
+  <h3>Comprobaciones básicas recomendadas</h3>
 
-<p><strong>¿Tiene una máquina CNC con alarma Fanuc 410?</strong></p>
+  <ul>
+    <li>Revisar carga del husillo en pantalla durante el mecanizado.</li>
+    <li>Verificar herramientas, material y condiciones de corte.</li>
+    <li>Comprobar si algún eje ha alcanzado su tope físico.</li>
+    <li>Revisar sensores de fin de carrera y cableado.</li>
+    <li>Comprobar parámetros de límites y configuración del CNC.</li>
+    <li>Inspeccionar posibles bloqueos mecánicos o interferencias.</li>
+  </ul>
 
-<p>
-En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong>, husillos y servos.
-</p>
+  <h3>Recomendaciones de seguridad</h3>
 
-<p>
-Si su máquina CNC presenta esta alarma o está parada, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
-</p>
+  <p>No se recomienda reiniciar la máquina sin antes identificar la causa, ya que podría provocar daños en el husillo, en los ejes o incluso una colisión. En caso de sobrecarga repetitiva, es fundamental detener el proceso y revisar las condiciones de mecanizado.</p>
 
-<p><strong>⚡ Para asistencia técnica, póngase en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+  <p>Debido a que la alarma <strong>Fanuc 410</strong> puede tener distintos orígenes según la máquina, un diagnóstico técnico detallado suele ser necesario para resolverla de forma definitiva.</p>
+
+  <p><strong>¿Tiene una máquina CNC con alarma Fanuc 410?</strong></p>
+
+  <p>
+  En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong>, husillos y servos.
+  </p>
+
+  <p>
+  Si su máquina CNC presenta esta alarma o está parada, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
+  </p>
+
+  <p><strong>⚡ Para asistencia técnica, póngase en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+
+</section>
 
 </div>
 
@@ -244,52 +264,74 @@ Si su máquina CNC presenta esta alarma o está parada, nuestro equipo técnico 
 
 <summary>
 
-<strong>Fanuc Alarm 411 – Eje − / Spindle Overrun</strong> - Límite negativo de eje o sobrevelocidad de husillo
-</summary>
+<strong>Fanuc Alarm 411 – Eje − / Spindle Overrun</strong> - Límite negativo de eje o sobrevelocidad de husillo  
+</summary> 
 <div id="fanuc411">
+</br>
+<strong><a href="error-411.html" class="contact-btn">💡 FICHA TECNICA DEL ERROR</a></strong>
+</br>
 
-<p>
-La alarma <strong>Fanuc 411</strong> puede aparecer por dos motivos principales dependiendo del tipo de máquina y del control Fanuc:
-</p>
+<section class="alarma-411">
+  <h2>Alarma Fanuc 411: Diagnóstico y Precauciones</h2>
+  
+  <p>La alarma <strong>Fanuc 411</strong> es habitual en máquinas CNC con control Fanuc y, al igual que la 410, puede tener diferentes interpretaciones según la configuración. En todos los casos, indica una condición fuera de límites que obliga a detener la máquina para evitar daños.</p>
 
-<ul>
-<li>En máquinas de fresado o torneado modernas, indica <strong>sobrevelocidad o sobrerecorrido del husillo (Spindle Overrun)</strong>.</li>
-<li>En máquinas de eje lineal, señala que el eje ha alcanzado su <strong>límite negativo (−) de recorrido</strong>.</li>
-</ul>
+  <h3>¿Qué significa la alarma Fanuc 411?</h3>
+  
+  <p>Esta alarma puede aparecer en dos situaciones principales:</p>
+  
+  <ul>
+    <li><strong>Sobrevelocidad o sobrerecorrido del husillo (Spindle Overrun):</strong> el husillo supera los límites seguros de funcionamiento.</li>
+    <li><strong>Límite negativo de eje (−):</strong> un eje lineal ha alcanzado el final de su recorrido en sentido negativo.</li>
+  </ul>
 
-<p>
-En ambos casos, la máquina se detiene para evitar daños y requiere revisión antes de continuar la operación.
-</p>
+  <p>El significado exacto dependerá del tipo de máquina (torno, fresadora, centro de mecanizado, etc.) y de la configuración del control.</p>
 
-<p>Algunas comprobaciones básicas que se pueden realizar son:</p>
+  <h3>Causas más comunes</h3>
 
-<ul>
-<li>Si se trata de husillo: comprobar velocidad, avance y carga de material, así como estado de la herramienta.</li>
-<li>Si se trata de límite de eje: verificar los topes físicos y sensores de fin de carrera.</li>
-<li>Revisar parámetros de servo y configuración de límites en el CNC.</li>
-<li>Comprobar que no haya interferencias eléctricas ni sobrecarga mecánica en el eje.</li>
-</ul>
+  <ul>
+    <li>Velocidad de husillo superior a la programada o permitida.</li>
+    <li>Errores en la programación CNC o parámetros incorrectos.</li>
+    <li>Herramienta inadecuada o en mal estado.</li>
+    <li>Activación del fin de carrera en el eje negativo.</li>
+    <li>Desajustes en parámetros de límites de recorrido.</li>
+    <li>Problemas en el servo drive o en el sistema de control.</li>
+  </ul>
 
-<p>
-Es importante tener en cuenta que la alarma <strong>Fanuc 411</strong> puede variar según el modelo de control y la serie de drives, por lo que un diagnóstico técnico completo suele ser necesario para identificar la causa real.
-</p>
+  <h3>Comprobaciones básicas recomendadas</h3>
 
-<p><strong>¿Tiene una máquina CNC con alarma Fanuc 411?</strong></p>
+  <ul>
+    <li>Verificar la velocidad real del husillo en pantalla.</li>
+    <li>Revisar condiciones de corte (avance, velocidad, profundidad).</li>
+    <li>Comprobar si algún eje ha alcanzado su límite negativo.</li>
+    <li>Inspeccionar sensores de fin de carrera y cableado.</li>
+    <li>Revisar parámetros del CNC relacionados con límites y velocidad.</li>
+    <li>Detectar posibles interferencias mecánicas o bloqueos.</li>
+  </ul>
 
-<p>
-En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong>, husillos y servos.
-</p>
+  <h3>Recomendaciones de seguridad</h3>
 
-<p>
-Si su máquina CNC presenta esta alarma o está parada, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
-</p>
+  <p>No se recomienda continuar la operación ni resetear la alarma sin antes identificar la causa. La sobrevelocidad del husillo o el impacto contra un límite pueden provocar daños graves en la máquina o en la herramienta.</p>
 
-<p><strong>⚡ Para asistencia técnica, póngase en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+  <p>Debido a que la alarma <strong>Fanuc 411</strong> puede tener distintos orígenes según la máquina, es recomendable realizar un diagnóstico técnico completo para asegurar una solución definitiva.</p>
+
+  <p><strong>¿Tiene una máquina CNC con alarma Fanuc 411?</strong></p>
+
+  <p>
+  En <strong>CNC Systems</strong> contamos con amplia experiencia en el diagnóstico y reparación de averías en controles <strong>FANUC</strong>, husillos y servos.
+  </p>
+
+  <p>
+  Si su máquina CNC presenta esta alarma o está parada, nuestro equipo técnico puede ayudarle a identificar la causa y encontrar la solución más adecuada.
+  </p>
+
+  <p><strong>⚡ Para asistencia técnica, póngase en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+
+</section>
 
 </div>
 
 </details>
-
 <details class="job-item">
 
 <summary>
@@ -530,6 +572,63 @@ Si su máquina CNC presenta esta alarma o está parada por un problema de sobrev
 
 </div>
 
+</details>
+<details class="job-item">
+  <summary>
+    <strong>Fanuc Alarm 701 – Fan Motor Overheat</strong> - Fallo en ventilador de la unidad de control
+  </summary>
+  <div id="fanuc701">
+    <br>
+    <strong><a href="error-701.html" class="contact-btn">💡 FICHA TECNICA DEL ERROR</a></strong>
+    <br>
+    <section class="alarma-701">
+      <h2>Alarma Fanuc 701: Diagnóstico y Precauciones</h2>
+      
+      <p>La alarma <strong>Fanuc 701</strong> es una señal de advertencia crítica relacionada con la gestión térmica del control CNC. Indica que el ventilador de refrigeración de la unidad de control o del módulo principal ha reducido su velocidad o se ha detenido por completo.</p>
+      
+      <h3>Definición Técnica</h3>
+      <p>El sistema de control monitoriza constantemente las RPM de los ventiladores internos. La alarma 701 se dispara cuando el sensor de velocidad detecta que el flujo de aire es insuficiente para mantener la electrónica en una temperatura de operación segura. A diferencia de otros errores, este suele dar un margen de tiempo antes de bloquear el sistema por completo para evitar daños térmicos irreversibles.</p>
+      
+      <h3>Causas Comunes</h3>
+      <ul>
+        <li>Acumulación de <strong>polvo, viruta o aceite</strong> en las aspas del ventilador.</li>
+        <li>Final de la vida útil del rodamiento del motor del ventilador.</li>
+        <li>Fallo en el cableado de alimentación o en el conector de señal del ventilador hacia la placa base.</li>
+        <li>Obstrucción de las rejillas de ventilación del armario eléctrico.</li>
+        <li>Fallo en la placa de circuito impreso que procesa la señal de velocidad.</li>
+      </ul>
+      
+      <h3>Consecuencias</h3>
+      <ul>
+        <li>Riesgo de sobrecalentamiento en la CPU y memorias del CNC.</li>
+        <li>Paradas intermitentes de la máquina por protección térmica.</li>
+        <li>Reducción de la vida útil de los componentes electrónicos internos.</li>
+        <li>Si no se soluciona, puede derivar en fallos de hardware mucho más costosos.</li>
+      </ul>
+      
+      <h3>Precauciones de Seguridad</h3>
+      <p>Aunque parece un fallo menor, el diagnóstico requiere abrir la unidad de control. <strong>Cualquier manipulación de las placas electrónicas debe hacerse con el equipo apagado y con protección contra descargas electrostáticas (ESD).</strong></p>
+      <p><strong>No ignore esta alarma operando la máquina con el armario abierto</strong>, ya que esto altera el flujo de aire diseñado y permite la entrada de contaminantes externos.</p>
+      
+      <h3>Puntos Clave de Inspección Profesional</h3>
+      <ul>
+        <li><strong>Inspección Visual:</strong> Comprobar si el ventilador gira físicamente al encender el control.</li>
+        <li><strong>Limpieza Técnica:</strong> Uso de aire comprimido seco para eliminar residuos sin dañar los componentes.</li>
+        <li><strong>Verificación de Voltaje:</strong> Comprobar la llegada de 24 V (habitualmente) al conector del ventilador.</li>
+        <li><strong>Sustitución Preventiva:</strong> Los ventiladores son componentes consumibles con horas de vida limitadas; se recomienda el cambio por repuestos originales para asegurar el flujo de aire (CFM) correcto.</li>
+        <li><strong>Estado de Filtros:</strong> Revisión de los filtros externos del armario eléctrico que pueden estar asfixiando el sistema.</li>
+      </ul>
+      
+      <h3>Diagnóstico Especializado</h3>
+      <p>Dependiendo de la serie de Fanuc (i-Series, 0i, 31i), el ventilador afectado puede estar integrado en la pantalla LCD o en el rack del CNC. Un técnico especializado puede identificar exactamente qué unidad está fallando mediante el registro de diagnósticos internos.</p>
+    </section>
+
+    <p>Este error requiere una intervención rápida para evitar que el calor dañe los procesadores principales del sistema CNC.</p>
+
+    <p> En <strong>CNC Systems</strong> disponemos de stock de ventiladores originales y recambios críticos para controles <strong>FANUC</strong>, garantizando una reparación inmediata para que su producción no se detenga.</p>
+
+    <p><strong>⚡ Si necesita asistencia técnica para su máquina CNC, no dude en ponerse en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
+  </div>
 </details>
 <details class="job-item">
 
