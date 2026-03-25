@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervenciones Técnicas | CNC Systems</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: #f4f7f9; }
+        header { background: #004a99; color: white; padding: 2rem text-align: center; }
+        .container { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
+        
+        /* Filtros Rápidos */
+        .filters { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+        .filter-btn { background: white; border: 1px solid #004a99; color: #004a99; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .filter-btn.active { background: #004a99; color: white; }
+
+        /* Grid de Intervenciones */
+        .interventions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        
+        /* Tarjeta de Caso Real */
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #004a99; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-img { width: 100%; height: 200px; background: #ddd; object-fit: cover; }
+        .card-content { padding: 20px; }
+        
+        /* SEO Tags */
+        .error-tag { background: #ffeded; color: #d93025; padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+        .machine-type { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        
+        h2 { font-size: 1.25rem; margin: 10px 0; color: #004a99; }
+        p { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
+        
+        .btn-read-more { display: inline-block; text-decoration: none; color: #004a99; font-weight: bold; border-bottom: 2px solid #004a99; transition: 0.2s; }
+        .btn-read-more:hover { color: #d93025; border-color: #d93025; }
+
+        /* Botón Pánico Emergencia */
+        .emergency-banner { background: #d93025; color: white; padding: 20px; border-radius: 8px; margin-top: 50px; text-align: center; }
+        .emergency-btn { background: white; color: #d93025; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Diario de Intervenciones CNC</h1>
+    <p>Casos reales de reparación y mantenimiento a pie de máquina</p>
+</header>
+
+<div class="container">
+    
+    <div class="filters">
+        <button class="filter-btn active">Todos</button>
+        <button class="filter-btn">Control Fanuc</button>
+        <button class="filter-btn">Electrónica</button>
+        <button class="filter-btn">Mecánica/Husillos</button>
+        <button class="filter-btn">Retrofitting</button>
+    </div>
+
+    <div class="interventions-grid">
+        
+        <article class="card">
+            <img src="https://via.placeholder.com/400x250?text=Reparacion+Fanuc+Servo" alt="Reparación Servo Fanuc" class="card-img">
+            <div class="card-content">
+                <span class="error-tag">ALERTA: ERROR 414 SERVO ALARM</span>
+                <div class="machine-type">Torno CNC Doosan</div>
+                <h2>Fallo en eje Z: Diagnóstico y cambio de módulo</h2>
+                <p>Intervención de urgencia por sobreintensidad en el servoamplificador. Analizamos el cableado de potencia y sustituimos el módulo Fanuc Alpha...</p>
+                <a href="#" class="btn-read-more">Ver diagnóstico completo →</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://via.placeholder.com/400x250?text=Sustitucion+Husillo" alt="Sustitución Husillo" class="card-img">
+            <div class="card-content">
+                <span class="error-tag">MANTENIMIENTO PREVENTIVO</span>
+                <div class="machine-type">Centro de Mecanizado Haas</div>
+                <h2>Sustitución de Husillo y Rodamientos de Precisión</h2>
+                <p>Ruido excesivo a altas revoluciones. Realizamos el equilibrado dinámico y ajuste de precarga en menos de 48 horas para evitar parada...</p>
+                <a href="#" class="btn-read-more">Ver detalles técnicos →</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://via.placeholder.com/400x250?text=Retrofitting+Siemens" alt="Retrofitting CNC" class="card-img">
+            <div class="card-content">
+                <span class="error-tag">RETROFITTING COMPLETO</span>
+                <div class="machine-type">Fresadora Bancada Fija</div>
+                <h2>Actualización de control antiguo a Siemens Sinumerik One</h2>
+                <p>Transformación total de una fresadora de 15 años. Mejora de la precisión del 40% y teleasistencia integrada para soporte remoto.</p>
+                <a href="#" class="btn-read-more">Ver proyecto de ingeniería →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="emergency-banner">
+        <h3>¿Tu máquina está parada por un error similar?</h3>
+        <p>No pierdas dinero por cada hora de inactividad. Nuestros técnicos están listos.</p>
+        <a href="tel:600000000" class="emergency-btn">SOLICITAR ASISTENCIA INMEDIATA</a>
+    </section>
+
+</div>
+
+</body>
+</html>
