@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Diagnóstico y solución de la alarma Fanuc 411. Servicio técnico CNC especializado en averías de husillo, servo y límites de eje. Asistencia rápida.">
   <meta name="keywords" content="fanuc alarm 411, error fanuc 411, spindle overrun fanuc, limite eje negativo cnc, reparacion cnc"> 
-  <title>Fanuc Alarm 411 Spindle Overrun | Solución y Asistencia CNC</title>
+  <title>Fanuc Alarm 414 Digital Servo Alarm | Solución y Asistencia CNC</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -72,69 +72,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="why">    
       <div class="alarm-item">
 
-        <h1>Fanuc Alarm 411</h1>
+        <h1>Fanuc Alarm 414</h1>
 
         <div class="alarm-content">
 
-          <p><strong>La alarma Fanuc 411:</strong> SPINDLE OVERRUN / NEGATIVE OVERTRAVEL</p>
+         <p><strong>La alarma Fanuc 414:</strong> DIGITAL SERVO ALARM</p>
 
           <div class="imagen-alarma">
-            <img src="images/fanuc-411.jpg" alt="Pantalla CNC Fanuc mostrando alarma 411 spindle overrun">
+            <img src="images/fanuc-414.jpg" alt="Pantalla CNC Fanuc mostrando alarma 414 digital servo alarm">
             <p>
-              El control CNC muestra la <strong>alarma 411</strong>, indicando que el husillo ha superado su velocidad segura o que un eje ha alcanzado su límite negativo de recorrido. Esta situación requiere detener la máquina y revisar tanto condiciones de mecanizado como límites de recorrido.
+              El control CNC muestra la <strong>alarma 414</strong>,  indica que el eje no alcanza la posición programada, generando un error de seguimiento.Este error aparece cuando la diferencia entre posición real y teórica supera el límite permitido."
             </p>
           </div>
 
           <div class="summary-box">
             <h2>Resumen rápido:</h2>
             <p>
-              <strong>Estado de la máquina:</strong> Parada por seguridad.<br>
-              <strong>Causa:</strong> Sobrevelocidad de husillo o eje en límite negativo.<br>
-              <strong>Solución rápida:</strong> Revisar parámetros, sensores y condiciones de mecanizado.<br>
-              <strong>Nivel de urgencia:</strong> Alta.<br>
-            </p>
+			<strong>Estado de la máquina:</strong> Parada.<br>
+			<strong>Causa:</strong> Fallo en servo o comunicación.<br>
+			<strong>Solución rápida:</strong> Revisar drive, motor y cableado.<br>
+			<strong>Nivel de urgencia:</strong> Alta.
+			</p>
             </br>
 
             <div class="accion-alarma">
-              <b>🛑 DETENER MÁQUINA Y VERIFICAR CONDICIONES DE FUNCIONAMIENTO</b> 
+              <b>🛑 DETENER MÁQUINA Y COMPROBAR SISTEMA DE SERVO</b>
+ 
             </div>
 
           </div>
 
           <h3>Causas principales:</h3>
-          <ul>
-            <li><strong>Exceso de velocidad:</strong> El husillo supera el límite configurado.</li>
-            <li><strong>Error de programación:</strong> Valores incorrectos de RPM o avance.</li>
-            <li><strong>Fin de carrera activado:</strong> El eje alcanza el límite negativo.</li>
-            <li><strong>Problema en sensores:</strong> Fallo en finales de carrera o cableado.</li>
-            <li><strong>Desajuste de parámetros:</strong> Límites mal configurados en el CNC.</li>
-            <li><strong>Fallo en servo drive:</strong> Problemas de control del movimiento.</li>
-          </ul>
+         <ul>
+		<li><strong>Fallo en el servo amplifier:</strong> incapacidad del drive para controlar el eje.</li>
+		<li><strong>Problema en el servomotor:</strong> desgaste, bloqueo o fallo interno.</li>
+		<li><strong>Error en encoder:</strong> pérdida de señal o lectura incorrecta.</li>
+		<li><strong>Cableado defectuoso:</strong> conexiones flojas o dañadas.</li>
+		<li><strong>Fallo de comunicación CNC-servo:</strong> errores en señal o parámetros.</li>
+		</ul>
 
           <div class="imagen-alarma">
-            <img src="images/fanuc-alarm-411.jpg" alt="Fanuc Alarm 411 en control CNC">
+            <img src="images/fanuc-alarm-414.jpg" alt="Fanuc Alarm 414 en control CNC">
             <p>
-              La alarma <strong>Fanuc 411</strong> puede producirse cuando el husillo excede su velocidad segura o cuando un eje alcanza su límite negativo. Este tipo de fallo suele estar relacionado con parámetros incorrectos, sensores o condiciones de mecanizado inadecuadas.
+				<strong>Hardware relacionado con el Error Fanuc 414:</strong> Localización de los servosistemas afectados. En este punto se debe verificar el código numérico en el panel de <strong>STATUS </strong>de cada módulo amarillo para determinar cuál de los tres ejes está enviando la señal de error de detección al control principal
+              
             </p>
           </div>
 
-          <div class="importante">
+			   <div class="importante">
 
-            <h3>⚠️ ADVERTENCIA: RIESGO DE DAÑO EN HUSILLO O COLISIÓN</h3>
+			<h3>⚠️ ADVERTENCIA: RIESGO DE DAÑO EN SERVO Y ELECTRÓNICA</h3>
 
-            <p>
-              La alarma Fanuc 411 protege la máquina frente a condiciones fuera de rango. Ignorarla puede provocar daños graves en el husillo o impactos mecánicos en los ejes.
-            </p>
+			<p>
+			La alarma Fanuc 414 indica un fallo en el sistema de servo digital. Ignorar este error puede provocar daños progresivos en el servo amplifier, el servomotor o el sistema de control.
+			</p>
 
-            <p style="background: #e63946; color: white; padding: 15px; font-weight: bold; border-radius: 4px; text-align: center;">
-              "Forzar el funcionamiento del husillo o ignorar los límites de recorrido puede causar averías graves en el sistema mecánico y electrónico."
-            </p>
+			<p style="background: #e63946; color: white; padding: 15px; font-weight: bold; border-radius: 4px; text-align: center;">
+			"Forzar el funcionamiento con un fallo de servo puede provocar averías irreversibles en el amplificador o en el motor."
+			</p>
 
-            <p style="margin-top: 15px;">
-              <strong>Consecuencia:</strong> Desde desajustes en el sistema hasta rotura de componentes críticos como rodamientos, motores o guías lineales.
-            </p>
+			<p style="margin-top: 15px;">
+			<strong>Consecuencia:</strong> Desde pérdida de precisión y movimientos erráticos hasta la rotura completa del servo amplifier o del servomotor, incrementando considerablemente el coste de reparación.
+			</p>
 
-          </div>
+			</div>
 
           <p>
             Se recomienda <strong>detener la máquina y contactar con servicio técnico</strong> para realizar un diagnóstico completo.
@@ -150,8 +151,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="relacionados">
   <h3>🔎 Alarmas relacionadas FANUC</h3>
   <ul>
-    <li><a href="error-401.html">Fanuc Alarm 401 – Servo Ready Off</a></li>
-    <li><a href="error-410.html">Fanuc Alarm 410 – Spindle Overrun / Límite positivo</a></li>
+    
+    <li><a href="error-410.html">Fanuc Alarm 410 – Eje + / Spindle OverloadT</a></li>
+	<li><a href="error-411.html">Fanuc Alarm 411 – Eje − / Spindle Overrun</a></li>
 	<li><a href="error-417.html">Fanuc Alarm 417 – Servo Error Excess</a></li>
 	<li><a href="error-430.html">Fanuc Alarm 430 – Servo Alarm / Axis Fault</a></li>
   </ul>
