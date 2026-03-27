@@ -103,6 +103,7 @@ nav a:hover {
 }
 .equipo-why {
   width: 90%;
+  
   margin: 60px auto; /* separación superior e inferior */
 }
 
@@ -110,9 +111,9 @@ nav a:hover {
 .equipo-why h1 {
   
   margin-bottom: 15px;
+
   color: #e63946;
   font-size: 2.5rem;
-  max-width: 600px;
 }
 
 
@@ -1424,3 +1425,174 @@ margin:20px 0;
             border-radius: 20px;
             text-align: center;
         }
+
+
+ /* Filtros Rápidos */
+        .filters { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; justify-content: center; }
+        .filter-btn { background: white; border: 1px solid #e9ecef; color: #e63946; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .filter-btn.active { background: #e63946; color: white; }
+
+        /* --- Estilos del NUEVO Carrusel --- */
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden; /* Oculta las cards que no caben */
+            padding: 10px 0;
+        }
+
+        .interventions-track {
+            display: flex;
+            gap: 20px; /* Espacio entre cards */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Ajuste de las Cards para el carrusel */
+        .cardi { 
+            background: white; 
+            border-radius: 8px; 
+			  overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            border-top: 5px solid #e63946; 
+            transition: transform 0.3s;
+            /* Cálculo para mostrar 3 cards (restando el gap) */
+            flex: 0 0 calc(33.333% - 14px); 
+            box-sizing: border-box;
+        }
+
+        /* Responsividad: 2 cards en tablets y 1 en móviles */
+        @media (max-width: 992px) { .cardi { flex: 0 0 calc(50% - 10px); } }
+        @media (max-width: 600px) { .cardi { flex: 0 0 100%; } }
+
+        .cardi:hover { transform: translateY(-5px); }
+        .card-img { width: 100%; height: 200px; background: #ddd; object-fit: cover; }
+        .card-content { padding: 20px; }
+        
+        .error-tag { background: #ffeded; color: #d93025; padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+        .machine-type { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        h2 { font-size: 1.25rem; margin: 10px 0; color: #e63946; }
+        p { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
+        .btn-read-more { display: inline-block; text-decoration: none; color: #e63946; font-weight: bold; border-bottom: 2px solid #e63946; transition: 0.2s; }
+
+        /* Controles del carrusel */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #e63946;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .nav-btn:disabled { background: #ccc; cursor: not-allowed; }
+        .prev-btn { left: 0; }
+        .next-btn { right: 0; }
+
+        .emergency-banner { background: #d93025; color: white; padding: 20px; border-radius: 8px; margin-top: 50px; text-align: center; }
+        .emergency-btn { background: white; color: #d93025; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; margin-top: 10px; }		
+		
+		.cta-final {
+ background: #e9ecef;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+  color: white;
+  
+}
+
+.cta-contenido h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta-contenido p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.cta-botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-llamar, .btn-contacto, .btn-whatsapp {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-llamar {
+  background-color: #2563eb;
+  color: white;
+  transform: scale(1.05);
+}
+
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+}
+.btn-contacto {
+  background-color: #ffffff;
+  color: #1e3a8a;
+}
+
+.btn-llamar:hover {
+ background-color: #1d4ed8; /* un poco más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.btn-whatsapp:hover {
+  background-color: #16a34a;
+    transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.btn-contacto:hover {
+  background-color: #e5e7eb;
+    transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.card.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: white;
+  width: 80%;
+  max-width: 600px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}

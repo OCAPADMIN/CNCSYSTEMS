@@ -1,74 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intervenciones Técnicas | CNC Systems</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PNLQP6N9');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicio técnico especializado en reparación de maquinaria CNC. Diagnóstico de averías, mantenimiento y asistencia técnica para centros de mecanizado y tornos CNC. Asistencia SAT.">
+  <meta name="keywords" content="servicio tecnico cnc, reparacion cnc, mantenimiento cnc, sat cnc, reparacion maquinaria cnc"> 
+  <title>Intervenciones Técnicas |Asistencia SAT| Reparación y mantenimiento de maquinaria CNC | CNC Systems</title>
+  <link rel="stylesheet" href="styles.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: #f4f7f9; }
-        header { background: #004a99; color: white; padding: 2rem text-align: center; }
-        .container { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
         
-        /* Filtros Rápidos */
-        .filters { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
-        .filter-btn { background: white; border: 1px solid #004a99; color: #004a99; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        .filter-btn.active { background: #004a99; color: white; }
-
-        /* Grid de Intervenciones */
-        .interventions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        
-        /* Tarjeta de Caso Real */
-        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #004a99; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card-img { width: 100%; height: 200px; background: #ddd; object-fit: cover; }
-        .card-content { padding: 20px; }
-        
-        /* SEO Tags */
-        .error-tag { background: #ffeded; color: #d93025; padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-block; margin-bottom: 10px; }
-        .machine-type { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
-        
-        h2 { font-size: 1.25rem; margin: 10px 0; color: #004a99; }
-        p { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
-        
-        .btn-read-more { display: inline-block; text-decoration: none; color: #004a99; font-weight: bold; border-bottom: 2px solid #004a99; transition: 0.2s; }
-        .btn-read-more:hover { color: #d93025; border-color: #d93025; }
-
-        /* Botón Pánico Emergencia */
-        .emergency-banner { background: #d93025; color: white; padding: 20px; border-radius: 8px; margin-top: 50px; text-align: center; }
-        .emergency-btn { background: white; color: #d93025; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; margin-top: 10px; }
+       
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Diario de Intervenciones CNC</h1>
-    <p>Casos reales de reparación y mantenimiento a pie de máquina</p>
-</header>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNLQP6N9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="asistencia-container">
+
+  <div  onclick="toggleMenu()">
+    <img src="images/icono-asistencia.png"><br>
+
+  </div>
+
+  <div class="asistencia-menu" id="asistenciaMenu">
+
+    <a href="tel:+34660404046" class="asistencia-item">
+      📞 Llamar ahora
+    </a>
+
+    <a href="https://wa.me/34660404046?text=Hola%20tengo%20una%20máquina%20CNC%20parada%20y%20necesito%20asistencia"
+       target="_blank"
+      class="asistencia-item">
+      💬 WhatsApp
+    </a>
+
+    <a href="formulario.html" class="asistencia-item">
+      ⚙ Enviar avería
+    </a>
+
+  </div>
+
+</div>
+ 
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">  <img src="images/logo.jpeg" alt="CNC SYSTEMS Logo"></div>
+      <nav>
+	   <!-- Botón del menú hamburguesa -->
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>   
+		<ul>
+            <li><a href="index.html" data-en="Home" data-es="Inicio" data-pt="Início">Inicio</a></li>
+            <li><a href="historia.html" data-en="About Us" data-es="Sobre Nosotros" data-pt="Sobre Nós">Sobre Nosotros</a></li>
+            <li><a href="equipo.html" data-en="Teams" data-es="Equipo técnico" data-pt="Equipo">Equipo técnico</a></li>
+			<li><a href="servicio.html" data-en="Services" data-es="Servicios/Tarifas" data-pt="Serviços">Servicios/Tarifas</a></li>
+            <li><a href="contact.html" data-en="Contact" data-es="Contacto" data-pt="Contato">Contacto</a></li>
+			<li><a href="trabaja_nosotros.html" data-en="Jobs with us" data-es="Trabaja con nosotros" data-pt="Contato">Trabaja con nosotros</a></li>
+		    <li><a href="blog.html">Consejos CNC</a></li>
+			<li><a href="formulario.html" class="menu-asistencia">Solicitar asistencia</a></li>
+        </ul>
+      </nav>
+	  <div class="language-selector">
+        <div class="idioma"><a href="#" onclick="changeLanguage('en')"><img src="images/ingles.png" alt="English"></a><a href="#" onclick="changeLanguage('es')"><img src="images/espanol.png" alt="Español"></a><a href="#" onclick="changeLanguage('pt')"><img src="images/portugues.png" alt="Português"></a></div>
+    </div>
+    </div>
+	   </header>
+<section class="services-why" id="about">
+  <div class="flex">
+<div class="why">       
+  <!-- Intro -->
+  <section class="equipo-why">
+     <h1>Diario de Intervenciones CNC Systems</h1>
+    <p>Descubre algunos de los últimos casos reales en los que CNCSystem ha intervenido, ayudando a empresas a recuperar su producción en el menor tiempo posible</p>
+     
+    <div class="filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+<button class="filter-btn" data-filter="control-fanuc">Control Fanuc</button>
+<button class="filter-btn" data-filter="electronica">Electrónica</button>
+<button class="filter-btn" data-filter="mecanica">Mecánica/Husillos</button>
+<button class="filter-btn" data-filter="retrofitting">Retrofitting</button>
+    </div>
+	  </section>
 
 <div class="container">
-    
-    <div class="filters">
-        <button class="filter-btn active">Todos</button>
-        <button class="filter-btn">Control Fanuc</button>
-        <button class="filter-btn">Electrónica</button>
-        <button class="filter-btn">Mecánica/Husillos</button>
-        <button class="filter-btn">Retrofitting</button>
-    </div>
 
-    <div class="interventions-grid">
+	
+ <section class="equipo-why">
+	  <div class="cards">
+    <div class="carousel-wrapper">
+        <button class="nav-btn prev-btn" onclick="moveSlide(-1)">❮</button>
         
-        <article class="card">
-            <img src="https://via.placeholder.com/400x250?text=Reparacion+Fanuc+Servo" alt="Reparación Servo Fanuc" class="card-img">
+        <div class="interventions-track" id="track">
+           <article class="cardi" data-category="control-fanuc electronica">
+            <img src="images/intervenciones/fanuc-alarm-414.jpg" alt="Fanuc Alarm 414 en control CNC" class="card-img">
             <div class="card-content">
                 <span class="error-tag">ALERTA: ERROR 414 SERVO ALARM</span>
                 <div class="machine-type">Torno CNC Doosan</div>
                 <h2>Fallo en eje Z: Diagnóstico y cambio de módulo</h2>
-                <p>Intervención de urgencia por sobreintensidad en el servoamplificador. Analizamos el cableado de potencia y sustituimos el módulo Fanuc Alpha...</p>
-                <a href="#" class="btn-read-more">Ver diagnóstico completo →</a>
+                <p> <strong>Máquina:</strong> Torno CNC Doosan </p>
+				<p> <strong>Control:</strong> Fanuc Series 0i-TF</p>
+				<p> <strong>Eje afectado:</strong> Z</p>
+				<p> <strong>Tipo de incidencia:</strong> Parada máquina – alarma crítica servo</p>
+				<p> <strong>Errores relacionados:</strong><a href="error-fanuc.html">Errores Fanuc</a>
+				<p>Intervención de urgencia por sobreintensidad en el servoamplificador. Analizamos el cableado de potencia y sustituimos el módulo Fanuc Alpha...</p>
+                
+				<a href="#" onclick='openModal({
+  title: "Fanuc Alarm 414 – Servo Alarm eje Z",
+  machine: "Torno CNC Doosan Puma 2600 - Control Fanuc 0i-TF",
+  fault: "Parada de máquina durante ciclo automático con alarma 414 en eje Z.",
+  diagnosis: "Se detectan picos de sobrecorriente en el servo del eje Z. Se observa calentamiento en el módulo de potencia y degradación del aislamiento del cable de potencia en zona de flexión.",
+  repair: "Sustitución del servoamplificador Fanuc Alpha SVM. Cambio de cable de potencia del eje Z. Revisión de encoder y reapriete de conectores de potencia.",
+  result: "Máquina recuperada sin alarmas. Pruebas en vacío y carga sin incidencias.",
+  time: "4 horas (diagnóstico + reparación + pruebas)"
+}); return false;'>
+Ver informe técnico →
+</a>
+
             </div>
         </article>
 
-        <article class="card">
+        <article class="cardi" data-category="mecanica">
             <img src="https://via.placeholder.com/400x250?text=Sustitucion+Husillo" alt="Sustitución Husillo" class="card-img">
             <div class="card-content">
                 <span class="error-tag">MANTENIMIENTO PREVENTIVO</span>
@@ -79,7 +144,39 @@
             </div>
         </article>
 
-        <article class="card">
+        <article class="cardi" data-category="retrofitting">
+            <img src="images/intervenciones/retrofit.jpg" alt="Retrofitting CNC" class="card-img">
+            <div class="card-content">
+                <span class="error-tag">RETROFITTING COMPLETO</span>
+                <div class="machine-type">Fresadora Bancada Fija</div>
+                <h2>Actualización de control antiguo a Siemens Sinumerik One</h2>
+                <p>Transformación total de una fresadora de 15 años. Mejora de la precisión del 40% y teleasistencia integrada para soporte remoto.</p>
+                <a href="#" class="btn-read-more">Ver proyecto de ingeniería →</a>
+            </div>
+			</article>
+			<article class="cardi" data-category="control-fanuc electronica">
+            <img src="https://via.placeholder.com/400x250?text=Reparacion+Fanuc+Servo" alt="Reparación Servo Fanuc" class="card-img">
+            <div class="card-content">
+                <span class="error-tag">ALERTA: ERROR 411 SERVO ALARM</span>
+                <div class="machine-type">Torno CNC Doosan</div>
+                <h2>Fallo en eje x: Diagnóstico y cambio de módulo</h2>
+                <p>Intervención de urgencia por sobreintensidad en el servoamplificador. Analizamos el cableado de potencia y sustituimos el módulo Fanuc Alpha...</p>
+                <a href="#" class="btn-read-more">Ver diagnóstico completo →</a>
+            </div>
+        </article>
+
+        <article class="cardi data-category="mecanica">
+            <img src="https://via.placeholder.com/400x250?text=Sustitucion+Husillo" alt="Sustitución Husillo" class="card-img">
+            <div class="card-content">
+                <span class="error-tag">MANTENIMIENTO PREVENTIVO</span>
+                <div class="machine-type">Centro de Mecanizado Haas</div>
+                <h2>Sustitución de Husillo y Rodamientos de Precisión</h2>
+                <p>Ruido excesivo a altas revoluciones. Realizamos el equilibrado dinámico y ajuste de precarga en menos de 48 horas para evitar parada...</p>
+                <a href="#" class="btn-read-more">Ver detalles técnicos →</a>
+            </div>
+        </article>
+
+        <article class="cardi" data-category="retrofitting">
             <img src="https://via.placeholder.com/400x250?text=Retrofitting+Siemens" alt="Retrofitting CNC" class="card-img">
             <div class="card-content">
                 <span class="error-tag">RETROFITTING COMPLETO</span>
@@ -88,17 +185,314 @@
                 <p>Transformación total de una fresadora de 15 años. Mejora de la precisión del 40% y teleasistencia integrada para soporte remoto.</p>
                 <a href="#" class="btn-read-more">Ver proyecto de ingeniería →</a>
             </div>
+			</article>
         </div>
 
+        <button class="nav-btn next-btn" onclick="moveSlide(1)">❯</button>
     </div>
+</div>
+	</section>
+	 
+<section class="cta-final">
+  <div class="cta-contenido">
+    <h2>¿Tienes un problema parecido?</h2>
+    <p>No lo dejes pasar. Nuestro equipo puede ayudarte rápidamente.</p>
+    
+    <div class="cta-botones">
+      
+	   <a href="tel:+34660404046" class="btn-llamar">
+      📞 Llamar ahora
+    </a>
 
-    <section class="emergency-banner">
-        <h3>¿Tu máquina está parada por un error similar?</h3>
-        <p>No pierdas dinero por cada hora de inactividad. Nuestros técnicos están listos.</p>
-        <a href="tel:600000000" class="emergency-btn">SOLICITAR ASISTENCIA INMEDIATA</a>
-    </section>
+    <a href="https://wa.me/34660404046?text=Hola%20tengo%20una%20máquina%20CNC%20parada%20y%20necesito%20asistencia"
+       target="_blank"
+      class="btn-whatsapp">
+      💬 WhatsApp
+    </a>
+
+    <a href="formulario.html" class="btn-contacto">
+      ⚙ Enviar avería
+    </a>
+	 
+    </div>
+  </div>
+</section>
+
 
 </div>
+</div>
+</div>
+</section>
+  <!-- Footer -->
+<footer class="site-footer">
 
+ <div class="footer-inner">
+    <div class="footer-left">
+      <p>© <span id="year"></span> CNC SYSTEMS. SL - All rights reserved</p>
+    </div>
+<p>
+    <a href="aviso-legal.html">Aviso Legal</a> | 
+	<a href="docs/PolíticaPrivacidad.pdf">Política de Privacidad</a> | 
+    <a href="politica-cookies.html">Política de Cookies</a>
+  </p>
+    <div class="footer-right">
+      <!-- LinkedIn -->
+      <a class="social-link" href="https://www.linkedin.com/company/cncsystems-sl"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Sigue a CNC Systems en LinkedIn">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.5 8.98h4.78v2.05h.07c.66-1.25 2.28-2.57 4.69-2.57 5.01 0 5.93 3.3 5.93 7.59V24h-5V16.7c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V24h-5V8.98z"/>
+        </svg>
+        <span class="sr-only">CNC Systems en LinkedIn</span>
+      </a>
+
+      <!-- Teléfono -->
+      <a class="social-link" href="tel:+034 914338981" aria-label="Llamar a CNC Systems">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.3 22 2 13.7 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.3.2 2.5.57 3.6a1 1 0 01-.25 1l-2.2 2.2z"/>
+        </svg>+034 914338981
+        <span class="sr-only">Teléfono CNC Systems</span>
+      </a>
+
+      <!-- Email -->
+      <a class="social-link" href="mailto:info@cncsystems.es" aria-label="Enviar correo a CNC Systems">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z"/>
+        </svg>direccion@cncsystems.es
+        <span class="sr-only">Email CNC Systems</span>
+      </a>
+    </div>
+  </div>
+   
+</footer>
+
+<!-- Banner cookies -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <p>
+    Usamos cookies para mejorar tu experiencia. 
+    <a href="politica-cookies.html">Más información</a>
+  </p>
+  <button onclick="acceptCookies()">Aceptar</button>
+  <button onclick="rejectCookies()">Rechazar</button>
+  <button onclick="openPreferences()">Configurar</button>
+</div>
+
+<!-- Panel de configuración -->
+<div id="cookie-preferences" class="cookie-banner" style="display:none; flex-direction:column; align-items:flex-start; max-width:500px;">
+  <h3>Configuración de cookies</h3>
+  <label><input type="checkbox" disabled checked> Necesarias (siempre activas)</label>
+  <label><input type="checkbox" id="analytics"> Analíticas</label>
+  <label><input type="checkbox" id="marketing"> Marketing</label>
+  <div style="margin-top:10px; display:flex; gap:8px;">
+    <button onclick="savePreferences()">Guardar</button>
+    <button onclick="closePreferences()">Cancelar</button>
+  </div>
+</div>
+
+<script>
+function acceptCookies() {
+  localStorage.setItem("cookies-consent", "all");
+  document.getElementById("cookie-banner").style.display = "none";
+}
+function rejectCookies() {
+  localStorage.setItem("cookies-consent", "none");
+  document.getElementById("cookie-banner").style.display = "none";
+}
+function openPreferences() {
+  document.getElementById("cookie-preferences").style.display = "flex";
+}
+function closePreferences() {
+  document.getElementById("cookie-preferences").style.display = "none";
+}
+function savePreferences() {
+  let analytics = document.getElementById("analytics").checked;
+  let marketing = document.getElementById("marketing").checked;
+  localStorage.setItem("cookies-consent", JSON.stringify({analytics, marketing}));
+  document.getElementById("cookie-preferences").style.display = "none";
+  document.getElementById("cookie-banner").style.display = "none";
+}
+window.onload = function() {
+  if (!localStorage.getItem("cookies-consent")) {
+    document.getElementById("cookie-banner").style.display = "flex";
+  }
+}
+</script>
+
+
+<!-- Script de JavaScript para cambiar el idioma -->
+<script>
+  // año automático
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+  <script src="js/script.js"></script>
+<!-- Script de JavaScript para cambiar el idioma -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtener el idioma desde la URL (si está disponible)
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'es'; // Default to English if no lang is specified
+
+        // Función para actualizar el contenido
+        function updateLanguage() {
+            const elements = document.querySelectorAll('[data-en], [data-es]');
+            elements.forEach(function (element) {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+        }
+
+        // Llamar a la función para actualizar el contenido según el idioma
+        updateLanguage();
+    });
+// Obtener el botón y el menú
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('header nav ul');
+
+// Añadir el evento de clic al botón
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show'); // Toggle para mostrar/ocultar el menú
+});
+
+</script>
+
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("asistenciaMenu");
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
+}
+</script>
+
+<script>
+    let currentIndex = 0;
+    const track = document.getElementById('track');
+    const cards = document.querySelectorAll('.cardi');
+
+    function moveSlide(direction) {
+        const cardWidth = cards[0].offsetWidth + 20; // Ancho + gap
+        const visibleCards = window.innerWidth > 992 ? 3 : (window.innerWidth > 600 ? 2 : 1);
+        const maxIndex = cards.length - visibleCards;
+
+        currentIndex += direction;
+
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        
+        // Actualizar estado de botones
+        document.querySelector('.prev-btn').disabled = currentIndex === 0;
+        document.querySelector('.next-btn').disabled = currentIndex === maxIndex;
+    }
+
+    // Inicializar botones
+    window.addEventListener('resize', () => moveSlide(0));
+    moveSlide(0);
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".cardi");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            // Activar botón
+            buttons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            const filter = this.dataset.filter;
+
+            // 🔥 NUEVO: calcular visibles
+            const visibleCards = Array.from(cards).filter(card => {
+                const categories = card.dataset.category || "";
+                return filter === "all" || categories.includes(filter);
+            });
+
+            // Ocultar todas
+            cards.forEach(card => card.style.display = "none");
+
+            // Mostrar solo las filtradas
+            visibleCards.forEach(card => card.style.display = "");
+
+            // 🔥 MUY IMPORTANTE: reset carrusel
+            currentIndex = 0;
+            document.getElementById('track').style.transform = `translateX(0px)`;
+
+        });
+    });
+
+});
+</script>
+<script>
+function openModal(data) {
+
+    document.getElementById("modalTitle").innerText = data.title;
+
+    document.getElementById("modalMachine").innerText = data.machine;
+    document.getElementById("modalFault").innerText = data.fault;
+    document.getElementById("modalDiagnosis").innerText = data.diagnosis;
+    document.getElementById("modalRepair").innerText = data.repair;
+    document.getElementById("modalResult").innerText = data.result;
+    document.getElementById("modalTime").innerText = data.time;
+
+    document.getElementById("diagnosticModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("diagnosticModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    let modal = document.getElementById("diagnosticModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<div id="diagnosticModal" class="modal">
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">×</span>
+
+    <h2 id="modalTitle"></h2>
+
+    <div class="modal-section">
+      <h3>📌 Datos de la máquina</h3>
+      <p id="modalMachine"></p>
+    </div>
+
+    <div class="modal-section">
+      <h3>⚠️ Descripción del fallo</h3>
+      <p id="modalFault"></p>
+    </div>
+
+    <div class="modal-section">
+      <h3>🔍 Diagnóstico</h3>
+      <p id="modalDiagnosis"></p>
+    </div>
+
+    <div class="modal-section">
+      <h3>🛠️ Reparación realizada</h3>
+      <p id="modalRepair"></p>
+    </div>
+
+    <div class="modal-section">
+      <h3>📊 Resultado</h3>
+      <p id="modalResult"></p>
+    </div>
+
+    <div class="modal-section">
+      <h3>⏱️ Tiempo de intervención</h3>
+      <p id="modalTime"></p>
+    </div>
+
+  </div>
+</div>
 </body>
 </html>
