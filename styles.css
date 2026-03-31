@@ -201,7 +201,12 @@ font-size: 12px; /* o 0.875rem, 90%, lo que prefieras */
   color: #e63946;
 }
 
-
+/* Titulos y párrafos */
+.services-why h1 {
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+  color: #e63946;
+}
 /* Titulos y párrafos */
 .services-why h3 {
   font-size: 1.4rem;
