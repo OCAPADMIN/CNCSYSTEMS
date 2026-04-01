@@ -105,7 +105,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button class="nav-btn prev-btn" onclick="moveSlide(-1)">❮</button>
         
         <div class="interventions-track" id="track">
-           <article class="cardi" data-category="control-fanuc electronica">
+<article class="cardi" data-category="mecanica">
+            <img src="images/intervenciones/cilindro_torno_OKUMA.jpg" alt="Fanuc Alarm 414 en control CNC" class="card-img">
+            <div class="card-content">
+                <span class="error-tag">Sustitución cilindro torno OKUMA</span>
+                <div class="machine-type">Torno CNC OKUMA</div>
+                <h2>Contaminación circuito hidraulico por taladrina</h2>
+                <p> <strong>Máquina:</strong> Torno CNC Doosan </p>
+				<p> <strong>Eje/Elemento afectado:</strong> Sistema hidráulico – cilindro de plato / torreta</p>
+				<p> <strong>Tipo de incidencia:</strong> Parada preventiva – posible contaminación interna</p>
+				<p> <strong>Errores relacionados:</strong>No se reportan alarmas eléctricas o de control</p>
+				<p>Intervención de urgencia por posible entrada de taladrina en el circuito hidráulico del cilindro del plato. El componente no presenta daños visibles, pero se decide su sustitución para descartar fallo interno.Tras el cambio se observa quee el cilindro funciona correctamente.</p>
+  <a href="#" onclick='openModal({
+  title: "Sustitución cilindro torno OKUMA",
+  machine: "Torno CNC OKUMA",
+  fault: "Parada de máquina por posible comunicacion de taladrina,",
+  diagnosis: "posible causa una fuga interna en la torreta, probablemente por desgaste de juntas. Durante las maniobras de cambio de herramienta en encabalgamiento/desenclavamiento, podría producirse la comunicación de taladrina hacia el circuito hidráulico.",
+  repair: "Sustitución cilindro plato, con el cilindro ya sustituido vaciar depósito del grupo hidráulico rellenar con aceite limpio",
+  result: "Una vez sustituido el cilindor y rellenado de aceite limpio se observa que ya queda poca taladrina y se pone la maquina en produccion dejandola en observacion para descartar otros posibles fallos",
+  time: "4,5 horas  2 tecnicos (diagnóstico + reparación + pruebas)",
+}); return false;'>
+Ver informe técnico →
+</a>
+
+            </div>
+        </article>          
+		  <article class="cardi" data-category="control-fanuc electronica">
             <img src="images/intervenciones/fanuc-alarm-414.jpg" alt="Fanuc Alarm 414 en control CNC" class="card-img">
             <div class="card-content">
                 <span class="error-tag">ALERTA: ERROR 414 SERVO ALARM</span>
