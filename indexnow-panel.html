@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>IndexNow Generator</title>
+
+<style>
+body {
+  font-family: Arial;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+a {
+  display: block;
+  margin-top: 15px;
+  word-break: break-all;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Generador IndexNow</h2>
+
+<p>Pega la URL:</p>
+
+<input type="text" id="urlInput" placeholder="https://cncsystems.es/pagina.html">
+
+<button onclick="generar()">Generar enlace</button>
+
+<a id="link" target="_blank"></a>
+
+<script>
+function generar() {
+
+  const url = document.getElementById("urlInput").value;
+
+  if (!url) {
+    alert("Introduce una URL");
+    return;
+  }
+
+  const key = "558b75bef3fc450fb50aaa65aa7eb1d9";
+  const host = "cncsystems.es";
+
+  const apiUrl = `https://api.indexnow.org/indexnow?url=${encodeURIComponent(url)}&key=${key}&host=${host}`;
+
+  const link = document.getElementById("link");
+  link.href = apiUrl;
+  link.innerText = "👉 Click aquí para enviar a Bing";
+}
+</script>
+
+</body>
+</html>
