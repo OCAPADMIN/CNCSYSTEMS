@@ -1624,3 +1624,11 @@ margin:20px 0;
   font-size: 13px;
   line-height: 1.4;
 }
+.seo-text{
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 10px;
+}
+.seo-keywords{
+  display:none;
+}
