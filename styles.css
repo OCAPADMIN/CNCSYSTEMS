@@ -1644,3 +1644,5 @@ margin:20px 0;
         .tool-list li::before { content: "✓"; color:  #e63946;  margin-right: 10px; font-weight: bold; }
 .warning-box { background: #fff5f5; border-left: 4px solid var(--secondary); padding: 20px; margin: 20px 0; }
 .brands { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; filter: grayscale(1); opacity: 0.5; font-weight: bold; font-size: 1.2em; }        
+
+
