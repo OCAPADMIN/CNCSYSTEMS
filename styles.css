@@ -1632,4 +1632,15 @@ margin:20px 0;
 .seo-keywords{
   display:none;
 }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 30px; }
+.cardser { border: 1px solid #ddd; border-radius: 8px; background: white; transition: 0.3s; height: 100%; }
+.cardser:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.cardser-header { background: #e63946; color: white; padding: 15px; font-weight: bold; border-radius: 7px 7px 0 0; }
+        
 
+.cardser-body { padding: 20px; }
+.tool-list { list-style: none; padding: 0; }
+        .tool-list li { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; font-size: 0.95em; text-align: left;}
+        .tool-list li::before { content: "✓"; color:  #e63946;  margin-right: 10px; font-weight: bold; }
+.warning-box { background: #fff5f5; border-left: 4px solid var(--secondary); padding: 20px; margin: 20px 0; }
+.brands { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; filter: grayscale(1); opacity: 0.5; font-weight: bold; font-size: 1.2em; }        
