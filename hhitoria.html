@@ -1,0 +1,186 @@
+<style>
+/* CONTENEDOR GENERAL */
+.timeline-section {
+    background: #f5f7fa;
+    padding: 60px 20px;
+}
+
+.timeline-container {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+/* Línea vertical */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 160px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #004a99;
+}
+
+/* ITEM */
+.timeline-item {
+    display: flex;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+/* ACTIVACIÓN ANIMACIÓN */
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FECHA */
+.timeline-date {
+    flex: 0 0 140px;
+    font-weight: bold;
+    color: #004a99;
+    font-size: 1.3rem;
+}
+
+/* CONTENIDO */
+.timeline-content {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-left: 40px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+/* PUNTO */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -48px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border: 4px solid #004a99;
+    border-radius: 50%;
+}
+
+/* ICONO */
+.timeline-icon {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+/* TEXTOS */
+.timeline-content h3 {
+    margin: 0 0 10px;
+    color: #222;
+    font-size: 1.2rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .timeline-container::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        padding-left: 40px;
+    }
+
+    .timeline-date {
+        margin-bottom: 10px;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+    }
+
+    .timeline-content::before {
+        left: -28px;
+    }
+}
+</style>
+
+<section class="timeline-section">
+    <div class="timeline-container">
+
+        <div class="timeline-item">
+            <div class="timeline-date">1989</div>
+            <div class="timeline-content">
+                <h3>Fundación de CNC Systems</h3>
+                <p>COMPUTER NUMERICAL CONTROL SYSTEMS SL se constituye como una estructura operativa de soporte técnico y comercial en el sector de la maquinaria CNC industrial, creada para dar cobertura en la venta, instalación, puesta en marcha y servicio técnico de los equipos distribuidos por Maquinser en distintas zonas de España.</p>
+				
+            </div>
+        </div>
+
+
+
+
+
+        <div class="timeline-item">
+            <div class="timeline-date">1987 - 2025</div>
+            <div class="timeline-content">
+                <h3>Especialización en maquinaria CNC industrial</h3>
+                <p>Desarrollo de actividad en la zona centro, sur y Galicia, consolidándose como la estructura técnica y operativa de referencia en dichas áreas para la distribución de maquinaria asociada a Maquinser, asumiendo la venta, instalación, puesta en marcha, mantenimiento y reparación de equipos CNC industriales, con responsabilidad directa en el soporte técnico y comercial de los equipos en producción.</p>
+				<p>Consolidación de la experiencia comercial y técnica (diagnóstico, puesta en marcha, reparación y mantenimiento) de maquinaria CNC.</p>
+			</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+                <h3>Evolución a servicio técnico independiente</h3>
+                <p>Inicio de una nueva etapa como servicio técnico CNC independiente multimarca, ampliando el soporte a maquinaria industrial de múltiples fabricantes. Se mantiene la experiencia acumulada en equipos distribuidos históricamente a través de Maquinser, evolucionando hacia un modelo de asistencia técnica abierto y sin limitación de fabricante, con cobertura en España y Portugal..</p>
+				
+			</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">Actualidad</div>
+            <div class="timeline-content">
+                <h3>Soporte a nivel nacional</h3>
+                <p>CNC Systems ofrece servicio técnico especializado en maquinaria CNC industrial en toda España, con enfoque en rapidez de intervención, diagnóstico eficaz y reducción de tiempos de parada en producción.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- BLOQUE SEO EXTRA -->
+<div style="max-width:900px;margin:40px auto;font-size:0.95rem;color:#555;line-height:1.6;">
+    <p>
+    En CNC Systems contamos con amplia experiencia en mantenimiento y reparación de maquinaria CNC industrial, incluyendo equipos distribuidos por Maquinser y otros fabricantes del sector, ofreciendo actualmente soporte técnico multimarca independiente.
+    </p>
+</div>
+
+<!-- SCRIPT ANIMACIÓN -->
+<script>
+const items = document.querySelectorAll('.timeline-item');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.2 });
+
+items.forEach(item => observer.observe(item));
+</script>
