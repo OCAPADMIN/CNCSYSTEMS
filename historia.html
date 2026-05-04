@@ -15,6 +15,135 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>Servicio técnico CNC |Asistencia SAT| Reparación y mantenimiento de maquinaria CNC | CNC Systems</title>
   
   <link rel="stylesheet" href="styles.css">
+  <style>
+/* CONTENEDOR GENERAL */
+.timeline-section {
+    background: #f5f7fa;
+    padding: 60px 20px;
+	 opacity: 0.7;
+  position: relative;
+  background-image: url('images/historia.jpg');
+  background-position: center;  /* Centra la imagen */
+  background-repeat: no-repeat; 
+ 
+}
+
+.timeline-container {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+	
+}
+
+/* Línea vertical */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 160px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background:  #e63946;
+}
+
+/* ITEM */
+.timeline-item {
+    display: flex;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+/* ACTIVACIÓN ANIMACIÓN */
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FECHA */
+.timeline-date {
+
+    flex: 0 0 140px;
+    font-weight: bold;
+    color: #e63946;
+    font-size: 1.3rem;
+}
+
+/* CONTENIDO */
+.timeline-content {
+   background: white;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-left: 40px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+/* PUNTO */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -48px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border: 4px solid #e63946;
+    border-radius: 50%;
+}
+
+/* ICONO */
+.timeline-icon {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+/* TEXTOS */
+.timeline-content h3 {
+    margin: 0 0 10px;
+    color: #222;
+    font-size: 1.2rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .timeline-container::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        padding-left: 40px;
+    }
+
+    .timeline-date {
+        margin-bottom: 10px;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+    }
+
+    .timeline-content::before {
+        left: -28px;
+    }
+	.timeline-section {
+  background-attachment: fixed; /* Efecto parallax sutil */}
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -30,7 +159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="asistencia-menu" id="asistenciaMenu">
 
-    <a href="tel:+34660404046" class="asistencia-item">
+    <a href="tel:+34914338981" class="asistencia-item">
       📞 Llamar ahora
     </a>
 
@@ -91,6 +220,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    data-es="En el año 1989 fundamos COMPUTER NUMERICAL CONTROL SYSTEMS SL con el objetivo de proporcionar un servicio técnico especializado y cercano a empresas del sector tanto en España como Portugal, durante todos estos años CNC SYSTEMS se ha comprometido con la innovación tecnológica y la formación continua de su equipo, adaptándose a las necesidades cambiantes del mercado."
    data-pt="Fundada com o objetivo de fornecer um serviço técnico especializado e próximo às empresas de Espanha e Portugal, a CNC SYSTEMS compromete-se com a inovação tecnológica e a formação contínua da sua equipe, adaptando-se às necessidades em constante mudança do mercado.">
    En el año 1989 fundamos COMPUTER NUMERICAL CONTROL SYSTEMS SL con el objetivo de proporcionar un servicio técnico especializado y cercano a empresas del sector de España como Portugal, durante todos estos años CNC SYSTEMS se ha comprometido con la innovación tecnológica y la formación continua de su equipo, adaptándose a las necesidades cambiantes del mercado.</p>
+
+<section class="timeline-section">
+    <div class="timeline-container">
+
+        <div class="timeline-item">
+            <div class="timeline-date">1989</div>
+            <div class="timeline-content">
+                <h3>Fundación de CNC Systems</h3>
+                <p>COMPUTER NUMERICAL CONTROL SYSTEMS SL se constituye como una estructura operativa de soporte técnico y comercial en el sector de la maquinaria CNC industrial, orientada a la venta, instalación, puesta en marcha y servicio técnico de equipos en distintas zonas de España.</p>
+				
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">1987 - 2025</div>
+            <div class="timeline-content">
+                <h3>Especialización en maquinaria CNC industrial</h3>
+                <p>Desarrollo de actividad en la zona centro, sur y Galicia, consolidándose como una estructura técnica y operativa de referencia en dichas áreas.</p>
+				<p>Durante este periodo, la empresa asume la venta, instalación, puesta en marcha, mantenimiento y reparación de maquinaria CNC industrial, con responsabilidad directa en el soporte técnico y comercial de los equipos en producción.</p>
+				<p>Se consolida una amplia experiencia tanto comercial como técnica, abarcando diagnóstico de averías, puesta en marcha, reparación y mantenimiento de equipos CNC.</p>
+			</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+                <h3>Evolución a servicio técnico independiente</h3>
+                <p>Inicio de una nueva etapa como servicio técnico CNC independiente multimarca, ampliando el soporte a maquinaria industrial de múltiples fabricantes.</p>
+				<p>Se mantiene la experiencia acumulada a lo largo de los años, evolucionando hacia un modelo de asistencia técnica abierto y sin limitación de fabricante, con cobertura en España y Portugal.</p>
+				
+			</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">Actualidad</div>
+            <div class="timeline-content">
+                <h3>Soporte a nivel nacional</h3>
+                <p>CNC Systems ofrece servicio técnico especializado en maquinaria CNC industrial en toda España, con enfoque en rapidez de intervención, diagnóstico eficaz y reducción de tiempos de parada en producción.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 	<h3 data-en="Our Experience" data-es="Nuestra Experiencia" data-pt="Nossa Experiência">Nuestra Experiencia</h3>
 <p data-en="With over 35 years in the industry, our highly qualified team of technicians combines experience and advanced knowledge of the latest CNC technologies, ensuring precise interventions and solutions tailored to each client."
    data-es="Con más de 35 años en el sector, nuestro equipo de técnicos altamente cualificados combina experiencia y conocimiento avanzado de las últimas tecnologías  maquinaria de control numerico, asegurando intervenciones precisas y soluciones adaptadas a cada cliente."
@@ -99,10 +272,10 @@ Con más de 35 años en el sector, nuestro equipo de técnicos altamente cualifi
 
 
      <h3 data-en="Coverage in Spain and Portugal" data-es="Cobertura en España y Portugal" data-pt="Cobertura em Espanha e Portugal">Cobertura en España y Portugal</h3>
-    <p data-en="With offices in Madrid and Seville, we offer coverage throughout Spain and Portugal, ensuring fast response times and tailored solutions for each client. From small companies to large industries, CNC SYSTEMS ensures machines operate at peak performance."
-       data-es="Con sede en Madrid, Vigo y Sevilla, ofrecemos cobertura en toda España y Portugal, garantizando tiempos de respuesta ágiles  y soluciones adaptadas a cada cliente. Ya sea para una pequeña empresa o una gran industria, CNC SYSTEMS asegura que su maquinaria funcione siempre al máximo rendimiento."
-       data-pt="Com sedes em Madrid e Sevilha, oferecemos cobertura em toda a Espanha e Portugal, garantindo tempos de resposta rápidos e soluções adaptadas a cada cliente. De pequenas empresas a grandes indústrias, a CNC SYSTEMS garante que as máquinas funcionem sempre com máximo desempenho.">
-       Con sede en Madrid, Vigo y Sevilla, ofrecemos cobertura en toda España y Portugal, garantizando tiempos de respuesta ágiles  y soluciones adaptadas a cada cliente. Ya sea para una pequeña empresa o una gran industria, CNC SYSTEMS asegura que su maquinaria funcione siempre al máximo rendimiento.
+    <p data-en="With offices in Madrid , we offer coverage throughout Spain and Portugal, ensuring fast response times and tailored solutions for each client. From small companies to large industries, CNC SYSTEMS ensures machines operate at peak performance."
+       data-es="Con sede en Madrid,  ofrecemos cobertura en toda España y Portugal, garantizando tiempos de respuesta ágiles  y soluciones adaptadas a cada cliente. Ya sea para una pequeña empresa o una gran industria, CNC SYSTEMS asegura que su maquinaria funcione siempre al máximo rendimiento."
+       data-pt="Com sedes em Madrid, oferecemos cobertura em toda a Espanha e Portugal, garantindo tempos de resposta rápidos e soluções adaptadas a cada cliente. De pequenas empresas a grandes indústrias, a CNC SYSTEMS garante que as máquinas funcionem sempre com máximo desempenho.">
+       Con sede en Madrid, ofrecemos cobertura en toda España y Portugal, garantizando tiempos de respuesta ágiles  y soluciones adaptadas a cada cliente. Ya sea para una pequeña empresa o una gran industria, CNC SYSTEMS asegura que su maquinaria funcione siempre al máximo rendimiento.
     </p>
    <h3 data-en="Our Services" data-es="Nuestros servicios" data-pt="Nossos Serviços">Nuestros servicios</h3>
 <div class="cards">
@@ -196,10 +369,10 @@ Ofrecemos un servicio rápido, fiable y profesional, utilizando repuestos de alt
       </a>
 
       <!-- Teléfono -->
-      <a class="social-link" href="tel:+034 660404046" aria-label="Llamar a CNC Systems">
+      <a class="social-link" href="tel:+34 914 338 981" aria-label="Llamar a CNC Systems">
         <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.3 22 2 13.7 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.3.2 2.5.57 3.6a1 1 0 01-.25 1l-2.2 2.2z"/>
-        </svg>+034 660404046
+        </svg>+34 914 338 981
         <span class="sr-only">Teléfono CNC Systems</span>
       </a>
 
@@ -313,4 +486,18 @@ function toggleMenu() {
     menu.style.display = "flex";
   }
 }
+</script>
+<!-- SCRIPT ANIMACIÓN -->
+<script>
+const items = document.querySelectorAll('.timeline-item');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.2 });
+
+items.forEach(item => observer.observe(item));
 </script>
