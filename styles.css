@@ -1,8 +1,11 @@
-:root{
-  --color-primary: #e63946;     /* 0ea5e9 azul del logo */
-  --color-primary-dark: #c72c3b;  /* 0284c7 azul oscur del logo */
 
-  --color-accent:  var(--color-primary);;      /* rojo (solo para destacar) */
+:root{
+  --color-primary: #0ea5e9;     /* 0ea5e9 azul del logo */
+  --color-primary-dark: #000;  /* 0284c7 azul oscur del logo */
+  --color-primary_logo: #0ea5e9;     /* 0ea5e9 azul del logo */
+  --color-primary_logohover: #000;     /* 0ea5e9 azul del logo */
+ 
+  --color-accent:  var(--color-primary);      /* rojo (solo para destacar) */
   --color-dark: #0f1724;
   --color-text: #333;
   --color-bg: #f8fafc;
@@ -13,21 +16,116 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--color-text);
+   overflow-x:hidden;
+  background: linear-gradient(180deg, #eef2f6 0%, #f8fafc 100%);
 }
 
 /* Header */
 header { 
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  
+ background:#ffffffee;
+    position: relative;
+  backdrop-filter: blur(10px);
   padding: 15px 0;
-  position: sticky;
   top: 0;
   z-index: 1000;
+   
+overflow: visible;
+}
+
+/* LINEA BASE */
+header::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+
+  width:100%;
+  height:3px;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8 0%,
+    #0ea5e9 35%,
+    #0369a1 65%,
+    #000000 100%
+  );
+
+  overflow:hidden;
+}
+
+/* LASER */
+header::before{
+  content:"";
+  position:absolute;
+
+  bottom:-2px;
+  transform: translateX(-120%);
+left:0;
+  width:25%;
+  height:3px;
+opacity:0.8;
+  border-radius:999px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.2) 15%,
+    #7dd3fc 40%,
+    #ffffff 50%,
+    #7dd3fc 60%,
+    rgba(255,255,255,0.2) 85%,
+    transparent 100%
+  );
+
+  filter: blur(1px);
+
+  box-shadow:
+    0 0 8px #38bdf8,
+    0 0 16px rgba(56,189,248,0.8),
+    0 0 24px rgba(14,165,233,0.5);
+
+  animation: laserMove 3s linear infinite;
+
+  pointer-events:none;
+}
+header::before,
+header::after{
+  pointer-events:none;
+  z-index:0;
+}
+nav,
+.menu,
+.menu-toggle{
+  position: relative;
+  z-index: 2;
+}
+
+/* ANIMACION */
+@keyframes laserMove{
+
+  0%{
+    transform: translateX(-220px);
+    opacity:0;
+  }
+
+  10%{
+    opacity:1;
+  }
+
+  90%{
+    opacity:1;
+  }
+
+  100%{
+    transform: translateX(calc(100vw + 220px));
+    opacity:0;
+  }
+
 }
 
 header .container {
@@ -57,12 +155,12 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: var(--color-text);
   font-weight: bold;   /* o 700 */
 }
 
 nav a:hover {
-  color:  var(--color-primary);;
+  color:  var(--color-primary_logo);
 }
 .centrado {
   text-align: center;
@@ -95,18 +193,29 @@ nav a:hover {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background:  var(--color-primary);;
+  background:  ;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
+background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color:white;
+  border-radius:8px;
+  font-weight:600;
+  padding:12px 22px;
+  box-shadow: 0 6px 15px rgba(14,165,233,0.3);
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(14,165,233,0.4);
+
+
   background: var(--color-primary-dark);
 }
 
 .btn.secondary {
-  background: #333;
+  background: var(--color-text);
 }
 
 .btn.secondary:hover {
@@ -148,7 +257,7 @@ font-size: 12px; /* o 0.875rem, 90%, lo que prefieras */
 .equipo-why p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #333;
+  color: var(--color-text);
 
 }
 
@@ -229,7 +338,7 @@ font-size: 12px; /* o 0.875rem, 90%, lo que prefieras */
 .services-why p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #333;
+  color: var(--color-text);
 
 }
 
@@ -294,7 +403,7 @@ padding:20px 20px;
 .services-job h2 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  color:  var(--color-primary);;
+  color:  var(--color-primary);
 }
 
 
@@ -302,7 +411,7 @@ padding:20px 20px;
 .services-job h3 {
   font-size: 1.4rem;
   margin-bottom: 15px;
-  color:  var(--color-primary);;
+  color:  var(--color-primary);
 }
 .services-job li {
 
@@ -311,7 +420,7 @@ font-size: 15px; /* o 0.875rem, 90%, lo que prefieras */
 .services-job p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #333;
+  color: var(--color-text);
 
 }
 .services-job ul{
@@ -354,7 +463,7 @@ footer {
 }
 
 .site-footer {
-  background: #0f1724;
+  background: var(--color-dark);
   color: #d1d5db;
   padding: 16px 20px;
   font-size: 14px;
@@ -593,30 +702,45 @@ header .idioma img {
 }
 
     /* Cambiar el menú a una columna */
- header nav ul {
-    display: none; /* Menú oculto por defecto */
-    position: absolute;
-    top: 60px; /* Ajusta este valor dependiendo de la altura de tu encabezado */
-    left: 0;
-	text-align: center;
-    width: 100%;
-    
-    z-index: 1000; /* Asegura que esté encima de la imagen */
-	flex-direction: column; /* Columna en lugar de fila */
-    background-color: white; /* Fondo blanco para el menú */
-    top: 100%; /* Lo dejamos fuera de la vista inicialmente */
-        left: 0;
-        right: 00;
-        display: none; /* Escondemos el menú por defecto */
-        align-items: center; /* Centra los elementos dentro */
-        gap: 20px; /* Espacio entre los elementos */
-        padding: 20px 0; /* Espaciado alrededor */
+ header nav ul{
+    display:none;
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    width: 100vw; /* Cambiado a 100vw para asegurar el ancho total de pantalla */
+
+    background:#ffffffee;
+    backdrop-filter: blur(10px);
+
+    flex-direction:column;
+    align-items:center;
+
+    gap:18px;
+
+    padding:25px 0;
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.08);
+
+    border-bottom:
+      1px solid rgba(14,165,233,0.15);
+
+    z-index:1500;
 }
 
-header nav ul.show {
-    display: block;
-	text-align: center
-    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+header nav ul.show{
+    display:flex;
+}
+header nav ul li{
+    width:100%;
+}
+
+header nav ul li a{
+    display:block;
+    width:100%;
+    padding:12px 0;
 }
  
 /* Botón hamburguesa siempre visible */
@@ -626,6 +750,8 @@ header nav ul.show {
         border: none;
         cursor: pointer;
         padding: 10px;
+		position: relative;
+				z-index: 2000;
     }
 
     /* Estilo de las líneas del menú hamburguesa */
@@ -634,12 +760,12 @@ header nav ul.show {
         width: 25px;
         height: 3px;
         margin: 5px auto;
-        background-color: #BD3B3B;
+        background-color: var(--color-primary-dark);
     }
 }
 /* Botón destacado */
 .menu-asistencia{
-  background:#39A9E1;   /* azul parecido al del logo */
+  background: var(--color-primary_logo);   /* azul parecido al del logo */
   color:white !important;
   padding:10px 18px;
   border-radius:6px;
@@ -649,7 +775,7 @@ header nav ul.show {
 }
 
 .menu-asistencia:hover{
-  background:#000;      /* negro del logo */
+  background:var(--color-primary_logohover);        /* negro del logo */
   border-color:#000;
 }
 @media (max-width: 768px){
@@ -663,7 +789,7 @@ font-size:14px;
 }
 .contact-section{
   padding: 36px 20px;
-  background: linear-gradient(180deg,#f8fafc 0%, #eef2f6 100%);
+  background: linear-gradient(180deg,var(--color-bg) 0%, #eef2f6 100%);
 }
 .contact-inner{
   max-width:1100px;
@@ -930,7 +1056,7 @@ font-size:14px;
  
 }
 .sat-cta {
-  background: #0f1724;
+  background: var(--color-dark);
   color: white;
   text-align: center;
   padding: 60px 20px;
@@ -1190,7 +1316,7 @@ margin-bottom:10px;
 
 .asistencia-menu a{
 background:#f2f2f2;
-color:#333;
+color:var(--color-text);
 text-decoration:none;
 padding:10px 14px;
 border-radius:8px;
@@ -1232,6 +1358,9 @@ margin-bottom:10px;
   max-width:900px;
 margin:1px auto;
 padding:20px 20px;
+ border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+ background: #ffffff;
 }
 
 /* Services (contenido principal) */
@@ -1282,7 +1411,7 @@ font-size: 15px; /* o 0.875rem, 90%, lo que prefieras */
 .services-blog p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #333;
+  color: var(--color-text);
 
 }
 .services-blog ul{
@@ -1333,6 +1462,7 @@ margin:20px 0;
 	border: 2px solid  var(--color-primary);; 
 	border-radius: 8px; 
 	margin: 30px 0;
+	
 }
 /* --- ESTILOS PARA VERSIÓN ESCRITORIO (Fuera de cualquier media query) --- */
 /* Contenedor principal */
@@ -1662,8 +1792,8 @@ margin:20px 0;
 .brands-visual {
 text-align:center;
 padding:60px 20px;
-background:#f5f7fa;
-margin-top:60px;
+ background: #e2e8f0;
+ margin-top:60px;
 }
 
 .brands-visual h2 {
@@ -1721,7 +1851,7 @@ color:#666;
   background: #ffffff;
   padding: 35px;
   border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
 /* Espaciado real entre bloques */
@@ -1780,7 +1910,7 @@ color:#666;
 }
 
 .services-blog{
-  background: #f8fafc;
+  background: var(--color-bg);
 }
 /* LANDING CNC */
 .landing-cnc{
@@ -1814,14 +1944,6 @@ color:#666;
   margin-top:20px;
 }
 
-/* BLOQUES */
-.bloque{
-  background:white;
-  padding:25px;
-  margin:30px 0;
-  border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
 
 /* URGENCIA */
 .urgente{
@@ -1849,4 +1971,19 @@ color:#666;
   margin-top:50px;
   font-size:0.95rem;
   color:#555;
+}
+
+.section-dark{
+  background: #0f1724;
+  color: #e2e8f0;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin: 40px 0;
+}
+.section-dark h2{
+  color: #0ea5e9;
+}
+
+.section-dark p{
+  color: #cbd5f5;
 }
