@@ -704,48 +704,56 @@ header .idioma img {
 	float: right;
 }
 
-    /* Cambiar el menú a una columna */
- header nav ul{
-    display:none;
-    position:absolute;
+ header nav ul {
+     display: flex;
+        flex-direction: column;
+        position: fixed;
+        
+        /* 1. Lo bajamos para que no tape el logo */
+        top: 100px; 
+        left: 0;
+        
+        /* 2. CAMBIO CLAVE: Alto automático según el contenido */
+        width: 220px;
+        height: auto; 
+        
+        /* 3. Ajustes visuales */
+        background: #ffffff;
+        z-index: 2000;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+        
+        /* Sombra que rodea solo el bloque del menú */
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+        
+        /* Redondeamos un poco la esquina inferior derecha para que quede mejor */
+        border-bottom-right-radius: 10px;
+        
+        padding: 10px 0; /* Espacio interno arriba y abajo de los enlaces */
+		}
 
-    top:100%;
-    left:0;
+    /* Clase que se añade al hacer clic (necesitas JS) */
+    header nav ul.show {
+        transform: translateX(0); /* Al activarse, vuelve a su posición original */
+    }
 
-    width: 100vw; /* Cambiado a 100vw para asegurar el ancho total de pantalla */
+    /* Asegúrate de que los items no estiren el menú de más */
+    header nav ul li {
+        width: 100%;
+        border-bottom: 1px solid #f1f5f9;
+    }
 
-    background:#ffffffee;
-    backdrop-filter: blur(10px);
+    header nav ul li:last-child {
+        border-bottom: none; /* Quitamos la línea al último para que quede limpio */
+    }
 
-    flex-direction:column;
-    align-items:center;
+    header nav ul li a {
+        padding: 15px 10px;
+        display: block;
+        color: var(--color-text);
+        font-weight: 600;
+    }
 
-    gap:18px;
-
-    padding:25px 0;
-
-    box-shadow:
-      0 10px 30px rgba(0,0,0,0.08);
-
-    border-bottom:
-      1px solid rgba(14,165,233,0.15);
-
-    z-index:1500;
-}
-
-header nav ul.show{
-    display:flex;
-}
-header nav ul li{
-    width:100%;
-}
-
-header nav ul li a{
-    display:block;
-    width:100%;
-    padding:12px 0;
-}
- 
 /* Botón hamburguesa siempre visible */
  .menu-toggle {
         display: block; /* Mostramos el botón de hamburguesa */
