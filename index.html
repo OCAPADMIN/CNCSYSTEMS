@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google Tag Manager -->
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PNLQP6N9');</script>
-<!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Favicons CNC Systems -->
@@ -66,10 +58,7 @@ Servicio técnico CNC
 </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNLQP6N9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 <div class="asistencia-container">
 
   <div  onclick="toggleMenu()">
@@ -422,34 +411,6 @@ data-pt="Configurar">Configurar</button>
 
 </div>
 
-<script>
-function acceptCookies() {
-  localStorage.setItem("cookies-consent", "all");
-  document.getElementById("cookie-banner").style.display = "none";
-}
-function rejectCookies() {
-  localStorage.setItem("cookies-consent", "none");
-  document.getElementById("cookie-banner").style.display = "none";
-}
-function openPreferences() {
-  document.getElementById("cookie-preferences").style.display = "flex";
-}
-function closePreferences() {
-  document.getElementById("cookie-preferences").style.display = "none";
-}
-function savePreferences() {
-  let analytics = document.getElementById("analytics").checked;
-  let marketing = document.getElementById("marketing").checked;
-  localStorage.setItem("cookies-consent", JSON.stringify({analytics, marketing}));
-  document.getElementById("cookie-preferences").style.display = "none";
-  document.getElementById("cookie-banner").style.display = "none";
-}
-window.onload = function() {
-  if (!localStorage.getItem("cookies-consent")) {
-    document.getElementById("cookie-banner").style.display = "flex";
-  }
-}
-</script>
 
 </body>
 
@@ -519,5 +480,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   applyLanguage(lang);
 });
+
 </script>
 </html>
