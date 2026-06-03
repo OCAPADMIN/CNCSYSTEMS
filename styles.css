@@ -830,70 +830,147 @@ font-size:14px;
 @media (max-width:800px){
   .contact-inner{ flex-direction:column; text-align:center; }
 }
+/* ======================================================== */
+/* BANNER DE COOKIES OPTIMIZADO (Bajo, scannable y accesible) */
+/* ======================================================== */
 .cookie-banner {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: #0ea5e9; /* azul CNC */
-  color: white;
-  padding: 14px 20px;
+  
+  /* ======================================================== */
+  /* CAMBIO: Fondo azul claro suave y borde azul corporativo  */
+  /* ======================================================== */
+  background: #e0f2fe; /* Un azul claro muy limpio (Sky 100) */
+  border: 1px solid #bae6fd; /* Borde un punto más oscuro para dar relieve */
+  
+  color: var(--color-text); /* Texto oscuro (#333) para máxima legibilidad */
+  padding: 15px 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15); /* Sombra adaptada al fondo azul */
+  
   display: flex;
+  flex-direction: row; 
   align-items: center;
-  gap: 12px;
-  z-index: 9999;
-  max-width: 450px;
+  justify-content: space-between;
+  gap: 25px;
+  
+  z-index: 99999;
+  width: 90%;
+  max-width: 1100px;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 .cookie-banner p {
   margin: 0;
   flex: 1;
+  text-align: left;
 }
 
 .cookie-banner a {
-  color: #fff;
+  color: var(--color-primary); /* Enlace azul CNC corporativo */
   text-decoration: underline;
   font-weight: bold;
 }
 
-.cookie-banner button {
-  background: #fff;
-  color: #0ea5e9;
-  border: none;
-  border-radius: 8px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s;
+/* Contenedor de botones alineado a la misma altura visual */
+.cookie-buttons-container {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0; /* Evita que los botones se encojan o deformen */
 }
 
-.cookie-banner button:hover {
-  background: #e0f2fe;
+.cookie-banner button {
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.2s ease;
 }
+
+/* Botón Aceptar (Color primario potente) */
+.cookie-banner button:nth-child(1) {
+  background: var(--color-primary);
+  color: white;
+}
+.cookie-banner button:nth-child(1):hover {
+  background: #0c94d6;
+}
+
+/* Botón Rechazar (Gris neutro con idéntica visibilidad) */
+.cookie-banner button:nth-child(2) {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+.cookie-banner button:nth-child(2):hover {
+  background: #e2e8f0;
+}
+
+/* Botón Configurar (Transparente/Outline discreto) */
+.cookie-banner button:nth-child(3) {
+  background: #ffffff; /* Fondo blanco para romper con el azul claro */
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+.cookie-banner button:nth-child(3):hover {
+  background: #f8fafc;
+  color: var(--color-text);
+}
+/* Botón flotante permanente para reconfigurar (Esquina inferior izquierda) */
 .cookie-settings-btn {
   position: fixed;
-  bottom: 80px;   /* un poco por encima del banner */
-  right: 20px;
+  bottom: 20px;
+  left: 20px; /* Cambiado a la izquierda para no tapar el widget de WhatsApp */
   background: #0ea5e9;
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.2s, transform 0.2s;
 }
 
 .cookie-settings-btn:hover {
   background: #0c94d6;
-  transform: rotate(20deg);
+  transform: rotate(30deg);
+}
+
+/* ======================================================== */
+/* ADAPTACIÓN PARA MÓVILES (Pasa automáticamente a bloque) */
+/* ======================================================== */
+@media (max-width: 768px) {
+  .cookie-banner {
+    flex-direction: column; /* En móvil se apila para que no se salga de los márgenes */
+    align-items: stretch;
+    gap: 15px;
+    bottom: 10px;
+    padding: 15px;
+    font-size: 12px;
+  }
+  
+  .cookie-buttons-container {
+    width: 100%;
+  }
+  
+  .cookie-buttons-container button {
+    flex: 1; /* Los tres botones ocupan el mismo ancho exacto en el móvil */
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 12px;
+  }
 }
 .servicios-fotos {
   width: 100%;
