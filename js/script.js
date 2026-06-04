@@ -29,7 +29,10 @@ function rejectCookies() {
 }
 
 function openPreferences() {
-  document.getElementById("cookie-preferences").style.display = "flex";
+ const prefPanel = document.getElementById("cookie-preferences");
+  if (prefPanel) {
+    prefPanel.style.display = "flex";
+  }
 }
 
 function closePreferences() {
