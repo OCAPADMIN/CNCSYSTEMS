@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PNLQP6N9');</script>
+
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Diagnóstico y solución de la alarma Fanuc 430. Servicio técnico CNC especializado en errores de servo, fallos de eje y comunicación. Asistencia rápida.">
   <meta name="keywords" content="fanuc alarm 430, error fanuc 430, servo alarm axis fault, fallo eje cnc, reparacion servo fanuc"> 
   <title>Fanuc Alarm 910 | Error de Comunicación CNC</title>
   <link rel="stylesheet" href="styles.css">
+   <script src="js/script.js"></script> 
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNLQP6N9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<button class="cookie-settings-btn" onclick="openPreferences()" title="Configuración de Cookies" aria-label="Configurar cookies">
+  🍪
+</button>
 <div class="asistencia-container">
 
   <div onclick="toggleMenu()">
@@ -193,7 +191,7 @@ Servicio técnico CNC multimarca en maquinaria y controles industriales.
         </p>
 
 </section>
-  <!-- Footer -->
+ <!-- Footer -->
 <footer class="site-footer">
 
  <div class="footer-inner">
@@ -217,6 +215,7 @@ data-pt="Política de Privacidade">Política de Privacidad</a> |
     <a href="politica-cookies.html" data-es="Política de Cookies"
 data-en="Cookie Policy"
 data-pt="Política de Cookies">Política de Cookies</a>
+<a href="#" onclick="openPreferences(); return false;" data-es="Configuración de Cookies" data-en="Cookie Settings">Configuración de Cookies</a>
 
   </p>
     <div class="footer-right">
@@ -253,26 +252,17 @@ data-pt="Política de Cookies">Política de Cookies</a>
 <!-- Banner cookies -->
 <div id="cookie-banner" class="cookie-banner" style="display:none;">
 <p 
-  data-es="Usamos cookies para mejorar tu experiencia. <a href='politica-cookies.html'>Más información</a>"
-  data-en="We use cookies to improve your experience. <a href='politica-cookies.html'>More information</a>"
-  data-pt="Usamos cookies para melhorar sua experiência. <a href='politica-cookies.html'>Mais informações</a>">
-  Usamos cookies...
+  data-es="Utilizamos cookies técnicas propias necesarias para la navegación y cookies de análisis de terceros para medir la actividad estadística del sitio web. Puede aceptar todas las cookies, rechazarlas o configurar sus preferencias a continuación. <a href='politica-cookies.html'>Política de Cookies</a>"
+  data-en="We use our own technical cookies necessary for navigation and third-party analytical cookies to measure website statistical activity. You can accept all cookies, reject them, or configure your preferences below. <a href='politica-cookies.html'>Cookie Policy</a>"
+  data-pt="Utilizamos cookies técnicas próprias necessárias para a navegação e cookies de análise de terceiros para medir a atividade estatística do sítio web. Pode aceitar todos os cookies, rejeitá-los ou configurar as suas preferências abaixo. <a href='politica-cookies.html'>Política de Cookies</a>">
+  Utilizamos cookies técnicas propias necesarias para la navegación...
 </p>
 
-<button onclick="acceptCookies()"
-data-es="Aceptar"
-data-en="Accept"
-data-pt="Aceitar">Aceptar</button>
-
-<button onclick="rejectCookies()"
-data-es="Rechazar"
-data-en="Reject"
-data-pt="Rejeitar">Rechazar</button>
-
-<button onclick="openPreferences()"
-data-es="Configurar"
-data-en="Settings"
-data-pt="Configurar">Configurar</button>
+<div class="cookie-buttons-container" style="display: flex; gap: 8px; margin-top: 10px;">
+  <button onclick="acceptCookies()" data-es="Aceptar" data-en="Accept" data-pt="Aceitar">Aceptar</button>
+  <button onclick="rejectCookies()" data-es="Rechazar" data-en="Reject" data-pt="Rejeitar">Rechazar</button>
+  <button onclick="openPreferences()" data-es="Configurar" data-en="Settings" data-pt="Configurar">Configurar</button>
+</div>
 
 </div>
 <!-- Panel de configuración -->
@@ -326,34 +316,6 @@ data-pt="Configurar">Configurar</button>
 
 </div>
 
-<script>
-function acceptCookies() {
-  localStorage.setItem("cookies-consent", "all");
-  document.getElementById("cookie-banner").style.display = "none";
-}
-function rejectCookies() {
-  localStorage.setItem("cookies-consent", "none");
-  document.getElementById("cookie-banner").style.display = "none";
-}
-function openPreferences() {
-  document.getElementById("cookie-preferences").style.display = "flex";
-}
-function closePreferences() {
-  document.getElementById("cookie-preferences").style.display = "none";
-}
-function savePreferences() {
-  let analytics = document.getElementById("analytics").checked;
-  let marketing = document.getElementById("marketing").checked;
-  localStorage.setItem("cookies-consent", JSON.stringify({analytics, marketing}));
-  document.getElementById("cookie-preferences").style.display = "none";
-  document.getElementById("cookie-banner").style.display = "none";
-}
-window.onload = function() {
-  if (!localStorage.getItem("cookies-consent")) {
-    document.getElementById("cookie-banner").style.display = "flex";
-  }
-}
-</script>
 
 </body>
 
@@ -423,6 +385,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   applyLanguage(lang);
 });
+
 </script>
-</body>
 </html>

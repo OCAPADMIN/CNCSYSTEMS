@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){
-w[l]=w[l]||[];
-w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-j.async=true;
-j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PNLQP6N9');
-</script>
-<!-- End Google Tag Manager -->
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +25,7 @@ f.parentNode.insertBefore(j,f);
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="stylesheet" href="styles.css">
+  <meta name="google-site-verification" content="EUEkinhmIJbcmxzRt9b0CU9oLn7igGIQ3eW9y-MHTS8" />
 
 <script type="application/ld+json">
 {
@@ -84,13 +73,14 @@ f.parentNode.insertBefore(j,f);
  ]
 }
 </script>
+<script src="js/script.js"></script> 
+ 
 
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNLQP6N9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<button class="cookie-settings-btn" onclick="openPreferences()" title="Configuración de Cookies" aria-label="Configurar cookies">
+  🍪
+</button>
 <div class="asistencia-container">
 
   <div  onclick="toggleMenu()">
@@ -434,22 +424,33 @@ En <strong> CNC Systems </strong> contamos con amplia experiencia y herramientas
 no dude en ponerse en <a href="contact.html" data-en="Contact" data-es="contacto" data-pt="contato">contacto</a> con nosotros.</strong></p>
   </div>
 </section>
-</section><!-- Footer -->
-
-
-
-
-
+</section>
+ <!-- Footer -->
 <footer class="site-footer">
 
  <div class="footer-inner">
     <div class="footer-left">
-      <p>© <span id="year"></span> CNC SYSTEMS. SL - All rights reserved</p>
+      <p>© <span id="year"></span> 	<p
+data-es="CNC SYSTEMS. Todos los derechos reservados"
+data-en="CNC SYSTEMS. All rights reserved"
+data-pt="CNC SYSTEMS. Todos os direitos reservados">
+CNC SYSTEMS
+</p>
+
     </div>
 <p>
-    <a href="aviso-legal.html">Aviso Legal</a> | 
-	<a href="docs/PolíticaPrivacidad.pdf">Política de Privacidad</a> | 
-    <a href="politica-cookies.html">Política de Cookies</a>
+    <a href="aviso-legal.html"data-es="Aviso Legal"
+data-en="Legal Notice"
+data-pt="Aviso Legal">Aviso Legal</a>| 
+
+	<a href="docs/PolíticaPrivacidad.pdf" data-es="Política de Privacidad"
+data-en="Privacy Policy"
+data-pt="Política de Privacidade">Política de Privacidad</a> | 
+    <a href="politica-cookies.html" data-es="Política de Cookies"
+data-en="Cookie Policy"
+data-pt="Política de Cookies">Política de Cookies</a>
+<a href="#" onclick="openPreferences(); return false;" data-es="Configuración de Cookies" data-en="Cookie Settings">Configuración de Cookies</a>
+
   </p>
     <div class="footer-right">
       <!-- LinkedIn -->
@@ -482,67 +483,82 @@ no dude en ponerse en <a href="contact.html" data-en="Contact" data-es="contacto
    
 </footer>
 
-
 <!-- Banner cookies -->
 <div id="cookie-banner" class="cookie-banner" style="display:none;">
-  <p>
-    Usamos cookies para mejorar tu experiencia. 
-    <a href="politica-cookies.html">Más información</a>
-  </p>
-  <button onclick="acceptCookies()">Aceptar</button>
-  <button onclick="rejectCookies()">Rechazar</button>
-  <button onclick="openPreferences()">Configurar</button>
+<p 
+  data-es="Utilizamos cookies técnicas propias necesarias para la navegación y cookies de análisis de terceros para medir la actividad estadística del sitio web. Puede aceptar todas las cookies, rechazarlas o configurar sus preferencias a continuación. <a href='politica-cookies.html'>Política de Cookies</a>"
+  data-en="We use our own technical cookies necessary for navigation and third-party analytical cookies to measure website statistical activity. You can accept all cookies, reject them, or configure your preferences below. <a href='politica-cookies.html'>Cookie Policy</a>"
+  data-pt="Utilizamos cookies técnicas próprias necessárias para a navegação e cookies de análise de terceiros para medir a atividade estatística do sítio web. Pode aceitar todos os cookies, rejeitá-los ou configurar as suas preferências abaixo. <a href='politica-cookies.html'>Política de Cookies</a>">
+  Utilizamos cookies técnicas propias necesarias para la navegación...
+</p>
+
+<div class="cookie-buttons-container" style="display: flex; gap: 8px; margin-top: 10px;">
+  <button onclick="acceptCookies()" data-es="Aceptar" data-en="Accept" data-pt="Aceitar">Aceptar</button>
+  <button onclick="rejectCookies()" data-es="Rechazar" data-en="Reject" data-pt="Rejeitar">Rechazar</button>
+  <button onclick="openPreferences()" data-es="Configurar" data-en="Settings" data-pt="Configurar">Configurar</button>
 </div>
 
+</div>
 <!-- Panel de configuración -->
 <div id="cookie-preferences" class="cookie-banner" style="display:none; flex-direction:column; align-items:flex-start; max-width:500px;">
-  <h3>Configuración de cookies</h3>
-  <label><input type="checkbox" disabled checked> Necesarias (siempre activas)</label>
-  <label><input type="checkbox" id="analytics"> Analíticas</label>
-  <label><input type="checkbox" id="marketing"> Marketing</label>
+  
+  <h3 
+  data-es="Configuración de cookies"
+  data-en="Cookie settings"
+  data-pt="Configuração de cookies">
+  Configuración de cookies
+  </h3>
+
+  <label 
+  data-es='<input type="checkbox" disabled checked> Necesarias (siempre activas)'
+  data-en='<input type="checkbox" disabled checked> Necessary (always active)'
+  data-pt='<input type="checkbox" disabled checked> Necessárias (sempre ativas)'>
+  <input type="checkbox" disabled checked> Necesarias (siempre activas)
+  </label>
+
+  <label 
+  data-es='<input type="checkbox" id="analytics"> Analíticas'
+  data-en='<input type="checkbox" id="analytics"> Analytics'
+  data-pt='<input type="checkbox" id="analytics"> Analíticas'>
+  <input type="checkbox" id="analytics"> Analíticas
+  </label>
+
+  <label 
+  data-es='<input type="checkbox" id="marketing"> Marketing'
+  data-en='<input type="checkbox" id="marketing"> Marketing'
+  data-pt='<input type="checkbox" id="marketing"> Marketing'>
+  <input type="checkbox" id="marketing"> Marketing
+  </label>
+
   <div style="margin-top:10px; display:flex; gap:8px;">
-    <button onclick="savePreferences()">Guardar</button>
-    <button onclick="closePreferences()">Cancelar</button>
+    
+    <button onclick="savePreferences()"
+    data-es="Guardar"
+    data-en="Save"
+    data-pt="Guardar">
+    Guardar
+    </button>
+
+    <button onclick="closePreferences()"
+    data-es="Cancelar"
+    data-en="Cancel"
+    data-pt="Cancelar">
+    Cancelar
+    </button>
+
   </div>
+
 </div>
 
-<script>
-function acceptCookies() {
-  localStorage.setItem("cookies-consent", "all");
-  document.getElementById("cookie-banner").style.display = "none";
-}
-function rejectCookies() {
-  localStorage.setItem("cookies-consent", "none");
-  document.getElementById("cookie-banner").style.display = "none";
-}
-function openPreferences() {
-  document.getElementById("cookie-preferences").style.display = "flex";
-}
-function closePreferences() {
-  document.getElementById("cookie-preferences").style.display = "none";
-}
-function savePreferences() {
-  let analytics = document.getElementById("analytics").checked;
-  let marketing = document.getElementById("marketing").checked;
-  localStorage.setItem("cookies-consent", JSON.stringify({analytics, marketing}));
-  document.getElementById("cookie-preferences").style.display = "none";
-  document.getElementById("cookie-banner").style.display = "none";
-}
-window.onload = function() {
-  if (!localStorage.getItem("cookies-consent")) {
-    document.getElementById("cookie-banner").style.display = "flex";
-  }
-}
-</script>
 
 </body>
-</html>
-<!-- Script de JavaScript para cambiar el idioma -->
 
+<!-- Script de JavaScript para cambiar el idioma -->
 <script>
   // año automático
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Obtener el idioma desde la URL (si está disponible)
@@ -570,7 +586,6 @@ menuToggle.addEventListener('click', () => {
 });
 
 </script>
-
 <script>
 function toggleMenu() {
   var menu = document.getElementById("asistenciaMenu");
@@ -581,3 +596,29 @@ function toggleMenu() {
   }
 }
 </script>
+<script>
+function changeLanguage(lang){
+  localStorage.setItem("lang", lang);
+  applyLanguage(lang);
+}
+
+function applyLanguage(lang){
+  document.querySelectorAll("[data-es]").forEach(el=>{
+    el.innerHTML = el.getAttribute("data-"+lang);
+  });
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  let lang = localStorage.getItem("lang");
+
+  // Si no hay idioma guardado → español
+  if(!lang){
+    lang = "es";
+    localStorage.setItem("lang","es");
+  }
+
+  applyLanguage(lang);
+});
+
+</script>
+</html>
