@@ -2203,3 +2203,49 @@ color:#666;
 	.timeline-section {
   background-attachment: fixed; /* Efecto parallax sutil */}
 }
+.privacidad-formulario{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.checkbox-legal{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    margin-bottom:10px;
+    font-size:11px;
+    line-height:1.4;
+    text-align:left;
+}
+
+.checkbox-legal input[type="checkbox"]{
+    margin-top:3px;
+    flex-shrink:0;
+}
+
+.rgpd-box{
+    background:#f5f7fa;
+    border:1px solid #d9e2ec;
+    border-radius:8px;
+    padding:20px;
+    margin-top:25px;
+    font-size:14px;
+		color:  black;
+}
+
+.rgpd-box table{
+    width:100%;
+    border-collapse:collapse;
+		color:  black;
+}
+
+.rgpd-box td{
+    padding:8px;
+    vertical-align:top;
+    border-bottom:1px solid #ddd;
+		color:  black;
+}
+
+.rgpd-box h4{
+    margin-bottom:15px;
+	color:  black;
+}
