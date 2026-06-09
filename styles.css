@@ -2249,3 +2249,37 @@ color:#666;
     margin-bottom:15px;
 	color:  black;
 }
+.privacy-job{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+    background:#f5f7f9;
+    border-left:4px solid #0ea5e9;
+    border-radius:6px;
+    text-align:left;
+    font-size:0.75rem;
+}
+
+.privacy-job h4{
+    margin-bottom:15px;
+    color:#0ea5e9;
+}
+
+.privacy-job p{
+    margin-bottom:10px;
+    line-height:1.5;
+	font-size:0.75rem;
+}
+.job-consent{
+    margin-top:15px;
+    font-size:0.9rem;
+    font-style:italic;
+    color:#555;
+}
+.cookie-description{
+    font-size:0.75rem;
+    line-height:1.5;
+    color:#666;
+    margin:5px 0 15px 25px;
+    max-width:90%;
+}
