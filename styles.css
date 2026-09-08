@@ -1711,7 +1711,7 @@ margin:20px 0;
         /* Ajuste para pantallas pequeñas */
 @media (max-width: 600px) {
   .card-content h2 {
-    font-size: 1.22rem; 
+    font-size: 1.22rem;  
   }
 }
         .error-tag { background: #ffeded; color: #d93025; padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-block; margin-bottom: 10px; }
