@@ -520,20 +520,38 @@ footer {
 
 /* Estilo de cards */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 30px;
-  position: relative;
-  background-image: url('images/tecnico3.jpg');
-  background-size: cover;       /* La imagen cubre todo el contenido */
-  background-position: center;  /* Centra la imagen */
-  background-repeat: no-repeat; 
-  background-attachment: fixed; /* Efecto parallax sutil */
-  display: flex;
-  justify-content: center;      /* Centra horizontalmente */
-  padding: 10px 20px; /* Espacio arriba y abajo */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+border-radius: 10px;
+           
+    position: relative;
+    background-image: url('images/tecnico3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card {
+    width: 250px;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 .cardsequ {
   display: flex;
@@ -551,24 +569,7 @@ footer {
   justify-content: center;      /* Centra horizontalmente */
   padding: 10px 20px; /* Espacio arriba y abajo */
 }
-.card{
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  width: 180px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
 
-    width: 250px; /* ancho fijo de la tarjeta */
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    word-wrap: break-word;       /* forzar quiebre de palabra larga */
-    overflow-wrap: break-word;   /* soporte moderno */
-    white-space: normal;         /* asegurar que no sea nowrap */
-}
 
 .card:hover {
   transform: translateY(-5px);
@@ -1715,11 +1716,21 @@ margin:20px 0;
   }
 
   /* Reducimos ligeramente los márgenes laterales del contenedor general */
-  .cards, .carousel-wrapper {
+  .carousel-wrapper {
     padding-left: 5px;
     padding-right: 5px;
   }
+   .cards {
+        width: 100%;
+        padding: 10px;
+		
+    }
 
+    .card {
+        width: 100%;
+        max-width: 350px;
+		
+    }
   /* Aseguramos que los títulos adapten el tamaño e introduzcan guiones si no caben */
   .card-content h2 {
     font-size: 1.1rem;

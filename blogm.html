@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Academia CNC Systems | Blog técnico sobre mantenimiento, reparación y eficiencia energética CNC</title>
+
+<meta name="description" content="Guías técnicas gratuitas sobre mantenimiento CNC, reparación de maquinaria CNC, eficiencia energética, auditorías energéticas, Fanuc, Siemens, Heidenhain y mucho más.">
+
+<!-- Hojas de estilo: styles.css para menú/footer e idéntica estética general, blog.css para el cuerpo del blog -->
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="blog.css">
+<script src="js/script.js"></script>
+</head>
+
+<body>
+
+<!-- MENÚ SUPERIOR (Copiado de index.html) -->
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.jpeg" alt="CNC SYSTEMS Logo"></a>
+    </div>
+    <nav>
+      <!-- Botón del menú hamburguesa -->
+      <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>   
+      <ul>
+          <li><a href="index.html" data-en="Home" data-es="Inicio" data-pt="Início">Inicio</a></li>
+          <li><a href="historia.html" data-en="About Us" data-es="Sobre Nosotros" data-pt="Sobre Nós">Sobre Nosotros</a></li>
+          <li><a href="equipo.html" data-en="Teams" data-es="Equipo técnico" data-pt="Equipo">Equipo técnico</a></li>
+          <li><a href="servicio-tecnico-cnc.html" data-en="Services" data-es="Servicios/Tarifas" data-pt="Serviços">Servicios/Tarifas</a></li>
+          <li><a href="contact.html" data-en="Contact" data-es="Contacto" data-pt="Contato">Contacto</a></li>
+          <li><a href="trabaja_nosotros.html" data-en="Jobs with us" data-es="Trabaja con nosotros" data-pt="Contato">Trabaja con nosotros</a></li>
+          <li><a href="blogm.html">Consejos CNC</a></li>
+          <li><a href="formulario.html" class="menu-asistencia">Solicitar asistencia</a></li>
+      </ul>
+     </nav>
+    <div class="language-selector">
+      <div class="idioma">
+        <a href="#" onclick="changeLanguage('en')"><img src="images/ingles.png" alt="English"></a>
+        <a href="#" onclick="changeLanguage('es')"><img src="images/espanol.png" alt="Español"></a>
+        <a href="#" onclick="changeLanguage('pt')"><img src="images/portugues.png" alt="Português"></a>
+      </div>
+    </div>
+  </div>
+</header>
+	
+
+<section class="search">
+
+    <h2>Buscar artículos</h2>
+
+    <input id="searchInput"
+           placeholder="Busca Fanuc, Siemens, potencia reactiva, lubricación...">
+
+</section>
+
+<section class="categories">
+
+<h2>Categorías del Blog</h2>
+
+<div class="category-grid">
+
+<a href="blogm.html#academia" class="card-link">
+<div class="category-card">
+<img src="images/blog/academia.png" alt="Academia CNC">
+<div class="card-content">
+<h3>Academia CNC</h3>
+<p>Curso gratuito de eficiencia energética y electricidad industrial aplicada a máquinas CNC.</p>
+</div>
+</div>
+</a>
+<a href="blogm.html#averias" class="card-link">
+<div class="category-card">
+<img src="images/blog/fanuc.png" alt="Alarmas CNC">
+<div class="card-content">
+<h3>Averías CNC</h3>
+<p>Errores Fanuc, Siemens, Heidenhain, Mitsubishi, Fagor y soluciones paso a paso.</p>
+</div>
+</div>
+</a>
+<a href="blogm.html#mantenimiento" class="card-link">
+<div class="category-card">
+<img src="images/blog/mantenimiento.png" alt="Mantenimiento CNC">
+<div class="card-content">
+<h3>Mantenimiento CNC</h3>
+<p>Geometría, lubricación, husillos, guías, precisión y mantenimiento preventivo.</p>
+</div>
+</div>
+</a>
+<a href="blogm.html#retrofit" class="card-link">
+<div class="category-card">
+<img src="images/blog/retrofit.png" alt="Retrofit CNC">
+<div class="card-content">
+<h3>Retrofit de Máquinas CNC</h3>
+    <p>¿Cuando es necesario realizar un retrofit?. Actualización de controles numéricos, servomotores y esquemas eléctricos para modernizar tu máquina.</p></div>
+</div>
+</a>
+
+<a href="intervenciones.html" class="card-link"><div class="category-card">
+<img src="images/blog/heckert.png" alt="Casos de éxito CNC">
+<div class="card-content">
+<h3>Casos de éxito</h3>
+<p>Trabajos reales realizados por CNCSystems en talleres e industria.</p>
+</div>
+</div></a>
+</a>
+<a href="blogm.html#noticias" class="card-link">
+<div class="category-card">
+<img src="images/blog/noticias.png" alt="Noticias CNC">
+<div class="card-content">
+<h3>Noticias del Sector</h3>
+<p>Ferias EMO, BIEMH, nuevas tecnologías CNC y normativas.</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<section id="academia" class="academia">
+
+<div class="containerb">
+
+<div class="section-header">
+<span>NUEVO CURSO GRATUITO</span>
+<h2>Academia CNC Systems</h2>
+
+<p>
+Aprende desde cero cómo funciona la electricidad de una máquina CNC,
+cómo medir su consumo y cómo elaborar informes profesionales de rendimiento energético.
+</p>
+
+</div>
+
+<div class="ruta">
+
+<div class="nivel verde">
+<h4>Nivel 0</h4>
+<p>Introducción a la eficiencia energética.</p>
+</div>
+
+<div class="nivel verde">
+<h4>Nivel 1</h4>
+<p>Electricidad Industrial.</p>
+</div>
+
+<div class="nivel amarillo">
+<h4>Nivel 2</h4>
+<p>Consumo energético.</p>
+</div>
+
+<div class="nivel naranja">
+<h4>Nivel 3</h4>
+<p>METREL MI2883.</p>
+</div>
+
+<div class="nivel rojo">
+<h4>Nivel 4</h4>
+<p>VDMA 34179.</p>
+</div>
+
+<div class="nivel rojo">
+<h4>Nivel 5</h4>
+<p>ISO 50001.</p>
+</div>
+
+</div>
+
+<div class="articulos">
+
+<article class="post-card">
+<img src="images/blog/electricidad.png" alt="">
+<div class="info">
+<span>NIVEL 0</span>
+<h3>La electricidad explicada para un taller CNC</h3>
+<p>Corriente, tensión, intensidad y trifásica explicadas desde cero.</p>
+<a href="#">Leer artículo →</a>
+</div>
+</article>
+
+<article class="post-card">
+<img src="images/blog/potencia.png" alt="">
+<div class="info">
+<span>NIVEL 1</span>
+<h3>Potencia activa, reactiva y aparente</h3>
+<p>Comprende qué significan los kW, kvar y kVA.</p>
+<a href="#">Leer artículo →</a>
+</div>
+</article>
+
+<article class="post-card">
+<img src="images/blog/metrel.png" alt="">
+<div class="info">
+<span>NIVEL 3</span>
+<h3>Cómo medir una máquina CNC con un METREL MI2883</h3>
+<p>Configuración, medición y análisis de datos.</p>
+<a href="#">Leer artículo →</a>
+</div>
+</article>
+
+<article class="post-card">
+<img src="images/blog/vdma.png" alt="">
+<div class="info">
+<span>NIVEL 4</span>
+<h3>Qué es la VDMA 34179</h3>
+<p>Cómo clasificar los estados OFF, STANDBY, OPERATIONAL y WORKING.</p>
+<a href="#">Leer artículo →</a>
+</div>
+</article>
+
+<article class="post-card">
+<img src="images/blog/iso50001.png" alt="">
+<div class="info">
+<span>NIVEL 5</span>
+<h3>ISO 50001 aplicada a talleres CNC</h3>
+<p>Cómo gestionar la energía en un taller de mecanizado.</p>
+<a href="#">Leer artículo →</a>
+</div>
+</article>
+
+<article class="post-card">
+<img src="images/blog/consumo.png" alt="">
+<div class="info">
+<span>NIVEL 2</span>
+<h3>¿Cuánto consume un centro de mecanizado CNC?</h3>
+<p>Análisis real del consumo durante producción y standby.</p>
+<a href="#">Leer artículo →</a>
+</div>
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="banner">
+
+<div class="banner-text">
+
+<h2>¿Sabías que una máquina CNC puede consumir energía durante horas sin producir?</h2>
+
+<p>
+Aprende a detectar consumos ocultos y a reducir costes eléctricos mediante auditorías energéticas.
+</p>
+
+<a href="#">Descubrir cómo →</a>
+
+</div>
+
+</section>
+
+<section id="mantenimiento" class="doble">
+
+<div class="imagen">
+<img src="images/blog/husillo.png" alt="">
+</div>
+
+<div class="texto">
+<span>MANTENIMIENTO PREVENTIVO</span>
+
+<h2>Guías completas para alargar la vida útil de tu maquinaria CNC</h2>
+
+<ul>
+<li>Lubricación de guías lineales.</li>
+<li>Mantenimiento del husillo.</li>
+<li>Geometría y precisión.</li>
+<li>Revisión de refrigeración.</li>
+<li>Checklist preventivo.</li>
+</ul>
+
+<a href="#">Ver mantenimiento →</a>
+
+</div>
+
+</section>
+
+<section id="casos" class="casos">
+
+<div class="section-header">
+
+<span>CASOS DE ÉXITO CNC SYSTEMS</span>
+
+<h2>Trabajos reales realizados en clientes</h2>
+
+</div>
+
+<div class="casos-grid">
+
+<div class="caso-card">
+<img src="images/blog/heckert.png" alt="">
+<div class="info">
+<h3>Heckert HEC1250</h3>
+<p>Caracterización energética mediante analizador METREL.</p>
+</div>
+</div>
+
+<div class="caso-card">
+<img src="images/blog/geometria.png" alt="">
+<div class="info">
+<h3>Corrección geométrica</h3>
+<p>Recuperación de precisión de un centro de mecanizado.</p>
+</div>
+</div>
+
+<div class="caso-card">
+<img src="images/blog/aire.png" alt="">
+<div class="info">
+<h3>Consumo neumático</h3>
+<p>Evaluación del aire comprimido y pérdidas energéticas.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="averias" class="averias">
+
+<div class="section-header">
+
+<span>AVERÍAS CNC</span>
+
+<h2>Biblioteca de alarmas y soluciones</h2>
+
+</div>
+
+<div class="articulos">
+
+<article class="post-card mini">
+<img src="images/blog/fanuc.png">
+<div class="info">
+<h3>Alarmas FANUC</h3>
+<a href="error-fanuc.html">Ver artículos →</a>
+</div>
+</article>
+
+<article class="post-card mini">
+<img src="images/blog/siemens.png">
+<div class="info">
+<h3>Alarmas SIEMENS</h3>
+<a href="#">Ver artículos →</a>
+</div>
+</article>
+
+<article class="post-card mini">
+<img src="images/blog/heidenhain.png">
+<div class="info">
+<h3>Alarmas HEIDENHAIN</h3>
+<a href="#">Ver artículos →</a>
+</div>
+</article>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-box">
+
+<h2>Centro de conocimiento CNC Systems</h2>
+
+<p>
+CNC Systems comparte contenido técnico sobre mantenimiento CNC, reparación,
+geometría, eficiencia energética, auditorías energéticas, Fanuc, Siemens,
+Heidenhain y optimización del consumo eléctrico de maquinaria CNC.
+</p>
+
+<a href="contacto.html">Solicitar asistencia técnica</a>
+
+</div>
+
+</footer>
+
+
+  <!-- Footer -->
+<footer class="site-footer">
+
+ <div class="footer-inner">
+    <div class="footer-left">
+      <p>© <span id="year"></span> 	<p
+data-es="CNC SYSTEMS. Todos los derechos reservados"
+data-en="CNC SYSTEMS. All rights reserved"
+data-pt="CNC SYSTEMS. Todos os direitos reservados">
+CNC SYSTEMS
+</p>
+
+    </div>
+<p>
+    <a href="aviso-legal.html"data-es="Aviso Legal"
+data-en="Legal Notice"
+data-pt="Aviso Legal">Aviso Legal</a>| 
+
+	<a href="politicaprivacidad.html" data-es="Política de Privacidad"
+data-en="Privacy Policy"
+data-pt="Política de Privacidade">Política de Privacidad</a> | 
+    <a href="politica-cookies.html" data-es="Política de Cookies"
+data-en="Cookie Policy"
+data-pt="Política de Cookies">Política de Cookies</a>
+<a href="#" onclick="openPreferences(); return false;" data-es="Configuración de Cookies" data-en="Cookie Settings">Configuración de Cookies</a>
+
+  </p>
+    <div class="footer-right">
+      <!-- LinkedIn -->
+      <a class="social-link" href="https://www.linkedin.com/company/cncsystems-sl"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Sigue a CNC Systems en LinkedIn">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.5 8.98h4.78v2.05h.07c.66-1.25 2.28-2.57 4.69-2.57 5.01 0 5.93 3.3 5.93 7.59V24h-5V16.7c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V24h-5V8.98z"/>
+        </svg>
+        <span class="sr-only">CNC Systems en LinkedIn</span>
+      </a>
+
+      <!-- Teléfono -->
+      <a class="social-link" href="tel:+34 914 338 981" aria-label="Llamar a CNC Systems">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.3 22 2 13.7 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.3.2 2.5.57 3.6a1 1 0 01-.25 1l-2.2 2.2z"/>
+        </svg>+34 914 338 981
+        <span class="sr-only">Teléfono CNC Systems</span>
+      </a>
+
+      <!-- Email -->
+      <a class="social-link" href="mailto:info@cncsystems.es" aria-label="Enviar correo a CNC Systems">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z"/>
+        </svg>direccion@cncsystems.es
+        <span class="sr-only">Email CNC Systems</span>
+      </a>
+    </div>
+  </div>
+   
+</footer>
+
+<!-- Banner cookies -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+<p 
+  data-es="Utilizamos cookies técnicas propias necesarias para la navegación y cookies de análisis de terceros para medir la actividad estadística del sitio web. Puede aceptar todas las cookies, rechazarlas o configurar sus preferencias a continuación. <a href='politica-cookies.html'>Política de Cookies</a>"
+  data-en="We use our own technical cookies necessary for navigation and third-party analytical cookies to measure website statistical activity. You can accept all cookies, reject them, or configure your preferences below. <a href='politica-cookies.html'>Cookie Policy</a>"
+  data-pt="Utilizamos cookies técnicas próprias necessárias para a navegação e cookies de análise de terceiros para medir a atividade estatística do sítio web. Pode aceitar todos os cookies, rejeitá-los ou configurar as suas preferências abaixo. <a href='politica-cookies.html'>Política de Cookies</a>">
+  Utilizamos cookies técnicas propias necesarias para la navegación...
+</p>
+
+<div class="cookie-buttons-container" style="display: flex; gap: 8px; margin-top: 10px;">
+  <button onclick="acceptCookies()" data-es="Aceptar" data-en="Accept" data-pt="Aceitar">Aceptar</button>
+  <button onclick="rejectCookies()" data-es="Rechazar" data-en="Reject" data-pt="Rejeitar">Rechazar</button>
+  <button onclick="openPreferences()" data-es="Configurar" data-en="Settings" data-pt="Configurar">Configurar</button>
+</div>
+
+</div>
+<!-- Panel de configuración -->
+<div id="cookie-preferences" class="cookie-banner" style="display:none; flex-direction:column; align-items:flex-start; max-width:500px;">
+  
+  <h3 
+  data-es="Configuración de cookies"
+  data-en="Cookie settings"
+  data-pt="Configuração de cookies">
+  Configuración de cookies
+  </h3>
+
+  <label
+data-es='<input type="checkbox" disabled checked> <strong>Necesarias (siempre activas)</strong>'
+data-en='<input type="checkbox" disabled checked> <strong>Necessary (always active)</strong>'
+data-pt='<input type="checkbox" disabled checked> <strong>Necessárias (sempre ativas)</strong>'>
+<input type="checkbox" disabled checked>
+<strong>Necesarias (siempre activas)</strong>
+</label>
+
+<p class="cookie-description"
+data-es="Estas cookies son necesarias para el correcto funcionamiento de la página web y no pueden ser desactivadas en nuestros sistemas. Permiten funciones básicas como la navegación por la página, el acceso a áreas seguras, la gestión de la sesión o la configuración de preferencias esenciales."
+data-en="These cookies are necessary for the proper functioning of the website and cannot be disabled in our systems. They enable basic functions such as page navigation, access to secure areas, session management and essential preference settings."
+data-pt="Estas cookies são necessárias para o correto funcionamento do website e não podem ser desativadas nos nossos sistemas. Permitem funções básicas como a navegação na página, o acesso a áreas seguras, a gestão da sessão e a configuração de preferências essenciais.">
+Estas cookies son necesarias para el correcto funcionamiento de la página web y no pueden ser desactivadas en nuestros sistemas. Permiten funciones básicas como la navegación por la página, el acceso a áreas seguras, la gestión de la sesión o la configuración de preferencias esenciales.
+</p>
+
+<label
+data-es='<input type="checkbox" id="analytics"> <strong>Analíticas</strong>'
+data-en='<input type="checkbox" id="analytics"> <strong>Analytics</strong>'
+data-pt='<input type="checkbox" id="analytics"> <strong>Analíticas</strong>'>
+<input type="checkbox" id="analytics">
+<strong>Analíticas</strong>
+</label>
+
+<p class="cookie-description"
+data-es="Estas cookies nos permiten obtener información sobre cómo los usuarios interactúan con la página web, como las páginas visitadas, el tiempo de navegación, los errores detectados o las funcionalidades más utilizadas. La información obtenida se utiliza con fines estadísticos y de mejora del funcionamiento, contenido y experiencia de usuario de la página web. Estas cookies solo se instalarán si presta su consentimiento."
+data-en="These cookies allow us to obtain information about how users interact with the website, such as pages visited, browsing time, detected errors and the most frequently used features. The information collected is used for statistical purposes and to improve the website's performance, content and user experience. These cookies will only be installed if you provide your consent."
+data-pt="Estas cookies permitem-nos obter informações sobre a forma como os utilizadores interagem com o website, tais como páginas visitadas, tempo de navegação, erros detetados ou funcionalidades mais utilizadas. As informações obtidas são utilizadas para fins estatísticos e para melhorar o funcionamento, conteúdo e experiência do utilizador. Estas cookies só serão instaladas se der o seu consentimento.">
+Estas cookies nos permiten obtener información sobre cómo los usuarios interactúan con la página web, como las páginas visitadas, el tiempo de navegación, los errores detectados o las funcionalidades más utilizadas. La información obtenida se utiliza con fines estadísticos y de mejora del funcionamiento, contenido y experiencia de usuario de la página web. Estas cookies solo se instalarán si presta su consentimiento.
+</p>
+
+<label
+data-es='<input type="checkbox" id="marketing"> <strong>Marketing</strong>'
+data-en='<input type="checkbox" id="marketing"> <strong>Marketing</strong>'
+data-pt='<input type="checkbox" id="marketing"> <strong>Marketing</strong>'>
+<input type="checkbox" id="marketing">
+<strong>Marketing</strong>
+</label>
+
+<p class="cookie-description"
+data-es="Estas cookies permiten gestionar espacios publicitarios y mostrar contenidos o anuncios personalizados en función de sus hábitos de navegación, preferencias o perfil de usuario. También pueden ser utilizadas por terceros para crear perfiles basados en su navegación y mostrarle publicidad personalizada en esta u otras páginas web. Estas cookies solo se instalarán si presta su consentimiento."
+data-en="These cookies allow advertising spaces to be managed and personalized content or advertisements to be displayed based on your browsing habits, preferences or user profile. They may also be used by third parties to create profiles based on your browsing activity and show you personalized advertising on this or other websites. These cookies will only be installed if you provide your consent."
+data-pt="Estas cookies permitem gerir espaços publicitários e apresentar conteúdos ou anúncios personalizados com base nos seus hábitos de navegação, preferências ou perfil de utilizador. Também podem ser utilizadas por terceiros para criar perfis com base na sua navegação e apresentar publicidade personalizada neste ou noutros websites. Estas cookies só serão instaladas se der o seu consentimento.">
+Estas cookies permiten gestionar espacios publicitarios y mostrar contenidos o anuncios personalizados en función de sus hábitos de navegación, preferencias o perfil de usuario. También pueden ser utilizadas por terceros para crear perfiles basados en su navegación y mostrarle publicidad personalizada en esta u otras páginas web. Estas cookies solo se instalarán si presta su consentimiento.
+</p>
+  <div style="margin-top:10px; display:flex; gap:8px;">
+    
+    <button onclick="savePreferences()"
+    data-es="Guardar"
+    data-en="Save"
+    data-pt="Guardar">
+    Guardar
+    </button>
+
+    <button onclick="closePreferences()"
+    data-es="Cancelar"
+    data-en="Cancel"
+    data-pt="Cancelar">
+    Cancelar
+    </button>
+
+  </div>
+
+</div>
+
+
+</body>
+
+<!-- Script de JavaScript para cambiar el idioma -->
+<script>
+  // año automático
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtener el idioma desde la URL (si está disponible)
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'es'; // Default to English if no lang is specified
+
+        // Función para actualizar el contenido
+        function updateLanguage() {
+            const elements = document.querySelectorAll('[data-en], [data-es]');
+            elements.forEach(function (element) {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+        }
+
+        // Llamar a la función para actualizar el contenido según el idioma
+        updateLanguage();
+    });
+// Obtener el botón y el menú
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('header nav ul');
+
+// Añadir el evento de clic al botón
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show'); // Toggle para mostrar/ocultar el menú
+});
+
+</script>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("asistenciaMenu");
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
+}
+</script>
+<script>
+function changeLanguage(lang){
+  localStorage.setItem("lang", lang);
+  applyLanguage(lang);
+}
+
+function applyLanguage(lang){
+  document.querySelectorAll("[data-es]").forEach(el=>{
+    el.innerHTML = el.getAttribute("data-"+lang);
+  });
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  let lang = localStorage.getItem("lang");
+
+  // Si no hay idioma guardado → español
+  if(!lang){
+    lang = "es";
+    localStorage.setItem("lang","es");
+  }
+
+  applyLanguage(lang);
+});
+
+</script>
+
+<script>
+const input = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.post-card,.caso-card');
+
+input.addEventListener('keyup',()=>{
+ const texto=input.value.toLowerCase();
+
+ cards.forEach(card=>{
+  card.style.display = card.innerText.toLowerCase().includes(texto)
+     ? 'block'
+     : 'none';
+ });
+
+});
+</script>
+</html>
