@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Favicons CNCSystems -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:image" content="https://www.cncsystems.es/images/logo.jpeg">
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Guía completa sobre Retrofit de máquinas CNC: ¿Cuándo conviene modernizar, reparar o comprar una máquina nueva? Análisis técnico de costes, consumo energético y retorno de inversión con CNCSystems.">
+  <meta name="keywords" content="retrofit cnc, reconstruccion maquina cnc, modernizacion cnc, cambiar control cnc, reparamos cnc, heidenhain retrofit, fanuc retrofit, siemens cnc retrofit, ahorro energetico cnc">
+  <meta name="robots" content="index, follow">
+
+  <title data-es="Guía Técnica: Retrofit de Máquinas CNC vs Reparación o Compra Nueva | CNCSystems"
+         data-en="Technical Guide: CNC Machine Retrofit vs Repair or Buying New | CNCSystems"
+         data-pt="Guia Técnico: Retrofit de Máquinas CNC vs Reparação ou Compra Nova | CNCSystems">
+    Guía Técnica: Retrofit de Máquinas CNC vs Reparación o Compra Nueva | CNCSystems
+  </title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/script.js"></script>
+  <meta name="google-site-verification" content="EUEkinhmIJbcmxzRt9b0CU9oLn7igGIQ3eW9y-MHTS8" />
+
+  <!-- Schema.org JSON-LD (Artículo Técnico + Servicio de Retrofit) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "headline": "Retrofit de Maquinaria CNC: Guía Completa de Decisiones Industriales, Rentabilidad y Eficiencia Energética",
+        "description": "Análisis exhaustivo sobre el retrofit de maquinaria CNC. Comparativa financiera y técnica de reparar, modernizar o comprar maquinaria nueva.",
+        "author": {
+          "@type": "Organization",
+          "name": "CNCSystems",
+          "url": "https://www.cncsystems.es"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "CNCSystems",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.cncsystems.es/images/logo.jpeg"
+          }
+        },
+        "inLanguage": "es",
+        "mainEntityOfPage": "https://www.cncsystems.es/retrofit-cnc-guia-completa.html"
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Retrofit y Modernización Integral de Maquinaria CNC",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "CNCSystems",
+          "url": "https://www.cncsystems.es"
+        },
+        "description": "Reconstrucción, cambio de CNC, servos, cabezales y actualización de armarios eléctricos para centros de mecanizado y tornos CNC.",
+        "areaServed": ["ES", "PT"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<button class="cookie-settings-btn" onclick="openPreferences()" title="Configuración de Cookies" aria-label="Configurar cookies">🍪</button>
+
+<!-- Botón lateral flotante de asistencia -->
+<div class="asistencia-container">
+  <div onclick="toggleMenu()">
+    <img src="images/icono-asistencia.png" alt="Asistencia Técnica CNC"><br>
+  </div>
+  <div class="asistencia-menu" id="asistenciaMenu">
+    <a href="tel:+34914338981" class="asistencia-item">📞 Llamar ahora</a>
+    <a href="https://wa.me/34660404046?text=Hola%20necesito%20información%20sobre%20un%20retrofit%20para%20mi%20máquina%20CNC" target="_blank" class="asistencia-item">💬 WhatsApp</a>
+    <a href="formulario.html" class="asistencia-item">⚙ Solicitud de Retrofit</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="logo"><img src="images/logo.jpeg" alt="CNCSystems Logo"></div>
+    <nav>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>   
+      <ul>
+          <li><a href="index.html" data-en="Home" data-es="Inicio" data-pt="Início">Inicio</a></li>
+          <li><a href="historia.html" data-en="About Us" data-es="Sobre Nosotros" data-pt="Sobre Nós">Sobre Nosotros</a></li>
+          <li><a href="equipo.html" data-en="Teams" data-es="Equipo técnico" data-pt="Equipo">Equipo técnico</a></li>
+          <li><a href="servicio-tecnico-cnc.html" data-en="Services" data-es="Servicios/Tarifas" data-pt="Serviços">Servicios/Tarifas</a></li>
+          <li><a href="contact.html" data-en="Contact" data-es="Contacto" data-pt="Contato">Contacto</a></li>
+          <li><a href="trabaja_nosotros.html" data-en="Jobs with us" data-es="Trabaja con nosotros" data-pt="Contato">Trabaja con nosotros</a></li>
+          <li><a href="blog.html">Consejos CNC</a></li>
+          <li><a href="formulario.html" class="menu-asistencia">Solicitar asistencia</a></li>
+      </ul>
+    </nav>
+    <div class="language-selector">
+      <div class="idioma">
+        <a href="#" onclick="changeLanguage('en')"><img src="images/ingles.png" alt="English"></a>
+        <a href="#" onclick="changeLanguage('es')"><img src="images/espanol.png" alt="Español"></a>
+        <a href="#" onclick="changeLanguage('pt')"><img src="images/portugues.png" alt="Português"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CONTENIDO DE LA REVISTA TÉCNICA (MAGAZINE LAYOUT) -->
+<main class="magazine-container">
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <a href="index.html">Inicio</a> &gt; <a href="blog.html">Consejos CNC</a> &gt; <span>Retrofit CNC vs Reparación vs Maquina Nueva</span>
+  </div>
+
+  <!-- Editorial Hero (Cabecera de Revista) -->
+  <section class="magazine-header">
+    <div class="magazine-tag">INFORME TÉCNICO E INDUSTRIAL | INGENIERÍA CNC</div>
+    <h1 data-es="Retrofit de Maquinaria CNC: La Guía Definitiva de Rentabilidad, Eficiencia y Modernización"
+        data-en="CNC Machine Retrofit: The Ultimate Guide to Profitability, Efficiency, and Modernization"
+        data-pt="Retrofit de Máquinas CNC: O Guia Definitivo de Rentabilidade, Eficiência e Modernização">
+      Retrofit de Maquinaria CNC: La Guía Definitiva de Rentabilidad, Eficiencia y Modernización
+    </h1>
+    <p class="magazine-subtitle">
+      ¿Reparar, reemplazar o reconvertir? Analizamos con rigurosidad técnica y financiera cuándo conviene hacer un retrofitting CNC, reduciendo hasta un 60% el consumo energético y recuperando la precisión micrométrica original de sus equipos.
+    </p>
+
+    <div class="magazine-meta">
+      <span>Por <strong>Equipo Técnico de CNCSystems</strong></span> | 
+      <span>Publicado en: <strong>Revista de Mantenimiento Industrial</strong></span> | 
+      <span>Lectura estimada: 15 min</span>
+    </div>
+  </section>
+
+  <!-- Imagen Principal / Portada de Reportaje -->
+  <div class="magazine-hero-image">
+    <img src="images/blog/tecnico-trabajando-armario.jpg" alt="Técnico de CNCSystems realizando retrofit e integración de armario eléctrico CNC">
+    <div class="image-caption">
+      <strong>Foto principal:</strong> Ingeniero del SAT realizando la reconversión electrónica y modernización del control numérico de un centro de mecanizado de alta precisión.
+    </div>
+  </div>
+
+  <!-- Indice de contenidos (SEO Quick Links) -->
+  <nav class="table-of-contents magazine-section">
+    <div class="container">
+      <div class="toc-header">
+        <span class="toc-badge">Guía Navegable</span>
+        <h2>Índice de Contenidos del Artículo Técnico</h2>
+      </div>
+
+      <div class="toc-grid">
+        <a href="#que-es-retrofit" class="toc-card">
+                    <div class="toc-content">
+            <h4>1. ¿Qué es el Retrofit en CNC?</h4>
+            <p>Conceptos fundamentales y alcance técnico.</p>
+          </div>
+        </a>
+
+        <a href="#dilema-triangular" class="toc-card">
+          
+          <div class="toc-content">
+            <h4>2. El Dilema Industrial</h4>
+            <p>Comparativa: Reparar vs. Comprar vs. Retrofit.</p>
+          </div>
+        </a>
+
+        <a href="#realizar" class="toc-card">
+          <div class="toc-content">
+            <h4>3. ¿Cuándo Modernizar?</h4>
+            <p>Indicadores clave para decidir la intervención.</p>
+          </div>
+        </a>
+
+        <a href="#Obsolescencia" class="toc-card">
+          
+          <div class="toc-content">
+            <h4>4. Industria 4.0 y Obsolescencia</h4>
+            <p>Riesgos de la tecnología obsoleta y conectividad.</p>
+          </div>
+        </a>
+
+        <a href="#matriz-decision" class="toc-card">
+          
+          <div class="toc-content">
+            <h4>Matriz de Decisión Económica</h4>
+            <p>Beneficios financieros y valoración técnica.</p>
+          </div>
+        </a>
+
+        <a href="#eficiencia-energetica" class="toc-card">
+          <div class="toc-content">
+            <h4>6 Eficiencia Energética</h4>
+            <p>Control de picos de consumo y huella de carbono.</p>
+          </div>
+        </a>
+
+        <a href="#porque" class="toc-card">
+          
+          <div class="toc-content">
+            <h4>7 Ventajas Frente a Maquinaria Nueva</h4>
+            <p>Por qué el reacondicionamiento es superior.</p>
+          </div>
+        </a>
+
+        <a href="#fases-retrofit" class="toc-card">
+          
+          <div class="toc-content">
+            <h4>8 Anatomía del Proceso</h4>
+            <p>Metodología paso a paso en CNCSystems.</p>
+          </div>
+        </a>
+
+        <a href="#faq-retrofit" class="toc-card full-width">
+          
+          <div class="toc-content">
+            <h4>9 Preguntas Frecuentes (FAQ)</h4>
+            <p>Resolución de dudas técnicas y operativas habituales.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN 1 -->
+  <section id="que-es-retrofit" class="magazine-section">
+    <h2>1. ¿Qué es exactamente el Retrofit de una máquina CNC?</h2>
+    <p>Mantener la eficiencia en la fabricación moderna plantea el desafío de renovar la tecnología de planta sin incurrir en desembolsos financieros desorbitados. En la actualidad, multitud de talleres operan con maquinaria cuya estructura metálica y robustez mecánica continúan siendo idóneas, pero cuyos componentes digitales, redes y autómatas han sobrepasado su ciclo de vida útil.</p>
+
+    <p>Con el avance de la <strong> industria 4.0 </strong>el ecosistema digital, la automatización inteligente y las crecientes exigencias de sostenibilidad, la adquisición de bienes de equipo completamente nuevos no es la única vía. Ante esta coyuntura, la actualización parcial de activos emerge como la solución idónea para revitalizar procesos industriales de manera rentable.</p>
+
+    <p>Esta reconversión técnica minimiza las paradas de producción por fallos de hardware descontinuado, disminuye la huella de consumo eléctrico y amplía de forma notable la rentabilidad de las máquinas existentes, logrando estándares operativos avanzados a una fracción del coste habitual.</p>
+    <p>
+      El <strong>retrofit CNC</strong> consiste en la modernización integral o parcial de la arquitectura eléctrica, electrónica, neumática y de control de un torno o centro de mecanizado, conservando la estructura mecánica pesada de la máquina (bancada, guías, fundición de hierro o granito sintético).
+      El proceso actualiza los equipos existentes mediante la integración de componentes tecnológicos avanzados, automatización y nuevos sistemas de control.
+    </p>
+    <p>	
+      En lugar de descartar una máquina por completo, esta técnica conserva la estructura mecánica base y sustituye de forma estratégica solo las partes obsoletas o desgastadas. Esto permite ajustar equipos veteranos a los estándares actuales de fabricación por una fracción del coste de una unidad nueva.
+    </p>
+    <p> <strong>Principales mejoras en un retrofit</strong> </p>
+    <p><strong>Sistemas de control:</strong> Instalación de nuevos Mandos Numéricos Computarizados (CNC) y cuadros eléctricos.</p>
+    <p><strong>Smart tech y conectividad:</strong>  Integración de sensores IoT, monitoreo en tiempo real y variadores de frecuencia.</p>
+    <p><strong>Precisión y medición:</strong>  Incorporación de reglas ópticas, encoders y tecnologías de medición avanzadas.</p>
+
+    <div class="magazine-grid-2col">
+      <div class="grid-card machine-old">
+        <span class="badge-status danger">SISTEMA OBSOLETO</span>
+        <img src="images/blog/maquina-cnc-antigua.jpg" alt="Máquina CNC obsoleta con pantalla CRT y electrónica antigua">
+        <h4>Máquina Pre-Retrofit</h4>
+        <ul>
+          <li>Pantallas monocromáticas CRT descatalogadas.</li>
+          <li>Servomotores analógicos con picos de consumo elevado.</li>
+          <li>Pérdida continua de precisión por desgaste de encóders y holguras.</li>
+          <li>Riesgo inminente de parada prolongada por falta de repuestos.</li>
+        </ul>
+      </div>
+
+      <div class="grid-card machine-new">
+        <span class="badge-status success">DESPUÉS DEL RETROFIT DE CNCSystems</span>
+        <img src="images/blog/maquina-cnc-moderna.jpg" alt="Máquina CNC reacondicionada con pantalla táctil e integración de CNCSystems">
+        <h4>Máquina con Retrofit CNCSystems</h4>
+        <ul>
+          <li>CNC con pantalla táctil HD, interfaz intuitiva y simulación 3D.</li>
+          <li>Drivers y servos de alta eficiencia energética (Regeneración de red).</li>
+          <li>Integración en Industria 4.0, IoT y supervisión remota SAT.</li>
+          <li>Cumplimiento estricto de directivas de seguridad CE.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Intermedio 1 -->
+  <div class="cta-banner-magazine">
+    <div class="cta-magazine-text">
+      <h3>¿Su maquinaria sufre paradas frecuentes por obsolescencia del CNC?</h3>
+      <p>Nuestros técnicos estudian la viabilidad mecánica de su bancada sin compromiso.</p>
+    </div>
+    <a href="formulario.html" class="btn btn-magazine">Solicitar Diagnóstico Técnico</a>
+  </div>
+
+  <!-- SECCIÓN 2 -->
+  <section id="dilema-triangular" class="magazine-section">
+    <h2>2. El Dilema Industrial: ¿Reparar, Comprar Nueva o Realizar Retrofit?</h2>
+    <p>
+      Los directores de planta y jefes de mantenimiento se enfrentan cotidianamente a este trilema cuando un equipo crítico falla o pierde capacidad competitiva:
+    </p>
+
+    <div class="trilema-box-container">
+      <div class="trilema-card">
+        <img src="images/reparacion.png" alt="Icono de Reparación CNC" class="section-badge-img" style="max-width: 60px; margin-bottom: 15px;">
+        <h3>Opción A: Reparar la Máquina</h3>
+        <p><strong>Cuándo es conveniente:</strong> Cuando la avería es puntual (ej. fallo de un rodamiento, rotura de una correa o sustitución de una tarjeta electrónica concreta) y el resto de los componentes electrónicos y mecánicos aún tienen vida útil garantizada.</p>
+        <p><strong>Inconveniente:</strong> Es una solución a corto plazo si la máquina roza el fin de su ciclo de vida comercial. Reparar constantemente genera costes ocultos de parada no programada.</p>
+      </div>
+
+      <div class="trilema-card Highlight-retrofit">
+         <img src="images/retrofit.png"  alt="Icono de Retrofit CNC" class="section-badge-img" style="max-width: 60px; margin-bottom: 15px;">
+        <h3>Opción B: Retrofit</h3>
+        <p><strong>Cuándo es conveniente:</strong> Cuando la bancada mecánica y las guías de la máquina conservan una gran robustez y rigidez estructural, pero su electrónica, CNC, motores o armario eléctrico están obsoletos o son irreparables por falta de recambios.</p>
+        <p><strong>Ventaja Clave:</strong> Se obtiene la productividad, velocidad y precisión de una máquina nueva a un <strong>30% - 50% del coste total</strong> de adquisición de un equipo nuevo.</p>
+        <p>Si necesita un retrofit <strong><a href="contact.html">Contacte</a> con nuestro servicio técnico.</strong></p>
+      </div>
+
+      <div class="trilema-card">
+         <img src="images/asesoramiento.png" alt="Icono de Maquinaria Nueva" class="section-badge-img" style="max-width: 60px; margin-bottom: 15px;">
+        <h3>Opción C: Comprar Máquina Nueva</h3>
+        <p><strong>Cuándo es conveniente:</strong> Cuando la geometría mecánica de la máquina antigua está irremediablemente deformada, o cuando se requieren cinemáticas avanzadas (mecanizado en 5 ejes continuos de alta velocidad) para los cuales la bancada actual no fue concebida.</p>
+        <p><strong>Inconveniente:</strong> Altísimo gasto de capital (CAPEX), tiempos de entrega largos (de 6 a 12 meses), costes adicionales de cimentación, grúas y reprogramación completa.</p>
+      </div>
+    </div>
+
+    <section class="section-dark" style="margin-top: 25px;">
+      <p><strong>Tanto si tiene una avería, como si decide realizar un retrofit, o simplemente quiere asesoramiento no dude en ponerse en <a href="contact.html">contacto</a> con nosotros. Estaremos a su disposición para realizar el mejor de los análisis y ayudarle a tomar la mejor de las decisiones para su empresa.</strong></p>
+    </section>
+  </section>
+
+  <!-- SECCIÓN 3: Cuando realizar un retrofit -->
+  <section id="realizar" class="magazine-section">
+    <div class="container">
+      <h2>3. ¿En qué momentos conviene modernizar una máquina industrial?</h2>
+      
+      <div class="magazine-feature-block" style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 25px;">
+        <div style="flex: 1; min-width: 280px;">
+          <p>Aunque la actualización tecnológica no aplica en todos los escenarios, es la opción ideal cuando el chasis y la mecánica de la máquina siguen en perfecto estado, pero su tecnología, automatización o electrónica han quedado anticuadas. Detectar esta oportunidad a tiempo garantiza maximizar la rentabilidad de la inversión.</p>
+        </div>
+        <div style="flex: 1; min-width: 280px; text-align: center;">
+          <img src="images/blog/mantenimiento-diagnostico.jpg" alt="Diagnóstico técnico de maquinaria CNC" style="width: 100%; max-width: 450px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+
+      <h3>Escenarios clave para considerar una actualización:</h3>
+      
+      <ul class="reasons-list">
+        <li>
+          <strong>Obsolescencia de componentes y electrónica:</strong> 
+          Ocurre cuando encontrar repuestos para el PLC, los accionamientos o la unidad CNC se vuelve extremadamente difícil o costoso, incrementando las paradas no programadas.
+        </li>
+        <li>
+          <strong>Transformación hacia la Industria 4.0:</strong> 
+          La parte mecánica rinde adecuadamente, pero el equipo carece de conectividad IoT, análisis de datos en tiempo real y capacidades para mantenimiento predictivo.
+        </li>
+        <li>
+          <strong>Exigencias de mayor productividad:</strong> 
+          Se buscan cotas superiores de precisión, velocidad de ciclos o flexibilidad operativa que la arquitectura original ya no puede proporcionar.
+        </li>
+        <li>
+          <strong>Adecuación normativa y seguridad laboral:</strong> 
+          Es necesario adaptar el equipo a los estándares de seguridad vigentes, renovando protecciones y barreras de control.
+        </li>
+        <li>
+          <strong>Altos gastos operativos y consumo energético:</strong> 
+          Los fallos recurrentes y el uso ineficiente de la energía reducen los márgenes de ganancia operativos.
+        </li>
+        <li>
+          <strong>Presupuesto de capital limitado:</strong> 
+          Permite elevar la capacidad productiva sin incurrir en la elevada inversión económica que supone adquirir maquinaria completamente nueva.
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- SECCIÓN 4: Industria 4.0 -->
+  <section id="Obsolescencia" class="magazine-section">
+    <div class="container">
+      <h2>4. La Industria 4.0 y el Desafío de la Obsolescencia en la Maquinaria Industrial</h2>
+
+      <div class="industry-header-media" style="text-align: center; margin: 20px 0;">
+        <img src="images/blog/industria-40-smart-factory.jpg" alt="Concepto de Industria 4.0, Sensores IoT y Fábrica Inteligente" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <p class="image-caption" style="font-size: 0.9em; color: #666; margin-top: 8px;"><strong>Figura 1:</strong> Integración de sensórica IoT, conectividad remota y mantenimiento predictivo en tornos y centros de mecanizado.</p>
+      </div>
+
+      <p>La cuarta revolución industrial ha transformado de forma radical el ecosistema de la fabricación, imponiendo un ritmo operativo donde la digitalización ya no es opcional. Hoy en día, la competitividad de una planta no depende únicamente de la fuerza o resistencia de sus equipos, sino de su capacidad para procesar datos, comunicarse con otros sistemas y adaptarse con agilidad a las fluctuaciones del mercado. En este panorama, la conectividad e integración digital se han convertido en los pilares fundamentales para garantizar la continuidad del negocio.</p>
+
+      <p>Sin embargo, un alto porcentaje del parque de maquinaria en activo fue diseñado en una era analógica o de automatización aislada. Aunque estas unidades conservan una estructura mecánica excepcionalmente robusta y capaz de seguir produciendo, sufren de un aislamiento tecnológico severo. Al carecer de sensores modernos y protocolos de comunicación estandarizados, se generan islas de información dentro de la fábrica, impidiendo que los responsables de planta obtengan una visibilidad precisa del rendimiento global.</p>
+
+      <p>Esta <strong>desconexión tecnológica</strong> desencadena el fenómeno de la obsolescencia funcional y técnica. Con el paso de los años, los fabricantes de componentes discontinuan las tarjetas electrónicas, las pantallas y los módulos de control originales. Esto provoca que ante la avería más simple de un microprocesador descatalogado, la empresa deba afrontar periodos de inactividad prolongados mientras busca repuestos en el mercado de segunda mano a precios desproporcionados, incrementando notablemente los costes operativos.</p>
+
+      <p>A este escenario se suma la ineficiencia de los métodos de mantenimiento tradicionales. Las máquinas desactualizadas dependen exclusivamente de revisiones periódicas o de intervenciones reactivas cuando el fallo ya se ha producido. Por el contrario, la <strong>Industria 4.0</strong> exige modelos de mantenimiento predictivo, donde la captura continua de parámetros como vibración, temperatura o consumo eléctrico permite anticipar los fallos antes de que paralicen la cadena de suministro.</p>
+
+      <p>Superar esta brecha sin recurrir al desguace de activos valiosos requiere soluciones de modernización inteligente. La integración de interfaces digitales, sensores IoT y unidades de control de nueva generación permite salvar esa distancia tecnológica. De este modo, las empresas logran incorporar la analítica de datos en tiempo real y la eficiencia energética en su maquinaria veterana, extendiendo su utilidad y garantizando su encaje en la fábrica inteligente del futuro.</p>
+      
+      <p>El <strong>Retrofitting es la mejor de las opciones para combatir esta obsolescencia y adaptar la empresa a la industria 4.0</strong> mejorando y modernizando la planta de producción, lo que a corto plazo ocasiona que la máquina sea más competitiva.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: MATRIZ DE DECISIÓN Y BENEFICIOS -->
+  <section id="matriz-decision" class="magazine-section">
+    <h2>5. Matriz de Decisión Económica y Técnica. Beneficios Clave del Reacondicionamiento Tecnológico Frente al Reemplazo de Equipos</h2>
+
+    <p>La actualización parcial de activos industriales se ha establecido como una estrategia sumamente eficiente frente a la adquisición de maquinaria completamente nueva. Esta metodología permite rescatar la estructura pesada y la bancada mecánica existente, concentrando la inversión exclusivamente en la sustitución de los componentes tecnológicos y electrónicos que han quedado obsoletos. De este modo, las plantas de producción logran dar un salto cualitativo en su capacidad operativa, asegurando un equilibrio óptimo entre el rendimiento técnico y la gestión responsable del presupuesto de capital.</p>
+
+    <div class="benefits-grid">
+      <article class="benefit-card">
+        <h3>Reducción Sustancial de Costes Financieros</h3>
+        <p>Afrontar la modernización integral mediante este enfoque suele representar un desembolso estimado de entre el 30% y el 60% del coste que supondría un activo nuevo de prestaciones equivalentes. Esta importante diferencia económica permite amortizar la inversión en plazos mucho más reducidos y libera liquidez estratégica para destinar a otros proyectos de innovación dentro de la empresa.</p>
+      </article>
+
+      <article class="benefit-card">
+        <h3>Extensión del Ciclo de Vida Útil</h3>
+        <p>Al sustituir tarjetas de control, accionamientos, servomotores y cableado por tecnología de última generación, se elimina el riesgo de fallo en componentes críticos y descontinuados. Esta renovación integral de la arquitectura electrónica revitaliza la máquina, permitiéndole operar durante años adicionales con estándares de fiabilidad comparables a los de un equipo recién salido de fábrica.</p>
+      </article>
+
+      <article class="benefit-card">
+        <h3>Curva de Aprendizaje y Puesta en Marcha Aceleradas</h3>
+        <p>Debido a que la ergonomía, la cinemática y la disposición espacial del equipo no se alteran de forma drástica, el personal operativo y de mantenimiento requiere una capacitación mínima para familiarizarse con la nueva interfaz. Asimismo, el tiempo de instalación y ajuste en planta es significativamente menor en comparación con el periodo de integración que exige una línea de fabricación totalmente nueva.</p>
+      </article>
+
+      <article class="benefit-card">
+        <h3>Incremento de Rendimiento y Precisión</h3>
+        <p>La implementación de mandos numéricos avanzados (CNC), encoders de alta resolución y sistemas de accionamiento más dinámicos permite optimizar las aceleraciones, reducir las holguras y elevar la velocidad de los ciclos de trabajo. Esto se traduce en una mayor repetibilidad de las piezas, menor tasa de desecho y una mejora directa en la capacidad productiva de la instalación.</p>
+      </article>
+
+      <article class="benefit-card">
+        <h3>Sostenibilidad y Optimización Energética</h3>
+        <p>Los componentes de control modernos e inversores de frecuencia actuales destacan por su alta eficiencia operativa y su capacidad para gestionar el consumo de electricidad de manera inteligente. Reducir la demanda energética de los motores no solo disminuye de forma directa los costes fijos de suministro, sino que alinea a la planta con los estándares y normativas ambientales vigentes.</p>
+      </article>
+
+      <article class="benefit-card">
+        <h3>Integración Digital e Inteligencia Operativa</h3>
+        <p>Transformar un activo convencional mediante la adición de sensores IoT, protocolos de comunicación industrial y paneles táctiles avanzados permite conectar el equipo a la red de la fábrica. Esta actualización habilita la supervisión remota de parámetros clave, la extracción de analítica de procesos y la implementación de estrategias de mantenimiento predictivo para prevenir paradas imprevistas.</p>
+      </article>
+    </div>
+
+    <div class="matrix-infographic" style="text-align: center; margin: 30px 0;">
+      <img src="images/blog/infografia-matriz-decision.jpg" alt="Infografía comparativa de inversión, ROI y vida útil entre reparación, retrofit y máquina nueva" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+    <p>A continuación se resume la evaluación comparativa para un centro de mecanizado o torno CNC de bancada pesada:</p>
+
+    <div class="table-responsive">
+      <table class="magazine-table">
+        <thead>
+          <tr>
+            <th>Parámetro Evaluado</th>
+            <th>Reparación Puntual</th>
+            <th>Retrofit</th>
+            <th>Máquina Nueva</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Inversión Económica (CAPEX)</strong></td>
+            <td>Muy Baja (10% - 15%)</td>
+            <td class="highlight-col"><strong>Media (30% - 50%)</strong></td>
+            <td>Muy Alta (100%)</td>
+          </tr>
+          <tr>
+            <td><strong>Tiempo de Amortización (ROI)</strong></td>
+            <td>Inmediato (A corto plazo)</td>
+            <td class="highlight-col"><strong>12 - 24 Meses</strong></td>
+            <td>4 - 7 Años</td>
+          </tr>
+          <tr>
+            <td><strong>Vida Útil Ganada</strong></td>
+            <td>6 a 18 meses</td>
+            <td class="highlight-col"><strong>10 a 15 Años adicionales</strong></td>
+            <td>15 a 20 Años</td>
+          </tr>
+          <tr>
+            <td><strong>Mejora de Precisión y Velocidad</strong></td>
+            <td>Nula (se mantiene igual)</td>
+            <td class="highlight-col"><strong>Sustancial (+30% velocidad)</strong></td>
+            <td>Máxima</td>
+          </tr>
+          <tr>
+            <td><strong>Ahorro Energético</strong></td>
+            <td>0%</td>
+            <td class="highlight-col"><strong>Hasta un 40% - 60%</strong></td>
+            <td>Hasta un 50%</td>
+          </tr>
+          <tr>
+            <td><strong>Garantía de Repuestos</strong></td>
+            <td>Solo pieza reparada</td>
+            <td class="highlight-col"><strong>Garantía Total en Electrónica Nueva</strong></td>
+            <td>Garantía de Fábrica Nueva</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6: EFICIENCIA ENERGÉTICA Y GRÁFICAS -->
+  <section id="eficiencia-energetica" class="magazine-section">
+    <h2>6. Eficiencia Energética: Análisis de Picos de Consumo y Huella de Carbono</h2>
+    <p>
+      Uno de los factores determinantes para realizar un retrofit en la actualidad es el <strong>coste de la energía eléctrica industrial</strong>. Las máquinas CNC construidas entre 1980 y 2005 utilizaban drives analógicos, variadores ineficientes y fuentes de alimentación discontinuas que generaban enormes picos de potencia reactiva y disipaban calor constantemente.
+    </p>
+
+    <!-- Gráfica SVG interactiva/visual dentro del documento estilo revista -->
+    <div class="chart-container-box">
+      <h3>Comparativa de Perfil Energético: Sistema Antiguo vs. Sistema Retrofit con Regeneración</h3>
+      <p class="chart-desc">Observación técnica de picos de amperaje durante aceleraciones y desbroce severo en un centro de mecanizado:</p>
+      
+      <div class="svg-chart-wrapper">
+        <svg viewBox="0 0 700 300" class="magazine-chart">
+          <!-- Fondo de cuadrícula -->
+          <line x1="50" y1="250" x2="650" y2="250" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="50" y1="50" x2="50" y2="250" stroke="#cbd5e1" stroke-width="2"/>
+          
+          <!-- Guías horizontales -->
+          <line x1="50" y1="200" x2="650" y2="200" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="50" y1="150" x2="650" y2="150" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="50" y1="100" x2="650" y2="100" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4"/>
+          
+          <!-- Etiquetas Y -->
+          <text x="15" y="255" fill="#64748b" font-size="12">0 kW</text>
+          <text x="15" y="155" fill="#64748b" font-size="12">30 kW</text>
+          <text x="15" y="55" fill="#64748b" font-size="12">60 kW</text>
+
+          <!-- Línea Consumo Antiguo (Roja - Picos ineficientes) -->
+          <path d="M 50 240 L 100 80 L 150 90 L 200 60 L 250 230 L 300 70 L 350 100 L 400 50 L 450 220 L 500 90 L 550 80 L 600 240 L 650 240" 
+                fill="none" stroke="#ef4444" stroke-width="3"/>
+
+          <!-- Línea Consumo con Retrofit (Azul CNCSystems - Suave y regenerativo) -->
+          <path d="M 50 240 L 100 160 L 150 165 L 200 150 L 250 245 L 300 160 L 350 170 L 400 140 L 450 240 L 500 160 L 550 155 L 600 240 L 650 240" 
+                fill="none" stroke="#0ea5e9" stroke-width="3"/>
+
+          <!-- Leyenda -->
+          <rect x="400" y="20" width="15" height="15" fill="#ef4444" />
+          <text x="425" y="32" fill="#333" font-size="12">Sistema CNC Antiguo (Picos de hasta 60 kW)</text>
+
+          <rect x="400" y="40" width="15" height="15" fill="#0ea5e9" />
+          <text x="425" y="52" fill="#333" font-size="12">Modernizado con CNCSystems (Regenerativo max 32 kW)</text>
+        </svg>
+      </div>
+
+      <div class="chart-insights">
+        <h4>Principales ventajas energéticas del Retrofit realizado por CNCSystems:</h4>
+        <ul>
+          <li><strong>Regeneración a la red eléctrica:</strong> La energía de frenado de los servomotores y del husillo principal no se quema en resistencias de frenado (calor), sino que se devuelve a la red de la fábrica.</li>
+          <li><strong>Disminución de pérdidas por disipación térmica:</strong> Menor gasto en climatización de los armarios eléctricos y talleres.</li>
+          <li><strong>Sustitución de motores de corriente continua por servomotores AC brushless:</strong> Eficiencia IE4 de altísimo rendimiento torque/corriente.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7: POR QUÉ REACONDICIONAR -->
+  <section id="porque" class="magazine-section">
+    <div class="container">
+      <h2>7. ¿Por qué Reacondicionar Maquinaria es Preferible a Comprar Equipamiento Nuevo?</h2>
+
+      <p>La actualización parcial de activos se consolida como la estrategia idónea para plantas industriales que buscan modernizar sus procesos productivos sin asumir los elevados costes de reemplazo total. Al conservar la estructura base y la mecánica principal, se interviene de forma puntual en la electrónica, el control y la conectividad, obteniendo mejoras operativas inmediatas con un gasto sustancialmente menor.</p>
+
+      <div class="advantages-grid">
+        <article class="advantage-card">
+          <h3>Optimización del Presupuesto de Capital</h3>
+          <p>Un proyecto de reconversión técnica representa entre un 30% y un 60% del desembolso requerido para una máquina nueva. Esta diferencia permite preservar liquidez para otras inversiones estratégicas en la empresa.</p>
+        </article>
+
+        <article class="advantage-card">
+          <h3>Extensión Operativa del Activo</h3>
+          <p>La sustitución de componentes críticos descontinuados por tecnología de última generación permite prolongar el ciclo de uso de los equipos, rentabilizando al máximo la inversión inicial.</p>
+        </article>
+
+        <article class="advantage-card">
+          <h3>Puesta en Marcha Rápida y Menor Formación</h3>
+          <p>Al no alterar la cinemática ni la ergonomía básica de la máquina, el personal de planta se adapta de forma casi inmediata, reduciendo drásticamente las curvas de aprendizaje y el tiempo de inactividad durante la instalación.</p>
+        </article>
+
+        <article class="advantage-card">
+          <h3>Incremento de la Capacidad y Precisión</h3>
+          <p>La integración de servomotores actuales, reglas de medición de alta resolución y nuevos CNC potencia la repetibilidad y velocidad de los ciclos, traduciéndose en una tasa superior de piezas conformes.</p>
+        </article>
+
+        <article class="advantage-card">
+          <h3>Reducción de Consumo Eléctrico</h3>
+          <p>Los componentes de automatización modernos incorporan sistemas de gestión energética eficiente y variadores de velocidad avanzados, ayudando a recortar los costes operativos de electricidad y cumplir metas de sostenibilidad.</p>
+        </article>
+
+        <article class="advantage-card">
+          <h3>Digitalización e Integración IoT</h3>
+          <p>El reacondicionamiento permite dotar al equipo de conectividad de red, paneles inteligentes y sensores para la extracción de métricas en tiempo real, facilitando esquemas de mantenimiento predictivo en el marco de la Industria 4.0.</p>
+        </article>
+      </div>
+
+      <div class="advantage-image-banner" style="margin-top: 25px; text-align: center;">
+        <img src="images/blog/operario-pantalla-cnc-nueva.jpg" alt="Operario utilizando interfaz moderna CNC tras retrofit" style="width: 100%; max-width: 750px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+      </div>
+
+      <p style="margin-top: 20px;">En definitiva, modernizar la tecnología existente constituye una alternativa rentable, sostenible y highly ágil, permitiendo a las plantas de fabricación mantenerse competitivas con un impacto mínimo sobre el balance financiero.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 8 -->
+  <section id="fases-retrofit" class="magazine-section">
+    <h2>8. Anatomía de un Retrofit de Éxito en CNCSystems</h2>
+    <p>Para garantizar una transición impecable y minimizar los tiempos de inactividad de su fábrica, CNCSystems aplica una metodología estructurada en 5 fases clave:</p>
+
+    <div class="process-steps">
+      <div class="step-item">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3>Auditoría Mecánica y Electrónica In Situ</h3>
+          <p>Nuestros ingenieros evalúan la geometría del equipo, las holguras en husillos de bolas recirculantes, el estado de las guías prismáticas o lineales y la respuesta dinámica del cabezal.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3>Diseño del Esquema Eléctrico y Selección de Componentes</h3>
+          <p>Proyectamos el nuevo armario eléctrico cumpliendo las normativas europeas de compatibilidad electromagnética (EMC) e integrando reguladores, fuentes y CNC de marcas líderes (Heidenhain, Fanuc, Siemens, Fagor).</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3>Montaje, Premontaje Eléctrico y Cableado</h3>
+          <p>Efectuamos el desmontaje de la electrónica obsoleta, la instalación de captación de medida (reglas ópticas o encóders absolutos) y el re-cableado integral de la máquina con mangueras apantalladas de alta flexibilidad.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3>Programación del PLC, Parametrización y Ajuste de Lazos de Control</h3>
+          <p>Desarrollamos la lógica del PLC personalizada (gestión de cambio de herramienta, engrase, cabezal, rampas de aceleración) y optimizamos los lazos de velocidad y posición para eliminar vibraciones y resonancias.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">05</div>
+        <div class="step-content">
+          <h3>Verificación Geométrica con Láser/Ballbar y Puesta en Marcha</h3>
+          <p>Realizamos la comprobación final de interpolación y tolerancia geométrica mediante <strong>Bola de Calibración Renishaw</strong> y sistemas de diagnóstico avanzadas antes de entregar la máquina lista para producción.</p>
+        </div>
+      </div>
+    </div>
+<div class="advantage-image-banner" style="margin-top: 25px; text-align: center;">
+        <img src="images/blog/fase-auditoria.jpg" alt="Fase 1: Auditoría geométrica"  style="width: 100%; max-width: 750px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+      </div>
+     
+    
+  </section>
+
+  <!-- SECCIÓN 9: FAQS ACCESIBLES -->
+  <section id="faq-retrofit" class="magazine-section">
+    <h2>9. Preguntas Frecuentes sobre el Retrofit CNC</h2>
+
+    <div class="faq-accordion">
+      <details class="faq-item">
+        <summary><strong>¿Cuánto tiempo suele tardar la ejecución de un Retrofit completo?</strong></summary>
+        <p>
+          Dependiendo de la complejidad de la máquina (3 ejes, 5 ejes, tornos multitorreta, etc.), la fase de trabajo directo sobre la máquina en planta suele durar entre 2 y 4 semanas. Previamente, CNCSystems realiza la ingeniería y el premontaje de los armarios en nuestras instalaciones para minimizar el tiempo de inactividad técnica de la máquina.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary><strong>¿Se pueden conservar los servomotores antiguos si cambio solo el CNC?</strong></summary>
+        <p>
+          En algunos casos es técnicamente factible utilizar adaptadores de señal analógica/digital, pero <strong>no es lo más recomendable</strong>. Mantener servomotores antiguos impide aprovechar las ventajas del bus de comunicación digital, la precisión de los encóders absolutos de alta resolución y el ahorro energético de las etapas de potencia modernas.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary><strong>¿Qué garantía ofrece CNCSystems tras realizar el Retrofit?</strong></summary>
+        <p>
+          Toda la electrónica, reguladores, captación de medida, CNC y cableado nuevo cuentan con la garantía oficial del fabricante (por ejemplo, 12 o 24 meses) combinada con el respaldo del Servicio de Asistencia Técnica (SAT) de CNCSystems para cualquier ajuste posterior.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary><strong>¿Es posible financiar o solicitar subvenciones para el Retrofit?</strong></summary>
+        <p>
+          Sí. Al implicar una mejora demostrable en eficiencia energética y digitalización (Industria 4.0), las actuaciones de Retrofit CNC son altamente elegibles para programas de ayudas a la modernización industrial e innovación tecnológica a nivel regional y europeo.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="cta-contenido">
+      <h2>¿Preparado para transformar la productividad de sus máquinas CNC?</h2>
+      <p>Póngase en contacto hoy mismo con el equipo de ingenieros de CNCSystems. Analizamos las necesidades de su parque de maquinaria y redactamos una propuesta técnica y económica a medida.</p>
+        
+      <div class="cta-botones">
+        <a href="tel:+34914338981" class="btn-llamar">
+          📞 Llamar ahora
+        </a>
+
+        <a href="https://wa.me/34660404046?text=Hola%20tengo%20una%20máquina%20CNC%20parada%20y%20necesito%20asistencia"
+           target="_blank"
+           class="btn-whatsapp">
+          💬 WhatsApp
+        </a>
+
+        <a href="formulario.html" class="btn-contacto">
+          ⚙ Enviar solicitud
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Brands visual del pie de página genérico -->
+<section class="brands-visual">
+  <h2>Trabajamos con las principales marcas CNC en maquinaria y controles</h2>
+  <div class="brands-grid">
+    <span>HAAS</span>
+    <span>MAZAK</span>
+    <span>DMG MORI</span>
+    <span>OKUMA</span>
+    <span>DOOSAN</span>
+    <span>STARRAG</span>
+    <span>HYUNDAI</span>
+    <span>FANUC</span>
+    <span>SIEMENS</span>
+    <span>HEIDENHAIN</span>
+    <span>FAGOR</span>
+  </div>
+  <p class="brands-note">Servicio técnico CNC multimarca en maquinaria y controles industriales.</p>
+  <p class="brands-notejuri">Las marcas mencionadas pertenecen a sus respectivos propietarios. CNCSystems no es servicio técnico oficial de dichas marcas.</p>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <p>© <span id="year"></span></p>
+      <p data-es="CNC SYSTEMS. Todos los derechos reservados"
+         data-en="CNC SYSTEMS. All rights reserved"
+         data-pt="CNC SYSTEMS. Todos os direitos reservados">
+        CNC SYSTEMS
+      </p>
+    </div>
+    <p>
+      <a href="aviso-legal.html" data-es="Aviso Legal" data-en="Legal Notice" data-pt="Aviso Legal">Aviso Legal</a> | 
+      <a href="politicaprivacidad.html" data-es="Política de Privacidad" data-en="Privacy Policy" data-pt="Política de Privacidade">Política de Privacidad</a> | 
+      <a href="politica-cookies.html" data-es="Política de Cookies" data-en="Cookie Policy" data-pt="Política de Cookies">Política de Cookies</a> |
+      <a href="#" onclick="openPreferences(); return false;" data-es="Configuración de Cookies" data-en="Cookie Settings">Configuración de Cookies</a>
+    </p>
+    <div class="footer-right">
+      <!-- LinkedIn -->
+      <a class="social-link" href="https://www.linkedin.com/company/cncsystems-sl"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Sigue a CNC Systems en LinkedIn">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.5 8.98h4.78v2.05h.07c.66-1.25 2.28-2.57 4.69-2.57 5.01 0 5.93 3.3 5.93 7.59V24h-5V16.7c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V24h-5V8.98z"/>
+        </svg>
+        <span class="sr-only">CNC Systems en LinkedIn</span>
+      </a>
+
+      <!-- Teléfono -->
+      <a class="social-link" href="tel:+34 914 338 981" aria-label="Llamar a CNC Systems">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.3 22 2 13.7 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.3.2 2.5.57 3.6a1 1 0 01-.25 1l-2.2 2.2z"/>
+        </svg>+34 914 338 981
+        <span class="sr-only">Teléfono CNC Systems</span>
+      </a>
+
+      <!-- Email -->
+      <a class="social-link" href="mailto:info@cncsystems.es" aria-label="Enviar correo a CNC Systems">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z"/>
+        </svg>direccion@cncsystems.es
+        <span class="sr-only">Email CNC Systems</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Banner cookies -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <p data-es="Utilizamos cookies técnicas propias necesarias para la navegación y cookies de análisis de terceros para medir la actividad estadística del sitio web. Puede aceptar todas las cookies, rechazarlas o configurar sus preferencias a continuación. <a href='politica-cookies.html'>Política de Cookies</a>"
+     data-en="We use our own technical cookies necessary for navigation and third-party analytical cookies to measure website statistical activity. You can accept all cookies, reject them, or configure your preferences below. <a href='politica-cookies.html'>Cookie Policy</a>"
+     data-pt="Utilizamos cookies técnicas próprias necessárias para a navegação e cookies de análise de terceiros para medir a atividade estatística do sítio web. Pode aceitar todos os cookies, rejeitá-los ou configurar as suas preferências abaixo. <a href='politica-cookies.html'>Política de Cookies</a>">
+    Utilizamos cookies técnicas propias necesarias para la navegación...
+  </p>
+
+  <div class="cookie-buttons-container" style="display: flex; gap: 8px; margin-top: 10px;">
+    <button onclick="acceptCookies()" data-es="Aceptar" data-en="Accept" data-pt="Aceitar">Aceptar</button>
+    <button onclick="rejectCookies()" data-es="Rechazar" data-en="Reject" data-pt="Rejeitar">Rechazar</button>
+    <button onclick="openPreferences()" data-es="Configurar" data-en="Settings" data-pt="Configurar">Configurar</button>
+  </div>
+</div>
+
+<!-- Panel de configuración -->
+<div id="cookie-preferences" class="cookie-banner" style="display:none; flex-direction:column; align-items:flex-start; max-width:500px;">
+  <h3 data-es="Configuración de cookies" data-en="Cookie settings" data-pt="Configuração de cookies">
+    Configuración de cookies
+  </h3>
+
+  <label data-es='<input type="checkbox" disabled checked> <strong>Necesarias (siempre activas)</strong>'
+         data-en='<input type="checkbox" disabled checked> <strong>Necessary (always active)</strong>'
+         data-pt='<input type="checkbox" disabled checked> <strong>Necessárias (sempre ativas)</strong>'>
+    <input type="checkbox" disabled checked>
+    <strong>Necesarias (siempre activas)</strong>
+  </label>
+
+  <p class="cookie-description"
+     data-es="Estas cookies son necesarias para el correcto funcionamiento de la página web y no pueden ser desactivadas en nuestros sistemas. Permiten funciones básicas como la navegación por la página, el acceso a áreas seguras, la gestión de la sesión o la configuración de preferencias esenciales."
+     data-en="These cookies are necessary for the proper functioning of the website and cannot be disabled in our systems. They enable basic functions such as page navigation, access to secure areas, session management and essential preference settings."
+     data-pt="Estas cookies são necessárias para o correto funcionamento do website e não podem ser desativadas nos nossos sistemas. Permitem funções básicas como a navegação na página, o acesso a áreas seguras, a gestão da sessão e a configuración de preferências essenciais.">
+    Estas cookies son necesarias para el correcto funcionamiento de la página web y no pueden ser desactivadas en nuestros sistemas...
+  </p>
+
+  <label data-es='<input type="checkbox" id="analytics"> <strong>Analíticas</strong>'
+         data-en='<input type="checkbox" id="analytics"> <strong>Analytics</strong>'
+         data-pt='<input type="checkbox" id="analytics"> <strong>Analíticas</strong>'>
+    <input type="checkbox" id="analytics">
+    <strong>Analíticas</strong>
+  </label>
+
+  <p class="cookie-description"
+     data-es="Estas cookies nos permiten obtener información sobre cómo los usuarios interactúan con la página web, como las páginas visitadas, el tiempo de navegación, los errores detectados o las funcionalidades más utilizadas. La información obtenida se utiliza con fines estadísticos y de mejora del funcionamiento, contenido y experiencia de usuario de la página web. Estas cookies solo se instalarán si presta su consentimiento."
+     data-en="These cookies allow us to obtain information about how users interact with the website, such as pages visited, browsing time, detected errors and the most frequently used features. The information collected is used for statistical purposes and to improve the website's performance, content and user experience. These cookies will only be installed if you provide your consent."
+     data-pt="Estas cookies permitem-nos obter informações sobre a forma como os utilizadores interagem com o website, tais como páginas visitadas, tempo de navegação, erros detetados ou funcionalidades mais utilizadas. As informações obtidas são utilizadas para fins estatísticos e para melhorar o funcionamento, conteúdo e experiência do utilizador. Estas cookies só serão instaladas se der o seu consentimento.">
+    Estas cookies nos permiten obtener información sobre cómo los usuarios interactúan con la página web...
+  </p>
+
+  <label data-es='<input type="checkbox" id="marketing"> <strong>Marketing</strong>'
+         data-en='<input type="checkbox" id="marketing"> <strong>Marketing</strong>'
+         data-pt='<input type="checkbox" id="marketing"> <strong>Marketing</strong>'>
+    <input type="checkbox" id="marketing">
+    <strong>Marketing</strong>
+  </label>
+
+  <p class="cookie-description"
+     data-es="Estas cookies permiten gestionar espacios publicitarios y mostrar contenidos o anuncios personalizados en función de sus hábitos de navegación, preferencias o perfil de usuario. También pueden ser utilizadas por terceros para crear perfiles basados en su navegación y mostrarle publicidad personalizada en esta u otras páginas web. Estas cookies solo se instalarán si presta su consentimiento."
+     data-en="These cookies allow advertising spaces to be managed and personalized content or advertisements to be displayed based on your browsing habits, preferences or user profile. They may also be used by third parties to create profiles based on your browsing activity and show you personalized advertising on this or other websites. These cookies will only be installed if you provide your consent."
+     data-pt="Estas cookies permitem gerir espaços publicitários e apresentar conteúdos ou anúncios personalizados com base nos seus hábitos de navegação, preferências ou perfil de utilizador. Também podem ser utilizadas por terceiros para criar perfis com base na sua navegação e apresentar publicidade personalizada neste ou noutros websites. Estas cookies só serão instaladas se der o seu consentimento.">
+    Estas cookies permiten gestionar espacios publicitarios y mostrar contenidos o anuncios personalizados...
+  </p>
+
+  <div style="margin-top:10px; display:flex; gap:8px;">
+    <button onclick="savePreferences()" data-es="Guardar" data-en="Save" data-pt="Guardar">Guardar</button>
+    <button onclick="closePreferences()" data-es="Cancelar" data-en="Cancel" data-pt="Cancelar">Cancelar</button>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const lang = urlParams.get('lang') || 'es';
+
+      function updateLanguage() {
+          const elements = document.querySelectorAll('[data-en], [data-es]');
+          elements.forEach(function (element) {
+              element.textContent = element.getAttribute(`data-${lang}`);
+          });
+      }
+
+      updateLanguage();
+  });
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('header nav ul');
+
+  menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+  });
+</script>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("asistenciaMenu");
+    if (menu.style.display === "flex") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "flex";
+    }
+  }
+</script>
+
+<script>
+  function changeLanguage(lang){
+    localStorage.setItem("lang", lang);
+    applyLanguage(lang);
+  }
+
+  function applyLanguage(lang){
+    document.querySelectorAll("[data-es]").forEach(el=>{
+      el.innerHTML = el.getAttribute("data-"+lang);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded",()=>{
+    let lang = localStorage.getItem("lang");
+
+    if(!lang){
+      lang = "es";
+      localStorage.setItem("lang","es");
+    }
+
+    applyLanguage(lang);
+  });
+</script>
+
+</body>
+</html>
