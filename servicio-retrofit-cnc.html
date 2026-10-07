@@ -1,0 +1,2071 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicons CNCSystems -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:image" content="https://www.cncsystems.es/images/logo.jpeg">
+
+  <!-- SEO -->
+  <title data-es="Retrofit CNC | Modernización de Máquinas CNC Industriales | CNCSystems"
+         data-en="CNC Retrofit | Industrial CNC Machine Modernization | CNCSystems"
+         data-pt="Retrofit CNC | Modernização de Máquinas CNC Industriais | CNCSystems">
+    Retrofit CNC | Modernización de Máquinas CNC Industriales | CNCSystems
+  </title>
+
+  <meta name="description"
+        content="Servicio de retrofit CNC para máquinas industriales. Modernizamos controles CNC, accionamientos, servomotores, armarios eléctricos y sistemas de captación para prolongar la vida útil de tornos y centros de mecanizado.">
+
+  <meta name="keywords"
+        content="retrofit cnc, retrofit máquina cnc, retrofit maquinaria cnc, modernización cnc, modernización máquina cnc, retrofit industrial, actualizar máquina cnc, cambio control cnc, retrofit fanuc, retrofit heidenhain">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.cncsystems.es/servicio-retrofit-cnc.html">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/script.js"></script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "Service",
+        "@id": "https://www.cncsystems.es/servicio-retrofit-cnc.html#service",
+        "name": "Servicio de Retrofit de Máquinas CNC",
+        "serviceType": "Retrofit y modernización de maquinaria CNC industrial",
+        "description": "Servicio de modernización y retrofit de tornos y centros de mecanizado CNC industriales mediante actualización de control numérico, accionamientos, servomotores, armarios eléctricos, sistemas de captación y automatización.",
+        "provider": {
+          "@type": "Organization",
+          "name": "CNCSystems",
+          "url": "https://www.cncsystems.es"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "España"
+          },
+          {
+            "@type": "Country",
+            "name": "Portugal"
+          }
+        ],
+        "url": "https://www.cncsystems.es/servicio-retrofit-cnc.html"
+      },
+
+      {
+        "@type": "WebPage",
+        "@id": "https://www.cncsystems.es/servicio-retrofit-cnc.html#webpage",
+        "url": "https://www.cncsystems.es/servicio-retrofit-cnc.html",
+        "name": "Retrofit CNC | Modernización de Máquinas CNC Industriales",
+        "description": "Servicio de retrofit y modernización de maquinaria CNC industrial de CNCSystems.",
+        "inLanguage": "es",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "CNCSystems",
+          "url": "https://www.cncsystems.es"
+        }
+      }
+
+    ]
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       ESTILOS ESPECÍFICOS DE LA LANDING DE RETROFIT
+       ========================================================= */
+
+    .retrofit-page {
+      width: 100%;
+    }
+
+    .retrofit-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+
+    .retrofit-hero {
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5,18,30,0.92) 0%,
+          rgba(5,18,30,0.78) 48%,
+          rgba(5,18,30,0.35) 100%
+        ),
+        url('images/blog/maquina-cnc-antigua.jpg') center/cover no-repeat;
+
+      color: #fff;
+      padding: 70px 5%;
+    }
+
+    .retrofit-hero-content {
+      max-width: 760px;
+    }
+
+    .retrofit-label {
+      display: inline-block;
+      padding: 7px 14px;
+      margin-bottom: 18px;
+      border-left: 4px solid var(--color-primary);
+      background: rgba(14,165,233,0.15);
+      color: #bae6fd;
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .retrofit-hero h1 {
+      font-size: 3.2rem;
+      line-height: 1.12;
+      margin-bottom: 22px;
+      color: #fff;
+    }
+
+    .retrofit-hero p {
+      max-width: 720px;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #e5edf5;
+      margin-bottom: 28px;
+    }
+
+    .retrofit-hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .retrofit-btn-secondary {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.5);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all .25s ease;
+    }
+
+    .retrofit-btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-2px);
+    }
+
+
+    /* BREADCRUMBS */
+
+    .retrofit-breadcrumbs {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto 0;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .retrofit-breadcrumbs a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+
+    /* INTRO */
+
+    .retrofit-intro {
+      padding: 70px 0 45px;
+      background: #fff;
+    }
+
+    .retrofit-intro-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .retrofit-intro h2 {
+      font-size: 2.2rem;
+      color: var(--color-primary);
+      margin-bottom: 18px;
+    }
+
+    .retrofit-intro p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 15px;
+    }
+
+    .retrofit-highlight {
+      background: #f0f9ff;
+      border-left: 5px solid var(--color-primary);
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .retrofit-highlight strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: #0f1724;
+    }
+
+
+    /* SERVICIOS */
+
+    .retrofit-services {
+      padding: 70px 0;
+      background: #f1f5f9;
+    }
+
+    .retrofit-section-title {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .retrofit-section-title h2 {
+      font-size: 2.2rem;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+    }
+
+    .retrofit-section-title p {
+      font-size: 1.05rem;
+      color: #475569;
+    }
+
+    .retrofit-service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .retrofit-service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 5px 18px rgba(15,23,42,0.08);
+      border-top: 4px solid var(--color-primary);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .retrofit-service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(15,23,42,0.13);
+    }
+
+    .retrofit-service-card .icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .retrofit-service-card h3 {
+      color: #0f1724;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .retrofit-service-card p {
+      line-height: 1.6;
+      color: #475569;
+    }
+
+
+    /* QUÉ MÁQUINAS */
+
+    .retrofit-machines {
+      padding: 70px 0;
+      background: #fff;
+    }
+
+    .retrofit-machines-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .retrofit-machines-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .retrofit-machines-content h2 {
+      color: var(--color-primary);
+      font-size: 2.1rem;
+      margin-bottom: 18px;
+    }
+
+    .retrofit-machines-content p {
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .retrofit-check-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .retrofit-check-list li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .retrofit-check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--color-primary);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+
+    /* CUÁNDO HACER RETROFIT */
+
+    .retrofit-when {
+      padding: 70px 0;
+      background: linear-gradient(180deg,#eef2f6,#f8fafc);
+    }
+
+    .retrofit-when-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
+    }
+
+    .retrofit-when-item {
+      background: #fff;
+      padding: 23px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.07);
+    }
+
+    .retrofit-when-item h3 {
+      font-size: 1.15rem;
+      color: #0f1724;
+      margin-bottom: 8px;
+    }
+
+    .retrofit-when-item p {
+      color: #475569;
+      line-height: 1.6;
+    }
+
+
+    /* PROCESO */
+
+    .retrofit-process {
+      padding: 70px 0;
+      background: #fff;
+    }
+
+    .retrofit-process-grid {
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      gap: 16px;
+    }
+
+    .retrofit-step {
+      position: relative;
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 25px 18px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+
+    .retrofit-step-number {
+      width: 45px;
+      height: 45px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .retrofit-step h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #0f1724;
+    }
+
+    .retrofit-step p {
+      font-size: .92rem;
+      line-height: 1.5;
+      color: #64748b;
+    }
+
+
+    /* BENEFICIOS */
+
+    .retrofit-benefits {
+      padding: 70px 0;
+      background: #f1f5f9;
+    }
+
+    .retrofit-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .retrofit-benefit {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.07);
+    }
+
+    .retrofit-benefit h3 {
+      color: var(--color-primary);
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+
+    .retrofit-benefit p {
+      line-height: 1.6;
+      color: #475569;
+    }
+
+
+    /* DIFERENCIAL */
+
+    .retrofit-differential {
+      padding: 70px 0;
+      background: #fff;
+    }
+
+    .retrofit-differential-box {
+      max-width: 1000px;
+      margin: auto;
+      background: #0f1724;
+      color: #fff;
+      border-radius: 14px;
+      padding: 45px;
+    }
+
+    .retrofit-differential-box h2 {
+      color: #7dd3fc;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .retrofit-differential-box p {
+      line-height: 1.7;
+      color: #e2e8f0;
+      margin-bottom: 15px;
+    }
+
+    .retrofit-differential-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 30px;
+      list-style: none;
+      padding: 15px 0;
+    }
+
+    .retrofit-differential-list li {
+      color: #e2e8f0;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .retrofit-differential-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+
+    /* FAQ */
+
+    .retrofit-faq {
+      padding: 70px 0;
+      background: #f8fafc;
+    }
+
+    .retrofit-faq details {
+      background: #fff;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      padding: 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,.05);
+    }
+
+    .retrofit-faq summary {
+      cursor: pointer;
+      padding: 20px;
+      font-weight: bold;
+      color: #0f1724;
+    }
+
+    .retrofit-faq details p {
+      padding: 0 20px 20px;
+      color: #475569;
+      line-height: 1.65;
+    }
+
+
+    /* CTA */
+
+    .retrofit-cta {
+      padding: 75px 20px;
+      text-align: center;
+      color: #fff;
+      background:
+        linear-gradient(
+          135deg,
+          #0369a1 0%,
+          #0ea5e9 55%,
+          #0f1724 100%
+        );
+    }
+
+    .retrofit-cta h2 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    .retrofit-cta p {
+      max-width: 800px;
+      margin: 0 auto 25px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .retrofit-cta-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      .retrofit-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .retrofit-intro-grid,
+      .retrofit-machines-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .retrofit-service-grid,
+      .retrofit-benefits-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .retrofit-process-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .retrofit-hero {
+        min-height: 500px;
+        padding: 55px 6%;
+      }
+
+      .retrofit-hero h1 {
+        font-size: 2.05rem;
+      }
+
+      .retrofit-hero p {
+        font-size: 1rem;
+      }
+
+      .retrofit-service-grid,
+      .retrofit-benefits-grid,
+      .retrofit-when-grid,
+      .retrofit-process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .retrofit-differential-list {
+        grid-template-columns: 1fr;
+      }
+
+      .retrofit-differential-box {
+        padding: 28px 22px;
+      }
+
+      .retrofit-cta h2 {
+        font-size: 1.9rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     BOTÓN DE COOKIES
+     ========================================================= -->
+
+<button class="cookie-settings-btn"
+        onclick="openPreferences()"
+        title="Configuración de Cookies"
+        aria-label="Configurar cookies">
+  🍪
+</button>
+
+
+<!-- =========================================================
+     ASISTENCIA TÉCNICA
+     ========================================================= -->
+
+<div class="asistencia-container">
+
+  <div onclick="toggleMenu()">
+    <img src="images/icono-asistencia.png"
+         alt="Asistencia Técnica CNC">
+    <br>
+  </div>
+
+  <div class="asistencia-menu" id="asistenciaMenu">
+
+    <a href="tel:+34914338981"
+       class="asistencia-item">
+      📞 Llamar ahora
+    </a>
+
+    <a href="https://wa.me/34660404046?text=Hola%20necesito%20información%20sobre%20un%20retrofit%20para%20mi%20máquina%20CNC"
+       target="_blank"
+       rel="noopener"
+       class="asistencia-item">
+      💬 WhatsApp
+    </a>
+
+    <a href="formulario.html"
+       class="asistencia-item">
+      ⚙ Solicitar Retrofit
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header>
+
+  <div class="container">
+
+    <div class="logo">
+      <img src="images/logo.jpeg"
+           alt="CNCSystems">
+    </div>
+
+    <nav>
+
+      <button class="menu-toggle"
+              aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul>
+
+        <li>
+          <a href="index.html"
+             data-en="Home"
+             data-es="Inicio"
+             data-pt="Início">
+            Inicio
+          </a>
+        </li>
+
+        <li>
+          <a href="historia.html"
+             data-en="About Us"
+             data-es="Sobre Nosotros"
+             data-pt="Sobre Nós">
+            Sobre Nosotros
+          </a>
+        </li>
+
+        <li>
+          <a href="equipo.html"
+             data-en="Technical Team"
+             data-es="Equipo técnico"
+             data-pt="Equipa técnica">
+            Equipo técnico
+          </a>
+        </li>
+
+        <li>
+          <a href="servicio-tecnico-cnc.html"
+             data-en="Services"
+             data-es="Servicios/Tarifas"
+             data-pt="Serviços">
+            Servicios/Tarifas
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html"
+             data-en="Contact"
+             data-es="Contacto"
+             data-pt="Contato">
+            Contacto
+          </a>
+        </li>
+
+        <li>
+          <a href="trabaja_nosotros.html"
+             data-en="Work with us"
+             data-es="Trabaja con nosotros"
+             data-pt="Trabalhe connosco">
+            Trabaja con nosotros
+          </a>
+        </li>
+
+        <li>
+          <a href="blog.html">
+            Consejos CNC
+          </a>
+        </li>
+
+        <li>
+          <a href="formulario.html"
+             class="menu-asistencia">
+            Solicitar asistencia
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+
+    <div class="language-selector">
+
+      <div class="idioma">
+
+        <a href="#"
+           onclick="changeLanguage('en')">
+          <img src="images/ingles.png"
+               alt="English">
+        </a>
+
+        <a href="#"
+           onclick="changeLanguage('es')">
+          <img src="images/espanol.png"
+               alt="Español">
+        </a>
+
+        <a href="#"
+           onclick="changeLanguage('pt')">
+          <img src="images/portugues.png"
+               alt="Português">
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main class="retrofit-page">
+
+
+<!-- =========================================================
+     BREADCRUMBS
+     ========================================================= -->
+
+<div class="retrofit-breadcrumbs">
+
+  <a href="index.html">Inicio</a>
+  &nbsp;›&nbsp;
+
+  <a href="servicio-tecnico-cnc.html">
+    Servicios CNC
+  </a>
+
+  &nbsp;›&nbsp;
+
+  <span>Retrofit CNC</span>
+
+</div>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="retrofit-hero">
+
+  <div class="retrofit-hero-content">
+
+    <span class="retrofit-label">
+      Servicio de ingeniería y modernización CNC
+    </span>
+
+    <h1>
+      Retrofit de Máquinas CNC Industriales
+    </h1>
+
+    <p>
+      Modernizamos maquinaria CNC industrial para prolongar su vida útil,
+      sustituir tecnología obsoleta y mejorar la fiabilidad, precisión
+      y capacidad productiva del equipo.
+    </p>
+
+    <p>
+      Estudiamos la máquina existente, analizamos su viabilidad técnica
+      y definimos una solución de modernización adaptada a sus necesidades
+      de producción.
+    </p>
+
+    <div class="retrofit-hero-buttons">
+
+      <a href="formulario.html"
+         class="btn">
+        Solicitar estudio de Retrofit
+      </a>
+
+     
+	    <a href="contact.html" class="btn">Contactenos</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRODUCCIÓN
+     ========================================================= -->
+
+<section class="retrofit-intro">
+
+  <div class="retrofit-container">
+
+    <div class="retrofit-intro-grid">
+
+      <div>
+
+        <h2>
+          Modernizar una máquina CNC puede ser más rentable que sustituirla
+        </h2>
+
+        <p>
+          Muchas máquinas CNC industriales mantienen una estructura mecánica
+          robusta y perfectamente aprovechable, pero incorporan controles,
+          accionamientos, electrónica o sistemas eléctricos que han quedado
+          obsoletos.
+        </p>
+
+        <p>
+          En estos casos, un <strong>retrofit CNC</strong> permite conservar
+          el activo industrial y actualizar los elementos que limitan su
+          funcionamiento, evitando en determinados proyectos la sustitución
+          completa de la máquina.
+        </p>
+
+        <p>
+          CNCSystems estudia cada proyecto de forma individual para determinar
+          qué elementos deben sustituirse y cuáles pueden mantenerse,
+          buscando una solución técnica viable para el entorno productivo.
+        </p>
+
+      </div>
+
+
+      <div class="retrofit-highlight">
+
+        <strong>
+          ¿Tiene una máquina CNC antigua pero mecánicamente aprovechable?
+        </strong>
+
+        <p>
+          Podemos estudiar la viabilidad de una modernización antes de que
+          tenga que plantearse la sustitución completa del equipo.
+        </p>
+
+        <a href="formulario.html"
+           class="btn">
+          Solicitar valoración
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICIOS
+     ========================================================= -->
+
+<section class="retrofit-services">
+
+  <div class="retrofit-container">
+
+    <div class="retrofit-section-title">
+
+      <h2>
+        ¿Qué incluye un Retrofit CNC?
+      </h2>
+
+      <p>
+        La intervención se adapta al estado y necesidades de cada máquina.
+        Podemos actuar sobre diferentes sistemas de control, accionamiento,
+        captación y automatización.
+      </p>
+
+    </div>
+
+
+    <div class="retrofit-service-grid">
+
+
+      <article class="retrofit-service-card">
+
+        <div class="icon">🖥️</div>
+
+        <h3>
+          Modernización del CNC
+        </h3>
+
+        <p>
+          Sustitución de controles numéricos obsoletos por sistemas CNC
+          actuales, adaptados a las necesidades de producción de la máquina.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-service-card">
+
+        <div class="icon">⚡</div>
+
+        <h3>
+          Accionamientos y servomotores
+        </h3>
+
+        <p>
+          Actualización de drives, accionamientos y servomotores cuando
+          la electrónica existente limita la fiabilidad, precisión o
+          disponibilidad del equipo.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-service-card">
+
+        <div class="icon">🔌</div>
+
+        <h3>
+          Armario eléctrico
+        </h3>
+
+        <p>
+          Diseño y renovación de armarios eléctricos, fuentes, protecciones,
+          cableado y elementos necesarios para integrar la nueva arquitectura.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-service-card">
+
+        <div class="icon">📐</div>
+
+        <h3>
+          Captación y medición
+        </h3>
+
+        <p>
+          Integración o sustitución de encoders, reglas ópticas y sistemas
+          de captación para adaptar la máquina a los nuevos sistemas de control.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-service-card">
+
+        <div class="icon">⚙️</div>
+
+        <h3>
+          PLC y automatización
+        </h3>
+
+        <p>
+          Programación, parametrización e integración de las funciones
+          necesarias para el funcionamiento de la máquina y sus periféricos.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-service-card">
+
+        <div class="icon">📡</div>
+
+        <h3>
+          Conectividad e Industria 4.0
+        </h3>
+
+        <p>
+          Preparación de la máquina para conectividad, adquisición de datos
+          e integración con sistemas de supervisión y mantenimiento.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     MÁQUINAS
+     ========================================================= -->
+
+<section class="retrofit-machines">
+
+  <div class="retrofit-container">
+
+    <div class="retrofit-machines-grid">
+
+
+      <div class="retrofit-machines-image">
+
+        <img src="images/blog/maquina-cnc-antigua.jpg"
+             alt="Máquina CNC industrial antigua susceptible de modernización mediante retrofit">
+
+      </div>
+
+
+      <div class="retrofit-machines-content">
+
+        <h2>
+          Retrofit para maquinaria CNC industrial
+        </h2>
+
+        <p>
+          El retrofit está especialmente indicado cuando la estructura
+          mecánica de la máquina conserva unas condiciones adecuadas,
+          pero determinados sistemas electrónicos o de control han llegado
+          al final de su ciclo de vida.
+        </p>
+
+        <p>
+          Estudiamos proyectos de modernización sobre diferentes tipos
+          de maquinaria CNC industrial:
+        </p>
+
+        <ul class="retrofit-check-list">
+
+          <li>
+            Tornos CNC industriales
+          </li>
+
+          <li>
+            Centros de mecanizado
+          </li>
+
+          <li>
+            Máquinas con controles CNC obsoletos
+          </li>
+
+          <li>
+            Equipos con electrónica descatalogada
+          </li>
+
+          <li>
+            Máquinas con dificultades de suministro de repuestos
+          </li>
+
+          <li>
+            Equipos cuya productividad se ha visto limitada por su tecnología
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CUÁNDO HACER RETROFIT
+     ========================================================= -->
+
+<section class="retrofit-when">
+
+  <div class="retrofit-container">
+
+    <div class="retrofit-section-title">
+
+      <h2>
+        ¿Cuándo conviene realizar un Retrofit?
+      </h2>
+
+      <p>
+        No todas las máquinas necesitan una modernización completa.
+        El primer paso es determinar si el activo existente merece ser
+        actualizado.
+      </p>
+
+    </div>
+
+
+    <div class="retrofit-when-grid">
+
+
+      <article class="retrofit-when-item">
+
+        <h3>
+          Electrónica obsoleta
+        </h3>
+
+        <p>
+          El CNC, PLC, accionamientos o tarjetas originales están
+          descatalogados o resulta difícil encontrar repuestos.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-when-item">
+
+        <h3>
+          Averías recurrentes
+        </h3>
+
+        <p>
+          Las intervenciones sobre electrónica antigua se repiten y
+          las paradas afectan a la disponibilidad de producción.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-when-item">
+
+        <h3>
+          Necesidad de mayor productividad
+        </h3>
+
+        <p>
+          La máquina continúa siendo mecánicamente válida, pero su sistema
+          de control limita velocidad, precisión o flexibilidad.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-when-item">
+
+        <h3>
+          Necesidad de conectividad
+        </h3>
+
+        <p>
+          Se necesita incorporar nuevas posibilidades de comunicación,
+          supervisión o adquisición de datos.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-when-item">
+
+        <h3>
+          Coste elevado de sustitución
+        </h3>
+
+        <p>
+          La adquisición de una máquina nueva supone una inversión
+          considerable frente a la posibilidad de actualizar el equipo existente.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-when-item">
+
+        <h3>
+          Máquina mecánicamente aprovechable
+        </h3>
+
+        <p>
+          La bancada, guías, husillos, cabezal y estructura general
+          todavía ofrecen una base adecuada para continuar produciendo.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROCESO
+     ========================================================= -->
+
+<section class="retrofit-process">
+
+  <div class="retrofit-container">
+
+    <div class="retrofit-section-title">
+
+      <h2>
+        Nuestro proceso de Retrofit CNC
+      </h2>
+
+      <p>
+        Una modernización CNC debe comenzar con un diagnóstico técnico.
+        No se trata simplemente de sustituir un control.
+      </p>
+
+    </div>
+
+
+    <div class="retrofit-process-grid">
+
+
+      <article class="retrofit-step">
+
+        <div class="retrofit-step-number">
+          01
+        </div>
+
+        <h3>
+          Estudio
+        </h3>
+
+        <p>
+          Analizamos la máquina, su estado y las necesidades de producción.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-step">
+
+        <div class="retrofit-step-number">
+          02
+        </div>
+
+        <h3>
+          Ingeniería
+        </h3>
+
+        <p>
+          Definimos arquitectura, componentes y alcance de la intervención.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-step">
+
+        <div class="retrofit-step-number">
+          03
+        </div>
+
+        <h3>
+          Integración
+        </h3>
+
+        <p>
+          Instalamos y conectamos los nuevos sistemas de control y potencia.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-step">
+
+        <div class="retrofit-step-number">
+          04
+        </div>
+
+        <h3>
+          Programación
+        </h3>
+
+        <p>
+          Parametrizamos CNC, PLC y sistemas asociados.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-step">
+
+        <div class="retrofit-step-number">
+          05
+        </div>
+
+        <h3>
+          Puesta en marcha
+        </h3>
+
+        <p>
+          Verificamos el funcionamiento y dejamos la máquina preparada
+          para producción.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     BENEFICIOS
+     ========================================================= -->
+
+<section class="retrofit-benefits">
+
+  <div class="retrofit-container">
+
+    <div class="retrofit-section-title">
+
+      <h2>
+        Ventajas de modernizar una máquina CNC
+      </h2>
+
+      <p>
+        El objetivo del retrofit no es simplemente sustituir electrónica:
+        es recuperar capacidad productiva y fiabilidad.
+      </p>
+
+    </div>
+
+
+    <div class="retrofit-benefits-grid">
+
+
+      <article class="retrofit-benefit">
+
+        <h3>
+          Prolongar la vida útil
+        </h3>
+
+        <p>
+          Aprovechamos la estructura mecánica de una máquina existente
+          cuando sus condiciones permiten continuar utilizándola.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-benefit">
+
+        <h3>
+          Reducir la obsolescencia
+        </h3>
+
+        <p>
+          Sustituimos componentes cuya disponibilidad o mantenimiento
+          resulta cada vez más complicado.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-benefit">
+
+        <h3>
+          Mejorar la fiabilidad
+        </h3>
+
+        <p>
+          Una arquitectura electrónica actual facilita el mantenimiento
+          y reduce la dependencia de componentes antiguos.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-benefit">
+
+        <h3>
+          Recuperar productividad
+        </h3>
+
+        <p>
+          La actualización del control y accionamientos puede permitir
+          aprovechar mejor las capacidades mecánicas de la máquina.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-benefit">
+
+        <h3>
+          Facilitar el mantenimiento
+        </h3>
+
+        <p>
+          Una arquitectura actual permite disponer de sistemas más
+          accesibles para diagnóstico y mantenimiento técnico.
+        </p>
+
+      </article>
+
+
+      <article class="retrofit-benefit">
+
+        <h3>
+          Digitalizar la máquina
+        </h3>
+
+        <p>
+          La modernización puede preparar el equipo para nuevas necesidades
+          de comunicación y adquisición de información.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     DIFERENCIAL CNC SYSTEMS
+     ========================================================= -->
+
+<section class="retrofit-differential">
+
+  <div class="retrofit-container">
+
+    <div class="retrofit-differential-box">
+
+      <h2>
+        Un Retrofit debe partir de la máquina, no de un catálogo
+      </h2>
+
+      <p>
+        Cada máquina tiene una configuración diferente. Por eso,
+        antes de plantear una sustitución de componentes, analizamos
+        el conjunto del equipo y sus necesidades.
+      </p>
+
+      <p>
+        El objetivo es determinar qué elementos deben actualizarse,
+        cuáles pueden conservarse y qué arquitectura permite conseguir
+        una solución técnicamente viable y mantenible.
+      </p>
+
+      <ul class="retrofit-differential-list">
+
+        <li>
+          Estudio individual de cada máquina
+        </li>
+
+        <li>
+          Modernización adaptada al equipo
+        </li>
+
+        <li>
+          Integración de control y accionamientos
+        </li>
+
+        <li>
+          Programación y parametrización
+        </li>
+
+        <li>
+          Diagnóstico y puesta en marcha
+        </li>
+
+        <li>
+          Servicio técnico CNC multimarca
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ENLACE AL ARTÍCULO DEL BLOG
+     ========================================================= -->
+
+<section class="retrofit-intro">
+
+  <div class="retrofit-container">
+
+    <div class="retrofit-highlight">
+
+      <strong>
+        ¿Quiere saber si el Retrofit es la mejor opción para su máquina?
+      </strong>
+
+      <p>
+        En nuestro artículo técnico explicamos con mayor detalle cuándo
+        conviene reparar, modernizar o sustituir una máquina CNC y qué
+        factores deben analizarse antes de tomar la decisión.
+      </p>
+
+      <a href="retrofit-maquina-cnc.html"
+         class="btn">
+        Leer la guía técnica sobre Retrofit CNC
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FAQ
+     ========================================================= -->
+
+<section class="retrofit-faq">
+
+  <div class="retrofit-container">
+
+    <div class="retrofit-section-title">
+
+      <h2>
+        Preguntas frecuentes sobre Retrofit CNC
+      </h2>
+
+    </div>
+
+
+    <details>
+
+      <summary>
+        ¿Qué es un Retrofit CNC?
+      </summary>
+
+      <p>
+        Es la modernización parcial o integral de los sistemas eléctricos,
+        electrónicos y de control de una máquina CNC, conservando cuando
+        es viable parte de su estructura y elementos mecánicos.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        ¿Se puede cambiar solamente el control CNC?
+      </summary>
+
+      <p>
+        En determinados proyectos es posible actualizar únicamente el CNC,
+        aunque debe estudiarse la compatibilidad con accionamientos,
+        servomotores, captación, PLC y resto de la arquitectura de la máquina.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        ¿Se pueden conservar elementos de la máquina antigua?
+      </summary>
+
+      <p>
+        Sí. Precisamente uno de los objetivos del estudio de Retrofit es
+        determinar qué elementos existentes pueden mantenerse y cuáles
+        necesitan ser sustituidos.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        ¿Trabajáis con máquinas CNC de diferentes fabricantes?
+      </summary>
+
+      <p>
+        CNCSystems presta servicio técnico sobre maquinaria CNC multimarca
+        y trabaja con diferentes arquitecturas de control y automatización.
+        La viabilidad se determina en función de la máquina y del proyecto.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        ¿Cómo puedo saber si mi máquina es candidata a un Retrofit?
+      </summary>
+
+      <p>
+        El primer paso es analizar el estado mecánico de la máquina,
+        la electrónica existente, la disponibilidad de repuestos,
+        las necesidades de producción y el alcance de la modernización.
+      </p>
+
+    </details>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA FINAL
+     ========================================================= -->
+
+<section class="retrofit-cta">
+
+	<div class="cta-contenido">
+         ¿Está valorando modernizar una máquina CNC?
+  </h2>
+<<p>
+    Envíenos información sobre la máquina, el control instalado y
+    la situación actual. Nuestro equipo técnico puede estudiar
+    la viabilidad de un proyecto de Retrofit y definir el alcance
+    de la intervención.
+  </p>   
+      <div class="cta-botones">
+        <a href="tel:+34914338981" class="btn-llamar">
+          📞 Llamar ahora
+        </a>
+
+        <a href="https://wa.me/34660404046?text=Hola%20tengo%20una%20máquina%20CNC%20parada%20y%20necesito%20asistencia"
+           target="_blank"
+           class="btn-whatsapp">
+          💬 WhatsApp
+        </a>
+
+        <a href="formulario.html" class="btn-contacto">
+          ⚙ Enviar solicitud
+        </a>
+      </div>
+    </div>
+	
+  </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     BRANDS
+     ========================================================= -->
+
+<!-- Brands visual del pie de página genérico -->
+<section class="brands-visual">
+  <h2>Trabajamos con las principales marcas CNC en maquinaria y controles</h2>
+  <div class="brands-grid">
+    <span>HAAS</span>
+    <span>MAZAK</span>
+    <span>DMG MORI</span>
+    <span>OKUMA</span>
+    <span>DOOSAN</span>
+    <span>STARRAG</span>
+    <span>HYUNDAI</span>
+    <span>FANUC</span>
+    <span>SIEMENS</span>
+    <span>HEIDENHAIN</span>
+    <span>FAGOR</span>
+  </div>
+  <p class="brands-note">Servicio técnico CNC multimarca en maquinaria y controles industriales.</p>
+  <p class="brands-notejuri">Las marcas mencionadas pertenecen a sus respectivos propietarios. CNCSystems no es servicio técnico oficial de dichas marcas.</p>
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-left">
+
+      <p>
+        © <span id="year"></span>
+      </p>
+
+      <p>
+        CNC SYSTEMS. Todos los derechos reservados
+      </p>
+
+    </div>
+
+
+    <p>
+
+      <a href="aviso-legal.html">
+        Aviso Legal
+      </a>
+
+      |
+
+      <a href="politicaprivacidad.html">
+        Política de Privacidad
+      </a>
+
+      |
+
+      <a href="politica-cookies.html">
+        Política de Cookies
+      </a>
+
+      |
+
+      <a href="#"
+         onclick="openPreferences(); return false;">
+        Configuración de Cookies
+      </a>
+
+    </p>
+
+
+    <div class="footer-right">
+
+      <a class="social-link"
+         href="https://www.linkedin.com/company/cncsystems-sl"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="CNC Systems en LinkedIn">
+
+        <svg width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             aria-hidden="true">
+
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.5 8.98h4.78v2.05h.07c.66-1.25 2.28-2.57 4.69-2.57 5.01 0 5.93 3.3 5.93 7.59V24h-5V16.7c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V24h-5V8.98z"/>
+
+        </svg>
+
+      </a>
+
+
+      <a class="social-link"
+         href="tel:+34914338981"
+         aria-label="Llamar a CNC Systems">
+
+        📞
+        <span class="sr-only">
+          Teléfono CNC Systems
+        </span>
+
+      </a>
+
+
+      <a class="social-link"
+         href="mailto:direccion@cncsystems.es"
+         aria-label="Enviar correo a CNC Systems">
+
+        ✉️
+
+        <span class="sr-only">
+          Email CNC Systems
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     COOKIES
+     ========================================================= -->
+
+<div id="cookie-banner"
+     class="cookie-banner"
+     style="display:none;">
+
+  <p>
+    Utilizamos cookies técnicas propias necesarias para la navegación
+    y cookies de análisis de terceros para medir la actividad estadística
+    del sitio web.
+    <a href="politica-cookies.html">
+      Política de Cookies
+    </a>
+  </p>
+
+
+  <div class="cookie-buttons-container">
+
+    <button onclick="acceptCookies()">
+      Aceptar
+    </button>
+
+    <button onclick="rejectCookies()">
+      Rechazar
+    </button>
+
+    <button onclick="openPreferences()">
+      Configurar
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     PANEL COOKIES
+     ========================================================= -->
+
+<div id="cookie-preferences"
+     class="cookie-banner"
+     style="display:none; flex-direction:column; align-items:flex-start; max-width:500px;">
+
+  <h3>
+    Configuración de cookies
+  </h3>
+
+  <label>
+    <input type="checkbox"
+           disabled
+           checked>
+
+    <strong>
+      Necesarias (siempre activas)
+    </strong>
+
+  </label>
+
+  <p class="cookie-description">
+
+    Estas cookies son necesarias para el correcto funcionamiento
+    de la página web.
+
+  </p>
+
+
+  <label>
+
+    <input type="checkbox"
+           id="analytics">
+
+    <strong>
+      Analíticas
+    </strong>
+
+  </label>
+
+
+  <p class="cookie-description">
+
+    Estas cookies permiten obtener información estadística sobre
+    el uso de la página web y solo se instalarán si presta
+    su consentimiento.
+
+  </p>
+
+
+  <div style="margin-top:10px; display:flex; gap:8px;">
+
+    <button onclick="savePreferences()">
+      Guardar
+    </button>
+
+    <button onclick="closePreferences()">
+      Cancelar
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     SCRIPTS
+     ========================================================= -->
+
+<script>
+
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+
+/* Menú móvil */
+
+const menuToggle =
+  document.querySelector('.menu-toggle');
+
+const menu =
+  document.querySelector('header nav ul');
+
+if (menuToggle && menu) {
+
+  menuToggle.addEventListener('click', () => {
+
+    menu.classList.toggle('show');
+
+  });
+
+}
+
+
+/* Menú asistencia */
+
+function toggleMenu() {
+
+  const menu =
+    document.getElementById("asistenciaMenu");
+
+  if (menu.style.display === "flex") {
+
+    menu.style.display = "none";
+
+  } else {
+
+    menu.style.display = "flex";
+
+  }
+
+}
+
+
+/* Idiomas */
+
+function changeLanguage(lang) {
+
+  localStorage.setItem("lang", lang);
+
+  applyLanguage(lang);
+
+}
+
+
+function applyLanguage(lang) {
+
+  document
+    .querySelectorAll("[data-es]")
+    .forEach(el => {
+
+      const value =
+        el.getAttribute("data-" + lang);
+
+      if (value) {
+
+        el.innerHTML = value;
+
+      }
+
+    });
+
+}
+
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    let lang =
+      localStorage.getItem("lang");
+
+    if (!lang) {
+
+      lang = "es";
+
+      localStorage.setItem(
+        "lang",
+        "es"
+      );
+
+    }
+
+    applyLanguage(lang);
+
+  }
+);
+
+</script>
+
+</body>
+</html>
+```
