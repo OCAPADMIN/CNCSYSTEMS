@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Servicio técnico y mantenimiento de maquinaria CNC industrial | CNC Systems</title>
+  <meta name="description" content="Mantenimiento, reparación, instalación, estudios de precisión y modernización de maquinaria CNC industrial. Servicio multimarca en España y Portugal. Más de 35 años de experiencia.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- CSS temporal para visualizar la propuesta.
+       Después podemos integrarlo en tu styles.css actual. -->
+  <style>
+    :root{
+      --navy:#0f2b46;
+      --navy2:#173b61;
+      --red:#c62828;
+      --text:#243746;
+      --muted:#637381;
+      --light:#f4f6f8;
+      --white:#fff;
+      --border:#dfe5ea;
+      --max:1180px;
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(var(--max),92%);margin:auto}
+
+    /* CABECERA */
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:#fff;
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+    .logo{
+      font-size:22px;
+      font-weight:800;
+      color:var(--navy);
+      white-space:nowrap;
+    }
+    .logo span{color:var(--red)}
+    nav{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      font-size:14px;
+      font-weight:600;
+    }
+    nav a:hover{color:var(--red)}
+    .nav-cta{
+      background:var(--red);
+      color:#fff;
+      padding:10px 16px;
+      border-radius:7px;
+    }
+
+    /* HERO */
+    .hero{
+      background:
+        linear-gradient(135deg,rgba(15,43,70,.97),rgba(23,59,97,.94));
+      color:#fff;
+      padding:88px 0 72px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:60px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-block;
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:30px;
+      padding:7px 13px;
+      font-size:13px;
+      margin-bottom:22px;
+    }
+    h1{
+      font-size:clamp(38px,5vw,64px);
+      line-height:1.08;
+      margin:0 0 22px;
+      letter-spacing:-1.5px;
+    }
+    .hero-lead{
+      font-size:21px;
+      line-height:1.45;
+      max-width:760px;
+      margin:0 0 18px;
+    }
+    .hero-sublead{
+      color:rgba(255,255,255,.82);
+      max-width:720px;
+      margin-bottom:30px;
+    }
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .btn{
+      display:inline-block;
+      padding:13px 20px;
+      border-radius:7px;
+      font-weight:700;
+    }
+    .btn-primary{
+      background:var(--red);
+      color:#fff;
+    }
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,.5);
+      color:#fff;
+    }
+    .hero-card{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      padding:28px;
+      border-radius:var(--radius);
+    }
+    .hero-card h3{margin-top:0;font-size:21px}
+    .hero-card ul{margin:0;padding-left:20px}
+    .hero-card li{margin:10px 0;color:rgba(255,255,255,.9)}
+
+    /* AUTORIDAD */
+    .authority{
+      background:#fff;
+      border-bottom:1px solid var(--border);
+    }
+    .authority-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+    }
+    .authority-item{
+      padding:25px 20px;
+      text-align:center;
+      border-right:1px solid var(--border);
+    }
+    .authority-item:last-child{border-right:0}
+    .authority strong{
+      display:block;
+      color:var(--navy);
+      font-size:22px;
+    }
+    .authority span{font-size:13px;color:var(--muted)}
+
+    /* SECCIONES */
+    section{padding:82px 0}
+    .section-header{
+      max-width:780px;
+      margin-bottom:42px;
+    }
+    .section-header .eyebrow{
+      color:var(--red);
+      border:0;
+      padding:0;
+      margin:0 0 8px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+    h2{
+      font-size:clamp(30px,4vw,44px);
+      line-height:1.15;
+      margin:0 0 15px;
+      color:var(--navy);
+    }
+    .section-header p{color:var(--muted);font-size:17px}
+
+    /* SERVICIOS */
+    .services{background:var(--light)}
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:16px;
+    }
+    .service{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:25px 20px;
+      min-height:245px;
+      transition:.2s;
+    }
+    .service:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 30px rgba(15,43,70,.10);
+    }
+    .service-number{
+      color:var(--red);
+      font-size:13px;
+      font-weight:800;
+    }
+    .service h3{
+      color:var(--navy);
+      font-size:19px;
+      line-height:1.25;
+    }
+    .service p{font-size:14px;color:var(--muted)}
+
+    /* PARQUES */
+    .park-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+    .park-list{
+      display:grid;
+      gap:13px;
+    }
+    .park-item{
+      padding:16px 18px;
+      border-left:4px solid var(--red);
+      background:var(--light);
+    }
+    .park-item strong{display:block;color:var(--navy)}
+    .park-item span{font-size:14px;color:var(--muted)}
+    .industrial-box{
+      background:linear-gradient(135deg,var(--navy),var(--navy2));
+      color:#fff;
+      padding:38px;
+      border-radius:var(--radius);
+    }
+    .industrial-box h3{
+      font-size:29px;
+      line-height:1.2;
+      margin-top:0;
+    }
+    .industrial-box p{color:rgba(255,255,255,.84)}
+
+    /* DIFERENCIACIÓN */
+    .difference{
+      background:var(--navy);
+      color:#fff;
+      text-align:center;
+    }
+    .difference h2{color:#fff}
+    .quote{
+      max-width:900px;
+      margin:0 auto 25px;
+      font-size:clamp(30px,4vw,52px);
+      line-height:1.12;
+      font-weight:800;
+    }
+    .difference p{
+      max-width:750px;
+      margin:auto;
+      color:rgba(255,255,255,.8);
+    }
+
+    /* SECTORES */
+    .sector-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .sector{
+      border:1px solid var(--border);
+      padding:24px;
+      border-radius:var(--radius);
+    }
+    .sector h3{color:var(--navy);margin-top:0}
+    .sector p{color:var(--muted);font-size:14px}
+
+    /* CASOS */
+    .cases{background:var(--light)}
+    .case-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .case{
+      background:#fff;
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid var(--border);
+    }
+    .case-image{
+      height:150px;
+      background:
+        linear-gradient(135deg,#d9dee3,#9ca9b4);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#43515d;
+      font-size:13px;
+      font-weight:700;
+    }
+    .case-content{padding:23px}
+    .case-content h3{color:var(--navy);margin-top:0}
+    .case-content p{color:var(--muted);font-size:14px}
+
+    /* CTA */
+    .final-cta{
+      background:#f7f8fa;
+      text-align:center;
+    }
+    .final-cta p{
+      max-width:680px;
+      margin:0 auto 28px;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#0b2033;
+      color:#fff;
+      padding:42px 0;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.4fr 1fr 1fr;
+      gap:35px;
+    }
+    footer h3{margin-top:0}
+    footer p,footer a{color:rgba(255,255,255,.7);font-size:14px}
+    .copyright{
+      border-top:1px solid rgba(255,255,255,.12);
+      margin-top:30px;
+      padding-top:20px;
+      color:rgba(255,255,255,.55);
+      font-size:12px;
+    }
+
+    @media(max-width:950px){
+      .hero-grid,.park-grid{grid-template-columns:1fr}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .authority-grid{grid-template-columns:repeat(2,1fr)}
+      .authority-item:nth-child(2){border-right:0}
+      .authority-item:nth-child(-n+2){border-bottom:1px solid var(--border)}
+      .sector-grid,.case-grid{grid-template-columns:1fr 1fr}
+      nav{display:none}
+    }
+
+    @media(max-width:600px){
+      .hero{padding:60px 0}
+      section{padding:60px 0}
+      .service-grid,.sector-grid,.case-grid{grid-template-columns:1fr}
+      .authority-grid{grid-template-columns:1fr 1fr}
+      .authority-item{padding:18px 8px}
+      .footer-grid{grid-template-columns:1fr}
+      h1{font-size:39px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">CNC<span>SYSTEMS</span></a>
+
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#parques">Mantenimiento industrial</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#casos">Casos de éxito</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="contacto.html" class="nav-cta">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO: NUEVO POSICIONAMIENTO -->
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <span class="eyebrow">Máquina-herramienta · Servicio técnico multimarca</span>
+
+        <h1>Servicio integral de maquinaria CNC industrial</h1>
+
+        <p class="hero-lead">
+          Mantenimiento, reparación, precisión, instalación y modernización
+          de máquinas-herramienta para entornos industriales.
+        </p>
+
+        <p class="hero-sublead">
+          Ayudamos a empresas industriales a mantener la disponibilidad,
+          precisión y productividad de sus máquinas CNC.
+          Más de 35 años de experiencia en servicio técnico multimarca.
+        </p>
+
+        <div class="buttons">
+          <a href="contacto.html" class="btn btn-primary">
+            Solicitar asistencia técnica
+          </a>
+
+          <a href="#parques" class="btn btn-secondary">
+            Evaluar mi maquinaria
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>Cuando su maquinaria es crítica para la producción</h3>
+        <ul>
+          <li>Servicio técnico multimarca</li>
+          <li>Máquinas de distintas generaciones y controles</li>
+          <li>Intervenciones de mantenimiento y reparación</li>
+          <li>Estudios de precisión y geometría</li>
+          <li>Modernización y retrofit</li>
+        </ul>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- AUTORIDAD -->
+  <section class="authority">
+    <div class="container authority-grid">
+
+      <div class="authority-item">
+        <strong>+35 años</strong>
+        <span>Experiencia en máquina-herramienta</span>
+      </div>
+
+      <div class="authority-item">
+        <strong>Multimarca</strong>
+        <span>Máquinas y controles CNC</span>
+      </div>
+
+      <div class="authority-item">
+        <strong>España · Portugal</strong>
+        <span>Cobertura de servicio</span>
+      </div>
+
+      <div class="authority-item">
+        <strong>Industrial</strong>
+        <span>Orientación a producción</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="eyebrow">Servicios</span>
+        <h2>Un único proveedor para el ciclo de vida de su maquinaria CNC</h2>
+        <p>
+          Desde la instalación y puesta en marcha hasta el mantenimiento,
+          reparación, recuperación de precisión y modernización de equipos.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <article class="service">
+          <span class="service-number">01</span>
+          <h3>Instalación y puesta en marcha</h3>
+          <p>
+            Instalación, comprobaciones técnicas, puesta en marcha
+            y soporte inicial de maquinaria CNC.
+          </p>
+          <a href="instalaciones.html">Ver servicio →</a>
+        </article>
+
+        <article class="service">
+          <span class="service-number">02</span>
+          <h3>Mantenimiento CNC</h3>
+          <p>
+            Mantenimiento preventivo y correctivo orientado a reducir
+            paradas y mantener la disponibilidad de los equipos.
+          </p>
+          <a href="servicio-tecnico-cnc.html">Ver servicio →</a>
+        </article>
+
+        <article class="service">
+          <span class="service-number">03</span>
+          <h3>Diagnóstico y reparación</h3>
+          <p>
+            Diagnóstico de averías y reparación de sistemas mecánicos,
+            eléctricos, hidráulicos, neumáticos y CNC.
+          </p>
+          <a href="reparacion-maquinas-cnc.html">Ver servicio →</a>
+        </article>
+
+        <article class="service">
+          <span class="service-number">04</span>
+          <h3>Precisión y geometría</h3>
+          <p>
+            Análisis y recuperación de la precisión de la máquina
+            mediante comprobaciones geométricas y Ballbar.
+          </p>
+          <a href="estudio-precision-cnc.html">Ver servicio →</a>
+        </article>
+
+        <article class="service">
+          <span class="service-number">05</span>
+          <h3>Retrofit y modernización</h3>
+          <p>
+            Actualización de máquinas CNC para prolongar su vida útil
+            y adaptarlas a las necesidades actuales de producción.
+          </p>
+          <a href="retrofit-maquina-cnc.html">Ver servicio →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARQUES DE MAQUINARIA -->
+  <section id="parques">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="eyebrow">Para empresas industriales</span>
+        <h2>Servicio técnico para parques de maquinaria CNC</h2>
+        <p>
+          Una fábrica no depende de una única máquina. Cuando existen
+          diferentes modelos, fabricantes y generaciones de controles,
+          disponer de un soporte técnico multimarca puede simplificar
+          el mantenimiento de todo el parque.
+        </p>
+      </div>
+
+      <div class="park-grid">
+
+        <div class="park-list">
+
+          <div class="park-item">
+            <strong>Mantenimiento de maquinaria</strong>
+            <span>Preventivo y correctivo para equipos CNC industriales.</span>
+          </div>
+
+          <div class="park-item">
+            <strong>Diagnóstico de averías</strong>
+            <span>Identificación de la causa antes de intervenir.</span>
+          </div>
+
+          <div class="park-item">
+            <strong>Recuperación de precisión</strong>
+            <span>Geometría, nivelación y comprobación del comportamiento de la máquina.</span>
+          </div>
+
+          <div class="park-item">
+            <strong>Máquinas de diferentes generaciones</strong>
+            <span>Soporte multimarca para equipos actuales y máquinas con años de producción.</span>
+          </div>
+
+          <div class="park-item">
+            <strong>Modernización</strong>
+            <span>Valoración de retrofit frente a sustitución de la máquina.</span>
+          </div>
+
+        </div>
+
+        <div class="industrial-box">
+          <h3>Cuando la máquina es crítica para su producción, el servicio técnico también lo es.</h3>
+          <p>
+            Nuestro objetivo no es simplemente reparar una avería.
+            Es ayudar a mantener la disponibilidad, precisión y continuidad
+            productiva de la maquinaria.
+          </p>
+          <a href="contacto.html" class="btn btn-primary">
+            Hablar con un técnico
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIACIÓN -->
+  <section class="difference">
+    <div class="container">
+
+      <div class="quote">
+        “No importa quién fabricó su máquina.
+        Importa que siga produciendo.”
+      </div>
+
+      <p>
+        Servicio técnico independiente y multimarca para empresas que
+        necesitan mantener operativa su maquinaria CNC.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- SECTORES -->
+  <section id="sectores">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="eyebrow">Entornos industriales</span>
+        <h2>Servicio técnico donde la disponibilidad de la máquina importa</h2>
+        <p>
+          Soluciones de mantenimiento, reparación y modernización
+          adaptadas a entornos de fabricación industrial.
+        </p>
+      </div>
+
+      <div class="sector-grid">
+
+        <article class="sector">
+          <h3>Fabricación de componentes</h3>
+          <p>
+            Máquinas CNC destinadas a producción continua y fabricación
+            de componentes mecanizados.
+          </p>
+        </article>
+
+        <article class="sector">
+          <h3>Subcontratación industrial</h3>
+          <p>
+            Soporte técnico para empresas cuya actividad depende de
+            mantener disponibles sus centros de mecanizado y tornos CNC.
+          </p>
+        </article>
+
+        <article class="sector">
+          <h3>Industria y máquina-herramienta</h3>
+          <p>
+            Mantenimiento y soporte técnico de maquinaria instalada
+            en entornos industriales.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS -->
+  <section class="cases" id="casos">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="eyebrow">Experiencia</span>
+        <h2>Intervenciones y casos de éxito</h2>
+        <p>
+          Mostrar problemas reales y soluciones técnicas transmite
+          mucha más confianza que una simple lista de servicios.
+        </p>
+      </div>
+
+      <div class="case-grid">
+
+        <article class="case">
+          <div class="case-image">IMAGEN DE INTERVENCIÓN</div>
+          <div class="case-content">
+            <h3>Recuperación de precisión</h3>
+            <p>
+              Comprobación geométrica y actuación técnica para recuperar
+              las condiciones de precisión de una máquina CNC.
+            </p>
+            <a href="intervenciones.html">Ver intervención →</a>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-image">IMAGEN DE INTERVENCIÓN</div>
+          <div class="case-content">
+            <h3>Modernización de máquina</h3>
+            <p>
+              Evaluación y ejecución de una modernización para prolongar
+              la vida productiva de una máquina.
+            </p>
+            <a href="retrofit-maquina-cnc.html">Ver servicio →</a>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-image">IMAGEN DE INTERVENCIÓN</div>
+          <div class="case-content">
+            <h3>Diagnóstico y reparación</h3>
+            <p>
+              Intervención técnica ante una incidencia que afecta
+              directamente a la disponibilidad de producción.
+            </p>
+            <a href="reparacion-maquinas-cnc.html">Ver servicio →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <div class="container">
+
+      <div class="section-header" style="margin-left:auto;margin-right:auto;text-align:center">
+        <span class="eyebrow">Servicio técnico CNC</span>
+        <h2>¿Necesita mantener, recuperar o modernizar una máquina CNC?</h2>
+      </div>
+
+      <p>
+        Cuéntenos qué máquina tiene, qué problema presenta o qué necesita
+        mejorar. Analizaremos la intervención técnica más adecuada.
+      </p>
+
+      <a href="contacto.html" class="btn btn-primary">
+        Solicitar asistencia técnica
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>CNC SYSTEMS</h3>
+        <p>
+          Servicio técnico multimarca de maquinaria CNC y máquina-herramienta.
+          Mantenimiento, reparación, precisión, instalación y modernización.
+        </p>
+      </div>
+
+      <div>
+        <h3>Servicios</h3>
+        <p><a href="servicio-tecnico-cnc.html">Mantenimiento CNC</a></p>
+        <p><a href="reparacion-maquinas-cnc.html">Reparación CNC</a></p>
+        <p><a href="instalaciones.html">Instalación y puesta en marcha</a></p>
+        <p><a href="retrofit-maquina-cnc.html">Retrofit CNC</a></p>
+      </div>
+
+      <div>
+        <h3>Contacto</h3>
+        <p>direccion@cncsystems.es</p>
+        <p>914 338 981</p>
+        <p>España · Portugal</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © CNC Systems · Servicio técnico de maquinaria CNC industrial
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
