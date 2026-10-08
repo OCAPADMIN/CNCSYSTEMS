@@ -420,7 +420,7 @@ nav a:hover {
       .authority-item:nth-child(2){border-right:0}
       .authority-item:nth-child(-n+2){border-bottom:1px solid var(--border)}
       .sector-grid,.case-grid{grid-template-columns:1fr 1fr}
-      nav{display:none}
+   
     }
 
     @media(max-width:600px){
