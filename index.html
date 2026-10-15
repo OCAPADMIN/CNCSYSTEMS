@@ -247,7 +247,22 @@ Servicio técnico CNC
     padding: 0; border-radius: 0; background: transparent; box-shadow: none;
     filter: drop-shadow(0 2px 2px rgba(0,0,0,.22)); opacity: 1;
   }
-  .hub-label { position: absolute; z-index: 2; bottom: 65px; font-size: .81rem; font-weight: 900; color: #f1f7fb; letter-spacing: .22em; }
+  .hub-label { 
+    position: absolute; 
+    z-index: 6; 
+    bottom: 65px; 
+    font-size: .81rem; 
+    font-weight: 900; 
+    color: #f1f7fb; 
+    letter-spacing: .22em; 
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  .hub-label:hover {
+    color: var(--blue);
+  }
   
   /* Líneas luminosas que conectan cada servicio con el círculo central */
   .connectors {
@@ -415,10 +430,10 @@ Servicio técnico CNC
     <a class="servicees servicees-6" href="instalaciones.html" style="--delay:280ms" aria-label="Medios e instalaciones"><span class="symbol" aria-hidden="true">▦</span><span class="name">Medios e instalaciones</span></a>
     <a class="servicees servicees-7" href="historia.html" style="--delay:330ms" aria-label="Cobertura y experiencia"><span class="symbol" aria-hidden="true">◎</span><span class="name">Cobertura y experiencia</span></a>
 
-    <a class="hub" id="hub"  aria-label="Entrar en la página principal de CNC Systems">
+    <div class="hub" id="hub" aria-label="Menú de servicios CNC Systems">
   <img src="images/logotras.png" alt="Logotipo de CNC Systems">
-  <span class="hub-label">ENTRAR</span>
-</a>
+  <a href="home.html" class="hub-label" id="entrar-link">ENTRAR</a>
+</div>
 </br>
 </br>
     <p class="hint"><strong>Pasa el ratón por el centro</strong> o pulsa para descubrir nuestros servicios</p>
