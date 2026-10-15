@@ -360,7 +360,7 @@ Servicio técnico CNC
   @media (max-width: 360px) {
     .servicees { width: 84px; }
     .servicees .name { font-size: .56rem; }
-    .servicees-1 { --x: 0px; --y: -150px; }
+    .servicees-1 { --x: 0px; --y: -250px; }
     .servicees-2 { --x: 78px; --y: -112px; }
     .servicees-3 { --x: 112px; --y: 12px; }
     .servicees-4 { --x: 62px; --y: 130px; }
@@ -416,9 +416,9 @@ Servicio técnico CNC
     <a class="servicees servicees-7" href="historia.html" style="--delay:330ms" aria-label="Cobertura y experiencia"><span class="symbol" aria-hidden="true">◎</span><span class="name">Cobertura y experiencia</span></a>
 
     <a class="hub" id="hub" href="home.html" aria-label="Entrar en la página principal de CNC Systems">
-	<img  src="images/logotras.png"  href="home.html" alt="Logotipo de CNC Systems">
-	 <span class="hub-label"  >ENTRAR</span>
-	</a>
+  <img src="images/logotras.png" alt="Logotipo de CNC Systems">
+  <span class="hub-label">ENTRAR</span>
+</a>
 </br>
 </br>
     <p class="hint"><strong>Pasa el ratón por el centro</strong> o pulsa para descubrir nuestros servicios</p>
@@ -697,19 +697,28 @@ document.addEventListener("DOMContentLoaded",()=>{
   
   window.addEventListener('resize', () => requestAnimationFrame(drawConnectors));
   
-  // MODIFICACIÓN CLAVE PARA MÓVIL:
+  // CONTROLADOR CLAVE PARA EL BOTÓN CENTRAL (HUB)
   hub.addEventListener('click', event => {
-    // Si es un dispositivo táctil (móvil/tablet) y la órbita está cerrada,
-    // permitimos que el enlace navegue directamente a home.html sin abrir los círculos.
-    if (isTouch() && !orbit.classList.contains('open')) {
-      return; // Deja que el navegador siga el href="home.html" por defecto
+    const isOpen = orbit.classList.contains('open');
+
+    // REGLA: Si los círculos ESTÁN ABIERTOS, permitimos la navegación a home.html (no prevenimos el evento)
+    if (isOpen) {
+      return; 
     }
 
-    // Comportamiento normal (abre/cierra órbita en escritorio o si ya estaba abierta)
-    event.preventDefault();
-    setOpen(!orbit.classList.contains('open'));
+    // REGLA: Si están cerrados...
+    if (isTouch()) {
+      // En móvil, si están cerrados, el primer toque los abre
+      event.preventDefault();
+      setOpen(true);
+    } else {
+      // En ordenador, si están cerrados, alternamos (los abre)
+      event.preventDefault();
+      setOpen(true);
+    }
   });
 
+  // Eventos de hover para ordenador
   orbit.addEventListener('mouseenter', () => { if (!isTouch()) setOpen(true); });
   orbit.addEventListener('mouseleave', () => { if (!isTouch()) setOpen(false); });
   
