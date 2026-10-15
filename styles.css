@@ -736,15 +736,14 @@ footer {
 }
 .social-link svg {
   width: 24px;
-  height: 24px;
+  height: 22px;
   fill: #0ea5e9; /* azul LinkedIn */
   display: inline-block;
 }
 
 .footer-right .social-link{
-  display:inline-flex;
+  
   align-items:center;
-  text-decoration:none;
   gap:8px;
 }
 .footer-right svg{
