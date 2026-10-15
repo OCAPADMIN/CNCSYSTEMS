@@ -415,7 +415,7 @@ Servicio técnico CNC
     <a class="servicees servicees-6" href="instalaciones.html" style="--delay:280ms" aria-label="Medios e instalaciones"><span class="symbol" aria-hidden="true">▦</span><span class="name">Medios e instalaciones</span></a>
     <a class="servicees servicees-7" href="historia.html" style="--delay:330ms" aria-label="Cobertura y experiencia"><span class="symbol" aria-hidden="true">◎</span><span class="name">Cobertura y experiencia</span></a>
 
-    <a class="hub" id="hub" aria-label="Entrar en la página principal de CNC Systems">
+    <a class="hub" id="hub" href="home.html" aria-label="Entrar en la página principal de CNC Systems">
 	<img  src="images/logotras.png"  href="home.html" alt="Logotipo de CNC Systems">
 	 <span class="hub-label"  >ENTRAR</span>
 	</a>
@@ -647,7 +647,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 </script>
-
 <script>
 (() => {
   const orbit = document.getElementById('orbit');
@@ -665,8 +664,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     connectors.setAttribute('viewBox', `0 0 ${orbitRect.width} ${orbitRect.height}`);
     connectors.setAttribute('preserveAspectRatio', 'none');
     connectors.innerHTML = '';
-    services.forEach(services => {
-      const r = services.getBoundingClientRect();
+    services.forEach(service => {
+      const r = service.getBoundingClientRect();
       if (!orbit.classList.contains('open')) return;
       const sx = r.left + r.width / 2 - orbitRect.left;
       const sy = r.top + r.height / 2 - orbitRect.top;
@@ -683,6 +682,7 @@ document.addEventListener("DOMContentLoaded",()=>{
       connectors.appendChild(line);
     });
   }
+
   function setOpen(open) {
     orbit.classList.toggle('open', open);
     hub.setAttribute('aria-expanded', String(open));
@@ -690,19 +690,37 @@ document.addEventListener("DOMContentLoaded",()=>{
     requestAnimationFrame(() => requestAnimationFrame(drawConnectors));
     if (open) window.setTimeout(drawConnectors, 700);
   }
+
   services.forEach(service => service.addEventListener('transitionend', event => {
     if (event.propertyName === 'transform') drawConnectors();
   }));
+  
   window.addEventListener('resize', () => requestAnimationFrame(drawConnectors));
-  hub.addEventListener('click', () => setOpen(!orbit.classList.contains('open')));
+  
+  // MODIFICACIÓN CLAVE PARA MÓVIL:
+  hub.addEventListener('click', event => {
+    // Si es un dispositivo táctil (móvil/tablet) y la órbita está cerrada,
+    // permitimos que el enlace navegue directamente a home.html sin abrir los círculos.
+    if (isTouch() && !orbit.classList.contains('open')) {
+      return; // Deja que el navegador siga el href="home.html" por defecto
+    }
+
+    // Comportamiento normal (abre/cierra órbita en escritorio o si ya estaba abierta)
+    event.preventDefault();
+    setOpen(!orbit.classList.contains('open'));
+  });
+
   orbit.addEventListener('mouseenter', () => { if (!isTouch()) setOpen(true); });
   orbit.addEventListener('mouseleave', () => { if (!isTouch()) setOpen(false); });
+  
   hub.addEventListener('keydown', event => {
     if (event.key === 'Escape') setOpen(false);
   });
+  
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') setOpen(false);
   });
+
   services.forEach(link => link.addEventListener('click', event => {
     if (isTouch() && !orbit.classList.contains('open')) {
       event.preventDefault();
