@@ -647,11 +647,12 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 </script>
+
 <script>
 (() => {
   const orbit = document.getElementById('orbit');
   const hub = document.getElementById('hub');
-  const services = [...orbit.querySelectorAll('.servicees')];
+  const services = [...orbit.querySelectorAll('.service')];
   const connectors = document.getElementById('connectors');
   const isTouch = () => window.matchMedia('(hover: none)').matches;
 
@@ -682,7 +683,6 @@ document.addEventListener("DOMContentLoaded",()=>{
       connectors.appendChild(line);
     });
   }
-
   function setOpen(open) {
     orbit.classList.toggle('open', open);
     hub.setAttribute('aria-expanded', String(open));
@@ -690,46 +690,19 @@ document.addEventListener("DOMContentLoaded",()=>{
     requestAnimationFrame(() => requestAnimationFrame(drawConnectors));
     if (open) window.setTimeout(drawConnectors, 700);
   }
-
   services.forEach(service => service.addEventListener('transitionend', event => {
     if (event.propertyName === 'transform') drawConnectors();
   }));
-  
   window.addEventListener('resize', () => requestAnimationFrame(drawConnectors));
-  
-  // CONTROLADOR CLAVE PARA EL BOTÓN CENTRAL (HUB)
-  hub.addEventListener('click', event => {
-    const isOpen = orbit.classList.contains('open');
-
-    // REGLA: Si los círculos ESTÁN ABIERTOS, permitimos la navegación a home.html (no prevenimos el evento)
-    if (isOpen) {
-      return; 
-    }
-
-    // REGLA: Si están cerrados...
-    if (isTouch()) {
-      // En móvil, si están cerrados, el primer toque los abre
-      event.preventDefault();
-      setOpen(true);
-    } else {
-      // En ordenador, si están cerrados, alternamos (los abre)
-      event.preventDefault();
-      setOpen(true);
-    }
-  });
-
-  // Eventos de hover para ordenador
+  hub.addEventListener('click', () => setOpen(!orbit.classList.contains('open')));
   orbit.addEventListener('mouseenter', () => { if (!isTouch()) setOpen(true); });
   orbit.addEventListener('mouseleave', () => { if (!isTouch()) setOpen(false); });
-  
   hub.addEventListener('keydown', event => {
     if (event.key === 'Escape') setOpen(false);
   });
-  
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') setOpen(false);
   });
-
   services.forEach(link => link.addEventListener('click', event => {
     if (isTouch() && !orbit.classList.contains('open')) {
       event.preventDefault();
