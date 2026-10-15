@@ -251,7 +251,7 @@ Servicio técnico CNC
     position: absolute; 
     z-index: 6; 
     bottom: 65px; 
-    font-size: .81rem; 
+    font-size: 1rem; 
     font-weight: 900; 
     color: #f1f7fb; 
     letter-spacing: .22em; 
@@ -357,7 +357,7 @@ Servicio técnico CNC
     .hub { width: 155px; padding: 16px; }
     .hub:hover, .hub:focus-visible { width: 165px; }
     .hub img { max-width: 135px; padding: 0; }
-    .hub-label { bottom: 40px; font-size: .52rem; }
+    .hub-label { bottom: 40px; font-size: .72rem; }
     .servicees { width: 94px; gap: 5px; }
     .servicees .symbol { font-size: 1.55rem; }
     .servicees .name { font-size: .61rem; }
@@ -376,7 +376,7 @@ Servicio técnico CNC
     .servicees { width: 84px; }
     .servicees .name { font-size: .56rem; }
     .servicees-1 { --x: 0px; --y: -250px; }
-    .servicees-2 { --x: 78px; --y: -202px; }
+    .servicees-2 { --x: 98px; --y: -202px; }
     .servicees-3 { --x: 112px; --y: 12px; }
     .servicees-4 { --x: 62px; --y: 230px; }
     .servicees-5 { --x: -62px; --y: 130px; }
@@ -628,46 +628,11 @@ menuToggle.addEventListener('click', () => {
 
 </script>
 <script>
-function toggleMenu() {
-  var menu = document.getElementById("asistenciaMenu");
-  if (menu.style.display === "flex") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "flex";
-  }
-}
-</script>
-<script>
-function changeLanguage(lang){
-  localStorage.setItem("lang", lang);
-  applyLanguage(lang);
-}
-
-function applyLanguage(lang){
-  document.querySelectorAll("[data-es]").forEach(el=>{
-    el.innerHTML = el.getAttribute("data-"+lang);
-  });
-}
-
-document.addEventListener("DOMContentLoaded",()=>{
-  let lang = localStorage.getItem("lang");
-
-  // Si no hay idioma guardado → español
-  if(!lang){
-    lang = "es";
-    localStorage.setItem("lang","es");
-  }
-
-  applyLanguage(lang);
-});
-
-</script>
-
-<script>
 (() => {
   const orbit = document.getElementById('orbit');
   const hub = document.getElementById('hub');
-  const services = [...orbit.querySelectorAll('.service')];
+  const entrarLink = document.getElementById('entrar-link');
+  const services = [...orbit.querySelectorAll('.servicees')];
   const connectors = document.getElementById('connectors');
   const isTouch = () => window.matchMedia('(hover: none)').matches;
 
@@ -698,26 +663,40 @@ document.addEventListener("DOMContentLoaded",()=>{
       connectors.appendChild(line);
     });
   }
+
   function setOpen(open) {
     orbit.classList.toggle('open', open);
     hub.setAttribute('aria-expanded', String(open));
-    hub.setAttribute('aria-label', open ? 'Cerrar menú de servicios' : 'Abrir menú de servicios');
     requestAnimationFrame(() => requestAnimationFrame(drawConnectors));
     if (open) window.setTimeout(drawConnectors, 700);
   }
+
   services.forEach(service => service.addEventListener('transitionend', event => {
     if (event.propertyName === 'transform') drawConnectors();
   }));
+  
   window.addEventListener('resize', () => requestAnimationFrame(drawConnectors));
-  hub.addEventListener('click', () => setOpen(!orbit.classList.contains('open')));
+  
+  // El círculo central (hub) SOLO abre y cierra la órbita al hacer clic en él
+  hub.addEventListener('click', event => {
+    // Si se hace clic directamente en el enlace de ENTRAR, dejamos que navegue
+    if (event.target === entrarLink || entrarLink.contains(event.target)) {
+      return;
+    }
+
+    // Para cualquier otra parte del círculo central, alternamos la órbita
+    event.preventDefault();
+    setOpen(!orbit.classList.contains('open'));
+  });
+
+  // Eventos de hover para ordenador
   orbit.addEventListener('mouseenter', () => { if (!isTouch()) setOpen(true); });
   orbit.addEventListener('mouseleave', () => { if (!isTouch()) setOpen(false); });
-  hub.addEventListener('keydown', event => {
-    if (event.key === 'Escape') setOpen(false);
-  });
+  
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') setOpen(false);
   });
+
   services.forEach(link => link.addEventListener('click', event => {
     if (isTouch() && !orbit.classList.contains('open')) {
       event.preventDefault();
