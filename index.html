@@ -239,13 +239,17 @@ Servicio técnico CNC
   .servicees::before { content:""; position:absolute; inset:5px; border:1px solid rgba(255,255,255,.23); border-radius:inherit; }
   .servicees .symbol { font-size: clamp(1.6rem, 3.3vw, 2.1rem); line-height: 1; filter: drop-shadow(0 2px 2px rgba(0,0,0,.65)); }
   .servicees .name { font-size: clamp(.64rem, 1.4vw, .82rem); font-weight: 800; text-transform: uppercase; letter-spacing: .035em; padding: 0 6px; }
-  .servicees:hover, .servicees:focus-visible { filter: brightness(1.2); box-shadow: 0 0 0 4px rgba(0,169,245,.24), 0 0 24px rgba(0,169,245,.32), inset 0 2px 4px #fff; outline: none; }
+  .servicees:hover, .servicees:focus-visible { filter: brightness(1.2); box-shadow: 0 0 0 4px rgba(0,169,245,.24), 0 0 24px rgba(0,169,245,.32), inset 0 2px 4px #fff; outline: none; color: var(--blue);}
   .orbit.open .servicees { opacity: 1; pointer-events: auto; transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1); }
   .orbit.open .servicees:hover,
   .orbit.open .servicees:focus-visible {
     transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.16);
     z-index: 12;
   }
+  .servicees img {
+      max-width: 50px;
+    }
+  
   
   /* Posiciones de los siete círculos en ordenador */
   .servicees-1 { --x: 0px; --y: -230px; --delay: 30ms; }
@@ -278,7 +282,9 @@ Servicio técnico CNC
   @media (max-width: 650px) {
     header { padding-top: 26px; }
     .stage { min-height: 690px; padding: 18px 10px 52px; }
-    
+    .servicees img {
+      max-width: 25px;
+    }
     .orbit::before {
       width: 320px;
       height: 320px;
@@ -334,7 +340,7 @@ Servicio técnico CNC
 
 
 <main class="stage">
-  <img src="images/logotras.png" alt="Logotipo de CNC Systems">
+  <img src="images/logo.jpeg" alt="Logotipo de CNC Systems">
   <h1>Soluciones industriales</h1>
   <p class="subtitle">Tecnología, precisión y servicio para tu maquinaria</p>
 <div class="content-wrapper">
@@ -364,16 +370,16 @@ Servicio técnico CNC
 
   <section class="orbit" id="orbit" aria-label="Menú de servicios CNC Systems">
     <svg class="connectors" id="connectors" aria-hidden="true" focusable="false"></svg>
-    <a class="servicees servicees-1" href="equipo.html" style="--delay:30ms" aria-label="Equipo y experiencia"><span class="symbol" aria-hidden="true">♙</span><span class="name">Talento</span></a>
-    <a class="servicees servicees-2" href="servicio-tecnico-cnc.html" style="--delay:80ms" aria-label="Servicios industriales"><span class="symbol" aria-hidden="true">⚙</span><span class="name">Compromiso</span></a>
-    <a class="servicees servicees-3" href="reparacion-maquinas-cnc.html" style="--delay:130ms" aria-label="Precisión y diagnóstico"><span class="symbol" aria-hidden="true">⌖</span><span class="name">Fiabilidad</span></a>
-    <a class="servicees servicees-4" href="mantenimiento-cnc.html" style="--delay:180ms" aria-label="Fiabilidad y mantenimiento"><span class="symbol" aria-hidden="true">◈</span><span class="name">Calidad</span></a>
-    <a class="servicees servicees-5" href="retrofit-maquina-cnc.html" style="--delay:230ms" aria-label="Ingeniería y retrofit"><span class="symbol" aria-hidden="true">⌘</span><span class="name">Especialización</span></a>
-    <a class="servicees servicees-6" href="instalaciones.html" style="--delay:280ms" aria-label="Medios e instalaciones"><span class="symbol" aria-hidden="true">▦</span><span class="name">Solidez</span></a>
-    <a class="servicees servicees-7" href="historia.html" style="--delay:330ms" aria-label="Cobertura y experiencia"><span class="symbol" aria-hidden="true">◎</span><span class="name">Experiencía</span></a>
+    <a class="servicees servicees-1" href="equipo.html" style="--delay:30ms" aria-label="Equipo y experiencia"><span class="symbol" aria-hidden="true"><img src="images/talento.png"> </span><span class="name">Talento</span></a>
+    <a class="servicees servicees-2" href="servicio-tecnico-cnc.html" style="--delay:80ms" aria-label="Servicios industriales"><span class="symbol" aria-hidden="true"><img src="images/compromiso.png"></span><span class="name">Compromiso</span></a>
+    <a class="servicees servicees-3" href="reparacion-maquinas-cnc.html" style="--delay:130ms" aria-label="Precisión y diagnóstico"><span class="symbol" aria-hidden="true"><img src="images/fiabilidad.png"></span><span class="name">Fiabilidad</span></a>
+    <a class="servicees servicees-4" href="mantenimiento-cnc.html" style="--delay:180ms" aria-label="Fiabilidad y mantenimiento"><span class="symbol" aria-hidden="true"><img src="images/calidad.png"></span><span class="name">Calidad</span></a>
+    <a class="servicees servicees-5" href="retrofit-maquina-cnc.html" style="--delay:230ms" aria-label="Ingeniería y retrofit"><span class="symbol" aria-hidden="true"><img src="images/expecializacion.png"></span><span class="name">Especialización</span></a>
+    <a class="servicees servicees-6" href="instalaciones.html" style="--delay:280ms" aria-label="Medios e instalaciones"><span class="symbol" aria-hidden="true"><img src="images/innovacion.png"> </span><span class="name">Innovación</span></a>
+    <a class="servicees servicees-7" href="historia.html" style="--delay:330ms" aria-label="Cobertura y experiencia"><span class="symbol" aria-hidden="true"><img src="images/experiencia.png"></span><span class="name">Experiencía</span></a>
 
     <div class="hub" id="hub" aria-label="Menú de servicios CNC Systems">
-  <img src="images/logotras.png" alt="Logotipo de CNC Systems">
+  <img src="images/Logotipo.png" alt="Logotipo de CNC Systems">
   <a href="home.html" class="hub-label" id="entrar-link">ENTRAR</a>
 </div>
 </br>
@@ -445,11 +451,8 @@ data-pt="Política de Cookies">Política de Cookies</a>
 
 <!-- Banner cookies -->
 <div id="cookie-banner" class="cookie-banner" style="display:none;">
-<p 
-  data-es="Utilizamos cookies técnicas propias necesarias para la navegación y cookies de análisis de terceros para medir la actividad estadística del sitio web. Puede aceptar todas las cookies, rechazarlas o configurar sus preferencias a continuación. <a href='politica-cookies.html'>Política de Cookies</a>"
-  data-en="We use our own technical cookies necessary for navigation and third-party analytical cookies to measure website statistical activity. You can accept all cookies, reject them, or configure your preferences below. <a href='politica-cookies.html'>Cookie Policy</a>"
-  data-pt="Utilizamos cookies técnicas próprias necessárias para a navegação e cookies de análise de terceiros para medir a atividade estatística do sítio web. Pode aceitar todos os cookies, rejeitá-los ou configurar as suas preferências abaixo. <a href='politica-cookies.html'>Política de Cookies</a>">
-  Utilizamos cookies técnicas propias necesarias para la navegación...
+<p>
+  Utilizamos cookies técnicas propias necesarias para la navegación y cookies de análisis de terceros para medir la actividad estadística del sitio web. Puede aceptar todas las cookies, rechazarlas o configurar sus preferencias a continuación. <a href='politica-cookies.html'>Política de Cookies</a>
 </p>
 
 <div class="cookie-buttons-container" style="display: flex; gap: 8px; margin-top: 10px;">
@@ -469,48 +472,27 @@ data-pt="Política de Cookies">Política de Cookies</a>
   Configuración de cookies
   </h3>
 
-  <label
-data-es='<input type="checkbox" disabled checked> <strong>Necesarias (siempre activas)</strong>'
-data-en='<input type="checkbox" disabled checked> <strong>Necessary (always active)</strong>'
-data-pt='<input type="checkbox" disabled checked> <strong>Necessárias (sempre ativas)</strong>'>
-<input type="checkbox" disabled checked>
-<strong>Necesarias (siempre activas)</strong>
+  <label>
+<input type="checkbox" disabled checked> <strong>Necesarias (siempre activas)</strong>
 </label>
 
-<p class="cookie-description"
-data-es="Estas cookies son necesarias para el correcto funcionamiento de la página web y no pueden ser desactivadas en nuestros sistemas. Permiten funciones básicas como la navegación por la página, el acceso a áreas seguras, la gestión de la sesión o la configuración de preferencias esenciales."
-data-en="These cookies are necessary for the proper functioning of the website and cannot be disabled in our systems. They enable basic functions such as page navigation, access to secure areas, session management and essential preference settings."
-data-pt="Estas cookies são necessárias para o correto funcionamento do website e não podem ser desativadas nos nossos sistemas. Permitem funções básicas como a navegação na página, o acesso a áreas seguras, a gestão da sessão e a configuração de preferências essenciais.">
+<p class="cookie-description">
 Estas cookies son necesarias para el correcto funcionamiento de la página web y no pueden ser desactivadas en nuestros sistemas. Permiten funciones básicas como la navegación por la página, el acceso a áreas seguras, la gestión de la sesión o la configuración de preferencias esenciales.
 </p>
 
-<label
-data-es='<input type="checkbox" id="analytics"> <strong>Analíticas</strong>'
-data-en='<input type="checkbox" id="analytics"> <strong>Analytics</strong>'
-data-pt='<input type="checkbox" id="analytics"> <strong>Analíticas</strong>'>
-<input type="checkbox" id="analytics">
-<strong>Analíticas</strong>
+<label>
+<input type="checkbox" id="analytics"> <strong>Analíticas</strong>
 </label>
 
-<p class="cookie-description"
-data-es="Estas cookies nos permiten obtener información sobre cómo los usuarios interactúan con la página web, como las páginas visitadas, el tiempo de navegación, los errores detectados o las funcionalidades más utilizadas. La información obtenida se utiliza con fines estadísticos y de mejora del funcionamiento, contenido y experiencia de usuario de la página web. Estas cookies solo se instalarán si presta su consentimiento."
-data-en="These cookies allow us to obtain information about how users interact with the website, such as pages visited, browsing time, detected errors and the most frequently used features. The information collected is used for statistical purposes and to improve the website's performance, content and user experience. These cookies will only be installed if you provide your consent."
-data-pt="Estas cookies permitem-nos obter informações sobre a forma como os utilizadores interagem com o website, tais como páginas visitadas, tempo de navegação, erros detetados ou funcionalidades mais utilizadas. As informações obtidas são utilizadas para fins estatísticos e para melhorar o funcionamento, conteúdo e experiência do utilizador. Estas cookies só serão instaladas se der o seu consentimento.">
+<p class="cookie-description">
 Estas cookies nos permiten obtener información sobre cómo los usuarios interactúan con la página web, como las páginas visitadas, el tiempo de navegación, los errores detectados o las funcionalidades más utilizadas. La información obtenida se utiliza con fines estadísticos y de mejora del funcionamiento, contenido y experiencia de usuario de la página web. Estas cookies solo se instalarán si presta su consentimiento.
 </p>
 
-<label
-data-es='<input type="checkbox" id="marketing"> <strong>Marketing</strong>'
-data-en='<input type="checkbox" id="marketing"> <strong>Marketing</strong>'
-data-pt='<input type="checkbox" id="marketing"> <strong>Marketing</strong>'>
-<input type="checkbox" id="marketing">
-<strong>Marketing</strong>
+<label>
+<input type="checkbox" id="marketing"> <strong>Marketing</strong>
 </label>
 
-<p class="cookie-description"
-data-es="Estas cookies permiten gestionar espacios publicitarios y mostrar contenidos o anuncios personalizados en función de sus hábitos de navegación, preferencias o perfil de usuario. También pueden ser utilizadas por terceros para crear perfiles basados en su navegación y mostrarle publicidad personalizada en esta u otras páginas web. Estas cookies solo se instalarán si presta su consentimiento."
-data-en="These cookies allow advertising spaces to be managed and personalized content or advertisements to be displayed based on your browsing habits, preferences or user profile. They may also be used by third parties to create profiles based on your browsing activity and show you personalized advertising on this or other websites. These cookies will only be installed if you provide your consent."
-data-pt="Estas cookies permitem gerir espaços publicitários e apresentar conteúdos ou anúncios personalizados com base nos seus hábitos de navegação, preferências ou perfil de utilizador. Também podem ser utilizadas por terceiros para criar perfis com base na sua navegação e apresentar publicidade personalizada neste ou noutros websites. Estas cookies só serão instaladas se der o seu consentimento.">
+<p class="cookie-description">
 Estas cookies permiten gestionar espacios publicitarios y mostrar contenidos o anuncios personalizados en función de sus hábitos de navegación, preferencias o perfil de usuario. También pueden ser utilizadas por terceros para crear perfiles basados en su navegación y mostrarle publicidad personalizada en esta u otras páginas web. Estas cookies solo se instalarán si presta su consentimiento.
 </p>
   <div style="margin-top:10px; display:flex; gap:8px;">
