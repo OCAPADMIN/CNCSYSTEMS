@@ -2954,3 +2954,53 @@ color:#666;
   .step-item { flex-direction: column; gap: 10px; }
   .magazine-section { padding: 20px; }
 }
+/* Portátiles y ventanas de escritorio estrechas */
+@media screen and (min-width: 769px) and (max-width: 1550px) {
+
+  header {
+    padding: 10px 0;
+  }
+
+  header .container {
+    width: 96%;
+    gap: 12px;
+  }
+
+  /* Reducimos el espacio ocupado por el logo */
+  header .logo img {
+    max-width: clamp(145px, 17vw, 210px);
+    height: auto;
+  }
+
+  /* Hacemos que el menú ocupe menos espacio */
+  header nav {
+    flex: 1;
+    min-width: 0;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+  }
+
+  header nav a {
+    font-size: 13px;
+    white-space: normal;
+  }
+
+  /* Evitamos que los idiomas se compriman demasiado */
+  header .language-selector {
+    flex-shrink: 0;
+  }
+
+  header .idioma img {
+    max-width: 17px;
+  }
+
+  /* Ocultamos el botón hamburguesa en este rango */
+  header .menu-toggle {
+    display: none;
+  }
+}
